@@ -1,3 +1,9 @@
+<?php
+/**
+ * @package CSSecoThemes
+ *
+ */
+?>
 <h1>CSSeco Theme Options</h1>
 <?php settings_errors(); ?>
 <form method="post" action="options.php">
