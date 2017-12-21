@@ -64,18 +64,10 @@ function csseco_custom_settings() {
 	 *      Settings ** register custom settings
 	 * ================
 	 */
-	// CSS Options settings
+	// About Options Settings
 	register_setting(
-		'cssecoSettingsGroup-cssOptions',
-		'css_bgCol'
-	);
-	register_setting(
-		'cssecoSettingsGroup-cssOptions',
-		'css_fontSize'
-	);
-	register_setting(
-		'cssecoSettingsGroup-cssOptions',
-		'css_mainBgCol'
+		'cssecoSettingsGroup-sidebarAbout',
+		'about_ceva'//
 	);
 	// Sidebar Options settings
 	register_setting(
@@ -88,7 +80,21 @@ function csseco_custom_settings() {
 	);
 	register_setting(
 		'cssecoSettingsGroup-sidebarOptions',
-		'sidebar_bgcol'//
+		'sidebar_bgcol',//
+		'csseco_sidebar_bgcol_sanitization'// sanitization functions in their (section) page
+	);
+	// CSS Options settings
+	register_setting(
+		'cssecoSettingsGroup-cssOptions',
+		'css_bgCol'
+	);
+	register_setting(
+		'cssecoSettingsGroup-cssOptions',
+		'css_fontSize'//
+	);
+	register_setting(
+		'cssecoSettingsGroup-cssOptions',
+		'css_mainBgCol'//
 	);
 
 	/**
@@ -97,6 +103,12 @@ function csseco_custom_settings() {
 	 * ================
 	 */
 	// SECTION // add custom setting to page(csseco_th_sidebar_options(CSSeco Theme: Sidebar Options))
+	add_settings_section(// About Options Section
+		'csseco-about-options',
+		'About CSSeco Theme...',
+		'cssecoth_about_options',
+		'csseco_th'
+	);
 	add_settings_section(//CSS Options Section
 		'csseco-css-options',
 		'CSS Options',
@@ -115,27 +127,13 @@ function csseco_custom_settings() {
 	 *      FIELDS ** add custom fields opts to section
 	 * ================
 	 */
-	// Fields for css options
+	// Fields for about options
 	add_settings_field(
-		'css-bgcol',
-		'Background Color',
-		'csseco_css_bg',// all callbacks in settings fields are in their files
-		'csseco_th_css_settings',
-		'csseco-css-options'
-	);
-	add_settings_field(
-		'css-fontSize',
-		'Font Size',
-		'csseco_font_size',// all callbacks in settings fields are in their files
-		'csseco_th_css_settings',
-		'csseco-css-options'
-	);
-	add_settings_field(
-		'css-mainBgCol',
-		'Main Content BgColor',
-		'csseco_mainBgCol',// all callbacks in settings fields are in their files
-		'csseco_th_css_settings',
-		'csseco-css-options'
+		'about-ceva',
+		'Despre ceva...',
+		'csseco_about_ceva',
+		'csseco_th',
+		'csseco-about-options'
 	);
 	// Fields for sidebar options
 	add_settings_field(
@@ -159,21 +157,58 @@ function csseco_custom_settings() {
 		'csseco_th_sidebar_options',
 		'csseco-sidebar-options'
 	);
+	// Fields for css options
+	add_settings_field(
+		'css-bgcol',
+		'Background Color',
+		'csseco_css_bg',// all callbacks in settings fields are in their files
+		'csseco_th_css_settings',
+		'csseco-css-options'
+	);
+	add_settings_field(
+		'css-fontSize',
+		'Font Size',
+		'csseco_font_size',// all callbacks in settings fields are in their files
+		'csseco_th_css_settings',
+		'csseco-css-options'
+	);
+	add_settings_field(
+		'css-mainBgCol',
+		'Main Content BgColor',
+		'csseco_mainBgCol',// all callbacks in settings fields are in their files
+		'csseco_th_css_settings',
+		'csseco-css-options'
+	);
+
 }
 
+/**
+ * ================
+ *      Sanitizations
+ * ================
+ */
+function csseco_sidebar_bgcol_sanitization( $input ) {
+	$output = sanitize_text_field( $input );
+	$output = str_replace( '@', ' at ', $output);
+	return $output;
+}
 
-/* Generate Pages */
+/**
+ * ================
+ *      Generate Pages
+ * ================
+ */
 function csseco_th_create_pg() {
 	// function used by: "CSSeco Theme" and "About CSSeco Theme"
 	require_once( get_template_directory() . '/includes/back/templates/about-options.php' );
 }
 
-function csseco_th_opts_css_subpage() {
-	// function used by: "CSSeco Theme: CSS Settings"
-	require_once( get_template_directory() . '/includes/back/templates/css-options.php' );
-}
-
 function csseco_th_opts_sidebar_subpage() {
 	// function used by: "CSSeco Theme: Sidebar Options"
 	require_once( get_template_directory() . '/includes/back/templates/sidebar-options.php' );
+}
+
+function csseco_th_opts_css_subpage() {
+	// function used by: "CSSeco Theme: CSS Settings"
+	require_once( get_template_directory() . '/includes/back/templates/css-options.php' );
 }

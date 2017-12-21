@@ -11,10 +11,11 @@ function cssecoth_css_options() {
 }
 
 function csseco_css_bg() {
-    $cssBgCol = get_option('css_bgCol');
+    $cssBgCol = sanitize_text_field(get_option('css_bgCol'));
 ?>
 
     <input name="css_bgCol" type="text" class="regular-text" value="<?php echo $cssBgCol; ?>" placeholder="<?php echo $cssBgCol; ?>" />
+    <p class="description">ex: #FFFFFF or white</p>
 
 <?php
 }

@@ -12,6 +12,7 @@
  * Includes
  */
 include( get_template_directory() . '/includes/back/function-admin.php' );
+include( get_template_directory() . '/includes/back/enqueue.php' );
 
 
 /**
