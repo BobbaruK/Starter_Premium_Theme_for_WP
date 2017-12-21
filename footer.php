@@ -6,6 +6,7 @@
  */
 ?>
 	</div>
+    <hr>
 	<footer id="cssecoFooter">
 		<p>Footer</p>
 	</footer>

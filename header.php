@@ -19,4 +19,5 @@
 	<header id="cssecoHeader">
 		<p>Header</p>
 	</header>
+    <hr>
 	<div id="cssecoContent" class="site-content">
