@@ -1,6 +1,7 @@
 <?php
 /**
  * @package CSSecoThemes
+ * function-admin.php
  * ================
  *      ADMIN PAGE
  * ================
@@ -18,7 +19,11 @@ function csseco_add_admin_page() {
 		get_template_directory_uri() . '/imgs/back_icons/csseco_admin_icon.png',
 		110
 	);
-	// Generate CSSeco Theme SubPages
+/**
+ * ================
+ *      ADMIN SUBPAGES
+ * ================
+ */
 	// Generate About subpage(first subpage(this) is the same as the above(CSSeco Theme Option))
 	add_submenu_page(
 		'csseco_th',
@@ -28,23 +33,23 @@ function csseco_add_admin_page() {
 		'csseco_th',
 		'csseco_th_create_pg'
 	);
-	// Generate CSS Options subpages -> Options
-	add_submenu_page(
-		'csseco_th',
-		'CSSeco Theme: CSS Settings',
-		'CSS Options',
-		'manage_options',
-		'csseco_th_css_settings',
-		'csseco_th_opts_subpage'
-	);
-	// Generate Sidebar Options subpages -> Options
+	// Generate Sidebar Options subpage -> Options Sidebar
 	add_submenu_page(
 		'csseco_th',
 		'CSSeco Theme: Sidebar Options',
 		'Sidebar Options',
 		'manage_options',
 		'csseco_th_sidebar_options',
-		'csseco_th_opts_sidebar'
+		'csseco_th_opts_sidebar_subpage'
+	);
+	// Generate CSS Options subpage -> Options CSS
+	add_submenu_page(
+		'csseco_th',
+		'CSSeco Theme: CSS Settings',
+		'CSS Options',
+		'manage_options',
+		'csseco_th_css_settings',
+		'csseco_th_opts_css_subpage'
 	);
 
 	// Activate custom settings
@@ -56,11 +61,11 @@ function csseco_custom_settings() {
 	// SETTING // register custom settings
 	register_setting(
 		'csseco-settings-group',
-		'first_name'
+		'sidebar_width'//
 	);
 	register_setting(
 		'csseco-settings-group',
-		'last_name'
+		'sidebar_bgcol'//
 	);
 	// SECTION // add custom setting to page(csseco_th_sidebar_options(CSSeco Theme: Sidebar Options))
 	add_settings_section(
@@ -71,49 +76,34 @@ function csseco_custom_settings() {
 	);
 	// FIELD // add custom fields opts to section
 	add_settings_field(
-		'sidebar-fname',
-		'First Name',
-		'csseco_sidebar_fname',
+		'sidebar-width',
+		'Sidebar Width',
+		'csseco_sidebar_width',
 		'csseco_th_sidebar_options',
 		'csseco-sidebar-options'
 	);
 	add_settings_field(
-		'sidebar-lname',
-		'Last Name',
-		'csseco_sidebar_lname',
+		'sidebar-bgcol',
+		'Sidebar BgCol',
+		'csseco_sidebar_bgcol',
 		'csseco_th_sidebar_options',
 		'csseco-sidebar-options'
 	);
-}
-function cssecoth_sidebar_options() {
-	echo 'Custom sidebar';
-}
-// Custom Option First Name
-function csseco_sidebar_fname() {
-	$firstName = esc_attr( get_option('first_name') );
-	echo '<input type="text" name="first_name" value="' . $firstName . '" placeholder="First Name" />';
-}
-// Custom Option Last Name
-function csseco_sidebar_lname() {
-	$lastName = esc_attr( get_option('last_name') );
-	echo '<input type="text" name="last_name" value="' . $lastName . '" placeholder="Last Name" />';
 }
 
 
 /* Generate Pages */
 function csseco_th_create_pg() {
 	// function used by: "CSSeco Theme" and "About CSSeco Theme"
-	echo '<h1>About CSSeco Theme</h1>';
-	echo '<h3 class="title">BobbaruK a.K.a. CSSeco or just Seco(one)</h3>';
-	echo '<p>CSSeco Starter Premium Theme is the best starter theme ever</p>';
+	require_once( get_template_directory() . '/includes/back/templates/about-options.php' );
 }
 
-function csseco_th_opts_subpage() {
-	// function used by: "CSSeco Theme: CSS Settings"
-	echo '<h1>CSSeco Theme CSS Options</h1>';
-}
-
-function csseco_th_opts_sidebar() {
+function csseco_th_opts_sidebar_subpage() {
 	// function used by: "CSSeco Theme: Sidebar Options"
-	require_once( get_template_directory() . '/includes/back/templates/pages-admin.php' );
+	require_once( get_template_directory() . '/includes/back/templates/sidebar-options.php' );
+}
+
+function csseco_th_opts_css_subpage() {
+	// function used by: "CSSeco Theme: CSS Settings"
+	require_once( get_template_directory() . '/includes/back/templates/css-options.php' );
 }

@@ -1,7 +1,7 @@
 <?php
 /**
  * @package CSSecoThemes
- *
+ * functions.php
  *
  *
  * Set up
