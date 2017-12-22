@@ -23,6 +23,11 @@ function csseco_about_ceva() {
 
 ?>
 
+<div class="csseco_about_class">
+    <p>
+        eee na!
+    </p>
+</div>
 
 <?php settings_errors(); ?>
 <form method="post" action="options.php">

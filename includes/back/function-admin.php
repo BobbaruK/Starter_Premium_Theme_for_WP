@@ -102,20 +102,23 @@ function csseco_custom_settings() {
 	 *      Sections **
 	 * ================
 	 */
-	// SECTION // add custom setting to page(csseco_th_sidebar_options(CSSeco Theme: Sidebar Options))
-	add_settings_section(// About Options Section
+	// SECTION // add custom setting to page
+	// About Options Section
+	add_settings_section(
 		'csseco-about-options',
 		'About CSSeco Theme...',
 		'cssecoth_about_options',
 		'csseco_th'
 	);
-	add_settings_section(//CSS Options Section
+	//CSS Options Section
+	add_settings_section(
 		'csseco-css-options',
 		'CSS Options',
 		'cssecoth_css_options',
 		'csseco_th_css_settings'
 	);
-	add_settings_section(//Sidebar Options Section
+	//Sidebar Options Section
+	add_settings_section(
 		'csseco-sidebar-options',
 		'Sidebar Options',
 		'cssecoth_sidebar_options',

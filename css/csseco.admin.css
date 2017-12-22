@@ -3,3 +3,14 @@
  * csseco.admin.css
  *
  */
+
+.csseco_about_class {
+    margin: 0 auto;
+    outline: 1px solid #2b2280;
+    text-align: center;
+    width: 80%;
+}
+
+.csseco_about_class p {
+    font-size: 24px;
+}
