@@ -66,8 +66,13 @@ function csseco_custom_settings() {
 	 */
 	// About Options Settings
 	register_setting(
-		'cssecoSettingsGroup-sidebarAbout',
+		'cssecoSettingsGroup-About',
 		'about_logo'//
+	);
+	register_setting(
+		'cssecoSettingGroup-About',
+		'about_postFormat',//
+		'csseco_postFormats_callback'
 	);
 	// Sidebar Options settings
 	register_setting(
@@ -85,15 +90,15 @@ function csseco_custom_settings() {
 	);
 	// CSS Options settings
 	register_setting(
-		'cssecoSettingsGroup-cssOptions',
+		'cssecoSettingsGroup-CSS',
 		'css_bgCol'
 	);
 	register_setting(
-		'cssecoSettingsGroup-cssOptions',
+		'cssecoSettingsGroup-CSS',
 		'css_fontSize'//
 	);
 	register_setting(
-		'cssecoSettingsGroup-cssOptions',
+		'cssecoSettingsGroup-CSS',
 		'css_mainBgCol'//
 	);
 
@@ -135,6 +140,13 @@ function csseco_custom_settings() {
 		'about-ceva',
 		'Logo',
 		'csseco_about_logo',
+		'csseco_th',
+		'csseco-about-options'
+	);
+	add_settings_field(
+		'about-theme-support',
+		'Post Formats',
+		'csseco_postFormats',
 		'csseco_th',
 		'csseco-about-options'
 	);
@@ -187,9 +199,12 @@ function csseco_custom_settings() {
 
 /**
  * ================
- *      Sanitizations
+ *      Sanitizations and Callback functions
  * ================
  */
+function csseco_postFormats_callback( $input ) {
+	return $input;
+}
 function csseco_sidebar_bgcol_sanitization( $input ) {
 	$output = sanitize_text_field( $input );
 	$output = str_replace( '@', ' at ', $output);
