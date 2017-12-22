@@ -18,7 +18,8 @@ $cssFontSize = get_option('css_fontSize');
 $cssMainBgCol = get_option('css_mainBgCol');
 
 echo '<h1>About Options</h1>';
-echo 'about ceva is: ' . $aboutLogo . '<br>';
+echo 'logo is: ' . $aboutLogo . '<br>';
+echo '<img src="' . $aboutLogo . '"><br>';
 echo '<h1>Sidebar Options</h1>';
 echo 'sidebar width is: ' . $sidebarWidth . '<br>';
 echo 'sidebar location is: ' . $sidebarLocation . '<br>';

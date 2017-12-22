@@ -14,8 +14,8 @@ function csseco_about_logo() {
     $aboutLogo = get_option('about_logo');
 ?>
 
-    <input type="button" class="button button-secondary" value="Upload Logo" id="cssecoUpload-Logo">
-    <input name="about_logo" type="hidden" value="<?php echo $aboutLogo; ?>" />
+    <input id="cssecoUpload-Logo" type="button" class="button button-secondary" value="Upload Logo" />
+    <input id="cssecoThLogo" title="" type="text" name="about_logo" value="<?php echo $aboutLogo; ?>" />
 
 <?php
 }
@@ -23,9 +23,11 @@ function csseco_about_logo() {
 
 ?>
 
+<?php $aboutLogo = get_option('about_logo'); ?>
 <div class="csseco_about_class">
     <p>
         eee na!
+        <img id="cssecoAdminLogo" src="<?php print $aboutLogo; ?>" alt="">
     </p>
 </div>
 
