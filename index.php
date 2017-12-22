@@ -7,7 +7,7 @@
 ?>
 <?php get_header(); ?>
 <?php
-$aboutCeva = get_option('about_ceva');
+$aboutLogo = get_option('about_logo');
 
 $sidebarWidth = get_option('sidebar_width');
 $sidebarLocation = get_option('sidebar_location');
@@ -18,7 +18,7 @@ $cssFontSize = get_option('css_fontSize');
 $cssMainBgCol = get_option('css_mainBgCol');
 
 echo '<h1>About Options</h1>';
-echo 'about ceva is: ' . $aboutCeva . '<br>';
+echo 'about ceva is: ' . $aboutLogo . '<br>';
 echo '<h1>Sidebar Options</h1>';
 echo 'sidebar width is: ' . $sidebarWidth . '<br>';
 echo 'sidebar location is: ' . $sidebarLocation . '<br>';

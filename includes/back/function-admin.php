@@ -67,7 +67,7 @@ function csseco_custom_settings() {
 	// About Options Settings
 	register_setting(
 		'cssecoSettingsGroup-sidebarAbout',
-		'about_ceva'//
+		'about_logo'//
 	);
 	// Sidebar Options settings
 	register_setting(
@@ -133,8 +133,8 @@ function csseco_custom_settings() {
 	// Fields for about options
 	add_settings_field(
 		'about-ceva',
-		'Despre ceva...',
-		'csseco_about_ceva',
+		'Logo',
+		'csseco_about_logo',
 		'csseco_th',
 		'csseco-about-options'
 	);

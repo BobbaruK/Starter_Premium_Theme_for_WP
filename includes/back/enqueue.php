@@ -17,6 +17,7 @@ function csseco_load_admin_scripts( $hook ) {
 		return;
 	}
 
+	// Admin css
 	wp_register_style(
 		'csseco_admin_style',
 		get_template_directory_uri() . '/css/csseco.admin.css',
@@ -26,11 +27,13 @@ function csseco_load_admin_scripts( $hook ) {
 	);
 	wp_enqueue_style('csseco_admin_style');
 
-
+	// Wordpress Media Uploader
+	wp_enqueue_media();
+	// Admin js
 	wp_register_script(
 		'csseco_admin_js',
 		get_template_directory_uri() . '/js/csseco.admin.js',
-		array(),
+		array('jquery'),
 		'1.0.0',
 		true
 	);

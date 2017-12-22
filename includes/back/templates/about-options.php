@@ -10,12 +10,12 @@ function cssecoth_about_options() {
 	echo 'Write something about you!';
 }
 
-function csseco_about_ceva() {
-    $aboutCeva = get_option('about_ceva');
+function csseco_about_logo() {
+    $aboutLogo = get_option('about_logo');
 ?>
 
-    <input name="about_ceva" type="text" class="regular-text" value="<?php echo $aboutCeva; ?>" placeholder="<?php echo $aboutCeva; ?>" />
-    <p class="description">ex: Suck it!</p>
+    <input type="button" class="button button-secondary" value="Upload Logo" id="cssecoUpload-Logo">
+    <input name="about_logo" type="hidden" value="<?php echo $aboutLogo; ?>" />
 
 <?php
 }
