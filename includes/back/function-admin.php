@@ -69,7 +69,7 @@ function csseco_custom_settings() {
 		'cssecoSettingsGroup-About',
 		'about_logo'//
 	);
-	register_setting(
+	register_setting(// TODO: de terminat chestia asta cu checkbox
 		'cssecoSettingGroup-About',
 		'about_postFormat',//
 		'csseco_postFormats_callback'
