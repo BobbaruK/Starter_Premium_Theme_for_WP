@@ -37,10 +37,12 @@ jQuery(document).ready(function ($) {
         e.preventDefault();
         var answer = confirm('Are you sure you want to remove yor Profile Picture');
         if(answer == true) {
-            $('#cssecoThLogo').val();
+            $('#cssecoThLogo').val('');
             $('#cssecoAdminLogo').attr('src', '');
             $('.csseco_about_page_form').submit();
+            e.preventDefault();
         }
         return;
     });
+
 });

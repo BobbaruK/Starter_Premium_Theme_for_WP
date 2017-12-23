@@ -15,7 +15,7 @@ function csseco_about_logo() {
     if( empty($aboutLogo) ){
 ?>
     <input id="cssecoUpload-Logo" type="button" class="button button-secondary" value="Upload Logo" />
-    <input id="cssecoThLogo" title="" type="text" class="regular-text" name="about_logo" value="" />
+    <input id="cssecoThLogo" title="" type="text" class="" name="about_logo" value="" />
     <input id="cssecoRemove-Logo" type="button" class="button button-secondary disabled" value="Remove Logo" />
 <?php
     } else {
