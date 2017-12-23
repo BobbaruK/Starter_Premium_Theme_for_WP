@@ -11,39 +11,39 @@ function cssecoth_about_options() {
 }
 
 function csseco_about_logo() {
-    $aboutLogo = get_option('about_logo');
-    if( empty($aboutLogo) ){
-?>
-    <input id="cssecoUpload-Logo" type="button" class="button button-secondary" value="Upload Logo" />
-    <input id="cssecoThLogo" title="" type="text" class="" name="about_logo" value="" />
-    <input id="cssecoRemove-Logo" type="button" class="button button-secondary" disabled value="Remove Logo" />
-<?php
-    } else {
-?>
+	$aboutLogo = get_option('about_logo');
+	if( empty($aboutLogo) ){
+		?>
+        <input id="cssecoUpload-Logo" type="button" class="button button-secondary" value="Upload Logo" />
+        <input id="cssecoThLogo" title="" type="text" class="" name="about_logo" value="" />
+        <input id="cssecoRemove-Logo" type="button" class="button button-secondary" disabled value="Remove Logo" />
+		<?php
+	} else {
+		?>
         <input id="cssecoUpload-Logo" type="button" class="button button-secondary" value="Replace Logo" />
         <input id="cssecoThLogo" title="" type="text" class="" name="about_logo" value="<?php echo $aboutLogo; ?>" />
         <input id="cssecoRemove-Logo" type="button" class="button button-secondary" value="Remove Logo" />
-<?php
-    }
+		<?php
+	}
 }
 
 function csseco_postFormats() {
-    $options = get_option( 'about_postFormat' );
-    $formats = array( 'aside', 'gallery', 'link', 'image', 'quote', 'status', 'video', 'audio', 'chat' );
-    $output = '';
-    foreach ( $formats as $format ) {
-        $checked = ( @$options[$format] == 1 ? 'checked' : '' );
-        $output .= '<label for="' . $format . '" class="csseco-label-' . $format . '"><input ' . $checked . ' 
+	$options = get_option( 'about_postFormat' );
+	$formats = array( 'aside', 'gallery', 'link', 'image', 'quote', 'status', 'video', 'audio', 'chat' );
+	$output = '';
+	foreach ( $formats as $format ) {
+		$checked = ( @$options[$format] == 1 ? 'checked' : '' );
+		$output .= '<label for="' . $format . '" class="csseco-label-' . $format . '"><input ' . $checked . ' 
                     name="about_postFormat[' . $format . ']" type="checkbox" id="' . $format . '" 
                     class="post-format-' . $format . '" value="1" />' . $format  . '</label><br>';
-    }
-    echo $output;
+	}
+	echo $output;
 }
 
 function csseco_customHeader() {
-    $options = get_option( 'about_customHeader' );
-    $checked = ( @$options == 1 ? 'checked' : '' );
-    echo '<label for="about_customHeader"><input ' . $checked . ' name="about_customHeader" type="checkbox" 
+	$options = get_option( 'about_customHeader' );
+	$checked = ( @$options == 1 ? 'checked' : '' );
+	echo '<label for="about_customHeader"><input ' . $checked . ' name="about_customHeader" type="checkbox" 
           id="about_customHeader" value="1" />Activate Custom Header</label>';
 }
 
@@ -55,14 +55,14 @@ function csseco_customBackground() {
 }
 
 function csseco_description() {
-    $description = sanitize_text_field( get_option('about_description') );
-?>
+	$description = sanitize_text_field( get_option('about_description') );
+	?>
     <label for="about_description">Write here a long description... i dont care how long...</label>
     <textarea name="about_description" id="about_description" class="large-text code" rows="10">
         <?php echo $description; ?>
     </textarea>
     <p class="description">HTML tags not allowed(sanitize_text_field();)</p>
-<?php
+	<?php
 }
 ?>
 

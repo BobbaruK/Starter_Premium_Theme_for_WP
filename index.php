@@ -21,6 +21,9 @@ $cssBgCol               = get_option('css_bgCol');
 $cssFontSize            = get_option('css_fontSize');
 $cssMainBgCol           = get_option('css_mainBgCol');
 
+$contactFf              = get_option( 'contactF_activate' );
+
+
 echo '<h1>About Options</h1>';
 echo 'logo is: ' . $aboutLogo . '<br>';
 echo '<img src="' . $aboutLogo . '"><br>';
@@ -40,5 +43,10 @@ echo '<h1>CSS Options</h1>';
 echo 'css bgcol is: ' . $cssBgCol . ' ->sanitize_text_field();<br>';
 echo 'css font size is: ' . $cssFontSize . '<br>';
 echo 'css main content bgcol is: ' . $cssMainBgCol . '<br>';
+
+
+echo '<h1>Contact Form Options</h1>';
+echo 'contact form is: ' . $contactFf . '<br>';
+
 ?>
 <?php get_footer();

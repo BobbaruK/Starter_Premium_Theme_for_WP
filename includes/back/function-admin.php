@@ -8,7 +8,6 @@
  */
 
 function csseco_add_admin_page() {
-
 	// Generate CSSeco Options Page
 	add_menu_page(
 		'CSSeco Theme Option',
@@ -51,10 +50,18 @@ function csseco_add_admin_page() {
 		'csseco_th_css_settings',
 		'csseco_th_opts_css_subpage'
 	);
+	// Generate Contact Form Options subpage -> Options Contact Form
+	add_submenu_page(
+		'csseco_th',
+		'CSSeco Theme: Contact Form',
+		'Contact Form Options',
+		'manage_options',
+		'csseco_th_contactForm_settings',
+		'csseco_th_opts_contactf_subpage'
+	);
 
 	// Activate custom settings
 	add_action( 'admin_init', 'csseco_custom_settings' );
-
 }
 
 // These are the custom settings
@@ -112,6 +119,11 @@ function csseco_custom_settings() {
 		'cssecoSettingsGroup-CSS',
 		'css_mainBgCol'//
 	);
+	// Contact Form Options settings
+	register_setting(
+		'cssecoSettingsGroup-ContactF',
+		'contactF_activate'//
+	);
 
 	/**
 	 * ================
@@ -139,6 +151,13 @@ function csseco_custom_settings() {
 		'Sidebar Options',
 		'cssecoth_sidebar_options',
 		'csseco_th_sidebar_options'
+	);
+	//ContactF Options Section
+	add_settings_section(
+		'csseco-contactf-options',
+		'Contact Form Activation',
+		'cssecoth_contactF_options',
+		'csseco_th_contactForm_settings'
 	);
 
 	/**
@@ -226,6 +245,14 @@ function csseco_custom_settings() {
 		'csseco_th_css_settings',
 		'csseco-css-options'
 	);
+	// Fields for contact form options
+	add_settings_field(
+		'contactF-activate',
+		'Activate Contact Form',
+		'contactF_checkActiv',// all callbacks in settings fields are in their files
+		'csseco_th_contactForm_settings',
+		'csseco-contactf-options'
+	);
 
 }
 
@@ -260,4 +287,9 @@ function csseco_th_opts_sidebar_subpage() {
 function csseco_th_opts_css_subpage() {
 	// function used by: "CSSeco Theme: CSS Settings"
 	require_once( get_template_directory() . '/includes/back/templates/css-options.php' );
+}
+
+function csseco_th_opts_contactf_subpage() {
+	// function used by: "CSSeco Theme: Contact Form Settings"
+	require_once( get_template_directory() . '/includes/back/templates/contactform-options.php' );
 }
