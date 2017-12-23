@@ -21,22 +21,24 @@ function csseco_about_logo() {
 function csseco_postFormats() {
     $options = get_option( 'about_postFormat' );
     $formats = array( 'Aside', 'Gallery', 'Link', 'Image', 'Quote', 'Satus', 'Video', 'Audio', 'Chat' );
-//    $output = '';
-//    foreach ( $formats as $format ) {
-//        $checked = ( $options[$format] == 1 ? 'checked' : '' );
-//        $output .= '<label><input type="checkbox" id="' . $format . '" name="about_postFormat[' . $format . ']" value="1" ' . $checked . ' /></label><br>';
-//        echo $output;
-//    }
-//}
     foreach( $formats as $format ) {
 	    $checked = ( @$options[$format] == 1 ? 'checked' : '' );
 ?>
-        <label for="cssecoPostFormatCheckBox<?php echo $format; ?>">
-            <input <?php echo $checked; ?> name="about_postFormat[<?php echo $format; ?>]" type="checkbox" id="cssecoPostFormatCheckBox<?php echo $format; ?>" class="post-format-<?php echo $format; ?>" value="1">
+        <label for="<?php echo $format; ?>">
+            <input <?php echo $checked; ?> name="about_postFormat[<?php echo $format; ?>]" type="checkbox" id="<?php echo $format; ?>" class="post-format-<?php echo $format; ?>" value="1">
             <?php echo $format; ?>
         </label><br>
 <?php
     }
+}
+
+function csseco_description() {
+    $description = sanitize_text_field( get_option('about_description') );
+?>
+    <label for="about_description">Write here a long description... i dont care how long...</label>
+    <textarea name="about_description" id="about_description" class="large-text code" rows="20"><?php echo $description; ?></textarea>
+    <p class="description">HTML tags not allowed</p>
+<?php
 }
 ?>
 

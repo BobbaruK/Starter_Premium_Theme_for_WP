@@ -69,10 +69,14 @@ function csseco_custom_settings() {
 		'cssecoSettingsGroup-About',
 		'about_logo'//
 	);
-	register_setting(// TODO: de terminat chestia asta cu checkbox
-		'cssecoSettingGroup-About',
+	register_setting(
+		'cssecoSettingsGroup-About',
 		'about_postFormat',//
 		'csseco_postFormats_callback'
+	);
+	register_setting(
+		'cssecoSettingsGroup-About',
+		'about_description'
 	);
 	// Sidebar Options settings
 	register_setting(
@@ -137,7 +141,7 @@ function csseco_custom_settings() {
 	 */
 	// Fields for about options
 	add_settings_field(
-		'about-ceva',
+		'about-logo',
 		'Logo',
 		'csseco_about_logo',
 		'csseco_th',
@@ -147,6 +151,13 @@ function csseco_custom_settings() {
 		'about-theme-support',
 		'Post Formats',
 		'csseco_postFormats',
+		'csseco_th',
+		'csseco-about-options'
+	);
+	add_settings_field(
+		'about-description',
+		'Long description',
+		'csseco_description',
 		'csseco_th',
 		'csseco-about-options'
 	);

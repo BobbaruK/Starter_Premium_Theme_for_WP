@@ -8,7 +8,8 @@
 <?php get_header(); ?>
 <?php
 $aboutLogo = get_option('about_logo');
-$postFormatsF = get_option('about_postFormat[]');
+$aboutPostsFormat = get_option('about_postFormat');
+$aboutDescription = sanitize_text_field( get_option('about_description') );
 
 $sidebarWidth = get_option('sidebar_width');
 $sidebarLocation = get_option('sidebar_location');
@@ -21,7 +22,8 @@ $cssMainBgCol = get_option('css_mainBgCol');
 echo '<h1>About Options</h1>';
 echo 'logo is: ' . $aboutLogo . '<br>';
 echo '<img src="' . $aboutLogo . '"><br>';
-echo 'posts formats are: ' . $postFormatsF . '<br>';
+echo 'posts formats are: ' . $aboutPostsFormat . '<br>';
+echo 'description is: ' . $aboutDescription . '<br>';
 echo '<h1>Sidebar Options</h1>';
 echo 'sidebar width is: ' . $sidebarWidth . '<br>';
 echo 'sidebar location is: ' . $sidebarLocation . '<br>';
