@@ -8,7 +8,6 @@
 <?php get_header(); ?>
 <?php
 $aboutLogo              = get_option('about_logo');
-$aboutPostsFormat       = get_option('about_postFormat');
 $cstmHeader             = get_option( 'about_customHeader' );
 $cstmBackgr             = get_option( 'about_customBackground' );
 $aboutDescription       = sanitize_text_field( get_option('about_description') );
@@ -27,7 +26,19 @@ $contactFf              = get_option( 'contactF_activate' );
 echo '<h1>About Options</h1>';
 echo 'logo is: ' . $aboutLogo . '<br>';
 echo '<img src="' . $aboutLogo . '"><br>';
-echo 'posts formats are: ' . $aboutPostsFormat . '<br>';
+
+echo 'posts formats are: ';
+$options = get_option( 'about_postFormat' );
+$output = '';
+foreach ( $options as $option ) {
+	$output .= $option . '; ';
+}
+echo $output;
+//for ($x = 0; $x <= count($options); $x++) {
+//	echo $options[$x]. '<br>';
+//}
+
+echo '<br>';
 echo 'custom header: ' . $cstmHeader . '<br>';
 echo 'custom bg: ' . $cstmBackgr . '<br>';
 echo 'description is: ' . $aboutDescription . '<br>';

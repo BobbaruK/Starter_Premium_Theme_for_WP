@@ -57,10 +57,9 @@ function csseco_customBackground() {
 function csseco_description() {
 	$description = sanitize_text_field( get_option('about_description') );
 	?>
-    <label for="about_description">Write here a long description... i dont care how long...</label>
-    <textarea name="about_description" id="about_description" class="large-text code" rows="10">
-        <?php echo $description; ?>
-    </textarea>
+    <label for="about_description">Write here a long description... i dont care how long...
+        <textarea name="about_description" id="about_description" class="large-text code" rows="10"><?php echo $description; ?></textarea>
+    </label>
     <p class="description">HTML tags not allowed(sanitize_text_field();)</p>
 	<?php
 }
