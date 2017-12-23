@@ -71,12 +71,19 @@ function csseco_custom_settings() {
 	);
 	register_setting(
 		'cssecoSettingsGroup-About',
-		'about_postFormat',//
-		'csseco_postFormats_callback'
+		'about_postFormat'//
 	);
 	register_setting(
 		'cssecoSettingsGroup-About',
-		'about_description'
+		'about_customHeader'//
+	);
+	register_setting(
+		'cssecoSettingsGroup-About',
+		'about_customBackground'//
+	);
+	register_setting(
+		'cssecoSettingsGroup-About',
+		'about_description'//
 	);
 	// Sidebar Options settings
 	register_setting(
@@ -148,9 +155,23 @@ function csseco_custom_settings() {
 		'csseco-about-options'
 	);
 	add_settings_field(
-		'about-theme-support',
+		'about-post-format',
 		'Post Formats',
 		'csseco_postFormats',
+		'csseco_th',
+		'csseco-about-options'
+	);
+	add_settings_field(
+		'about-custom-header',
+		'Custom Header',
+		'csseco_customHeader',
+		'csseco_th',
+		'csseco-about-options'
+	);
+	add_settings_field(
+		'about-custom-background',
+		'Custom background',
+		'csseco_customBackground',
 		'csseco_th',
 		'csseco-about-options'
 	);
@@ -208,19 +229,18 @@ function csseco_custom_settings() {
 
 }
 
+
 /**
  * ================
  *      Sanitizations and Callback functions
  * ================
  */
-function csseco_postFormats_callback( $input ) {
-	return $input;
-}
 function csseco_sidebar_bgcol_sanitization( $input ) {
 	$output = sanitize_text_field( $input );
 	$output = str_replace( '@', ' at ', $output);
 	return $output;
 }
+
 
 /**
  * ================

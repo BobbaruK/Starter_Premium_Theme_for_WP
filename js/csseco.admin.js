@@ -36,13 +36,12 @@ jQuery(document).ready(function ($) {
     $('#cssecoRemove-Logo').on('click', function(e){
         e.preventDefault();
         var answer = confirm('Are you sure you want to remove yor Profile Picture');
-        if(answer == true) {
+        if(answer === true) {
             $('#cssecoThLogo').val('');
             $('#cssecoAdminLogo').attr('src', '');
-            $('.csseco_about_page_form').submit();
-            e.preventDefault();
+            //$('.csseco_about_page_form').submit();
         }
-        return;
+        // return; // remove comment if write something after this if
     });
 
 });

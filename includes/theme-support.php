@@ -3,14 +3,30 @@
  * @package CSSecoThemes
  * theme-support.php
  *
+ * Post Formats
  */
-
-$options = get_option( 'about_postFormat' );
+$optionsPostFormats = get_option( 'about_postFormat' );
 $formats = array( 'aside', 'gallery', 'link', 'image', 'quote', 'status', 'video', 'audio', 'chat' );
 $output = array();
 foreach ( $formats as $format ) {
-	$output[] = ( @$options[ $format ] == 1 ? $format : '' );
+	$output[] = ( @$optionsPostFormats[ $format ] == 1 ? $format : '' );
 }
-if( !empty( $options ) ) {
+if( !empty( $optionsPostFormats ) ) {
 	add_theme_support( 'post-formats', $output );
+}
+
+/**
+ * Custom Header
+ */
+$optionsCustomHeader = get_option( 'about_customHeader' );
+if( @$optionsCustomHeader == 1 ) {
+	add_theme_support( 'custom-header' );
+}
+
+/**
+ * Custom Background
+ */
+$optionsCustomBg = get_option( 'about_customBackground' );
+if( @$optionsCustomBg == 1 ) {
+	add_theme_support( 'custom-background' );
 }
