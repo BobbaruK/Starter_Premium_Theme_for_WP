@@ -4,6 +4,7 @@
  *
  */
 
+/* Cacatu ala de titlu de pe about options */
 .csseco_about_class {
     margin: 0 auto;
     outline: 1px solid #2b2280;
@@ -14,3 +15,10 @@
 .csseco_about_class p {
     font-size: 24px;
 }
+/* END Cacatu ala de titlu de pe about options */
+
+/* On about admin options page the post fortmats have lower case */
+label[class*="csseco-label-"] {
+    text-transform: capitalize;
+}
+/* END On about admin options page the post fortmats have lower case */

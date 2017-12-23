@@ -12,24 +12,32 @@ function cssecoth_about_options() {
 
 function csseco_about_logo() {
     $aboutLogo = get_option('about_logo');
+    if( empty($aboutLogo) ){
 ?>
     <input id="cssecoUpload-Logo" type="button" class="button button-secondary" value="Upload Logo" />
-    <input id="cssecoThLogo" title="" type="text" class="regular-text" name="about_logo" value="<?php echo $aboutLogo; ?>" />
+    <input id="cssecoThLogo" title="" type="text" class="regular-text" name="about_logo" value="" />
+    <input id="cssecoRemove-Logo" type="button" class="button button-secondary disabled" value="Remove Logo" />
 <?php
+    } else {
+?>
+        <input id="cssecoUpload-Logo" type="button" class="button button-secondary" value="Replace Logo" />
+        <input id="cssecoThLogo" title="" type="text" class="" name="about_logo" value="<?php echo $aboutLogo; ?>" />
+        <input id="cssecoRemove-Logo" type="button" class="button button-secondary" value="Remove Logo" />
+<?php
+    }
 }
 
 function csseco_postFormats() {
     $options = get_option( 'about_postFormat' );
-    $formats = array( 'Aside', 'Gallery', 'Link', 'Image', 'Quote', 'Satus', 'Video', 'Audio', 'Chat' );
-    foreach( $formats as $format ) {
-	    $checked = ( @$options[$format] == 1 ? 'checked' : '' );
-?>
-        <label for="<?php echo $format; ?>">
-            <input <?php echo $checked; ?> name="about_postFormat[<?php echo $format; ?>]" type="checkbox" id="<?php echo $format; ?>" class="post-format-<?php echo $format; ?>" value="1">
-            <?php echo $format; ?>
-        </label><br>
-<?php
+    $formats = array( 'aside', 'gallery', 'link', 'image', 'quote', 'status', 'video', 'audio', 'chat' );
+    $output = '';
+    foreach ( $formats as $format ) {
+        $checked = ( @$options[$format] == 1 ? 'checked' : '' );
+        $output .= '<label for="' . $format . '" class="csseco-label-' . $format . '"><input ' . $checked . ' 
+        name="about_postFormat[' . $format . ']" type="checkbox" id="' . $format . '" 
+        class="post-format-' . $format . '" value="1" />' . $format  . '</label><br>';
     }
+    echo $output;
 }
 
 function csseco_description() {
@@ -52,8 +60,8 @@ function csseco_description() {
 </div>
 
 <?php settings_errors(); ?>
-<form method="post" action="options.php">
+<form method="post" action="options.php" class="csseco_about_page_form">
 	<?php settings_fields( 'cssecoSettingsGroup-About' ); ?>
 	<?php do_settings_sections('csseco_th') ?>
-	<?php submit_button(); ?>
+	<?php submit_button('Save Changes', 'primary','btnSubmit'); ?>
 </form>

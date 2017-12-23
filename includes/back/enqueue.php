@@ -31,13 +31,16 @@ function csseco_load_admin_scripts( $hook ) {
 	wp_enqueue_media();
 	// Admin js
 	wp_register_script(
-		'csseco_admin_js',
-		get_template_directory_uri() . '/js/csseco.admin.js',
-		array('jquery'),
-		'1.0.0',
-		true
+		'csseco_admin_js',get_template_directory_uri() . '/js/csseco.admin.js',
+		array('jquery'),'1.0.0',true
+	);
+	// Admin MediaUploader Init
+	wp_register_script(
+		'csseco_admin_mediauploader_js',get_template_directory_uri() . '/js/mediauploader.js',
+		array('jquery'),'1.0.0',true
 	);
 	wp_enqueue_script('csseco_admin_js');
+	wp_enqueue_script('csseco_admin_mediauploader_js');
 
 }
 add_action('admin_enqueue_scripts', 'csseco_load_admin_scripts');

@@ -6,6 +6,7 @@
  *
  * Set up
  */
+include( get_template_directory() . '/includes/theme-support.php' );
 
 
 /**
