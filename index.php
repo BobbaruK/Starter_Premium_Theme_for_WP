@@ -41,17 +41,17 @@ echo $output;
 echo '<br>';
 echo 'custom header: ' . $cstmHeader . '<br>';
 echo 'custom bg: ' . $cstmBackgr . '<br>';
-echo 'description is: ' . $aboutDescription . '<br>';
+echo 'description is: ' . $aboutDescription . ' ->sanitize function();<br>';
 
 
 echo '<h1>Sidebar Options</h1>';
 echo 'sidebar width is: ' . $sidebarWidth . '<br>';
 echo 'sidebar location is: ' . $sidebarLocation . '<br>';
-echo 'sidebar bgcol is: ' . $sidebarBgCol . ' ->sanitize function();<br>';
+echo 'sidebar bgcol is: ' . $sidebarBgCol . '<br>';
 
 
 echo '<h1>CSS Options</h1>';
-echo 'css bgcol is: ' . $cssBgCol . ' ->sanitize_text_field();<br>';
+echo 'css bgcol is: ' . $cssBgCol . '<br>';
 echo 'css font size is: ' . $cssFontSize . '<br>';
 echo 'css main content bgcol is: ' . $cssMainBgCol . '<br>';
 

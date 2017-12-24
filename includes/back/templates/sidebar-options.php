@@ -45,7 +45,7 @@ function csseco_sidebar_location() {
 function csseco_sidebar_bgcol() {
     $sidebarBgCol = get_option('sidebar_bgcol');
 ?>
-    <input name="sidebar_bgcol" type="text" class="regular-text" placeholder="<?php echo $sidebarBgCol ?>" value="<?php echo $sidebarBgCol ?>" />
+    <input name="sidebar_bgcol" type="text" class="color-field" placeholder="<?php echo $sidebarBgCol ?>" value="<?php echo $sidebarBgCol ?>" />
 <?php
 }
 ?>

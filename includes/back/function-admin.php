@@ -90,7 +90,8 @@ function csseco_custom_settings() {
 	);
 	register_setting(
 		'cssecoSettingsGroup-About',
-		'about_description'//
+		'about_description',//
+		'csseco_about_description_sanitization'// sanitization functions in their (section) page
 	);
 	// Sidebar Options settings
 	register_setting(
@@ -103,8 +104,7 @@ function csseco_custom_settings() {
 	);
 	register_setting(
 		'cssecoSettingsGroup-sidebarOptions',
-		'sidebar_bgcol',//
-		'csseco_sidebar_bgcol_sanitization'// sanitization functions in their (section) page
+		'sidebar_bgcol'//
 	);
 	// CSS Options settings
 	register_setting(
@@ -262,7 +262,7 @@ function csseco_custom_settings() {
  *      Sanitizations and Callback functions
  * ================
  */
-function csseco_sidebar_bgcol_sanitization( $input ) {
+function csseco_about_description_sanitization( $input ) {
 	$output = sanitize_text_field( $input );
 	$output = str_replace( '@', ' at ', $output);
 	return $output;

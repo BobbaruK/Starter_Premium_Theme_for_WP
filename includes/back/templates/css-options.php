@@ -11,10 +11,9 @@ function cssecoth_css_options() {
 }
 
 function csseco_css_bg() {
-    $cssBgCol = sanitize_text_field(get_option('css_bgCol'));
+    $cssBgCol = get_option('css_bgCol');
 ?>
-    <input name="css_bgCol" type="text" class="regular-text" value="<?php echo $cssBgCol; ?>" placeholder="<?php echo $cssBgCol; ?>" />
-    <p class="description">ex: #FFFFFF or white</p>
+    <input name="css_bgCol" type="text" class="color-field" value="<?php echo $cssBgCol; ?>" placeholder="<?php echo $cssBgCol; ?>" />
 <?php
 }
 
@@ -28,7 +27,7 @@ function csseco_font_size() {
 function csseco_mainBgCol() {
 	$cssMainBgCol = get_option('css_mainBgCol');
 ?>
-    <input name="css_mainBgCol" type="text" class="regular-text" value="<?php echo $cssMainBgCol; ?>" placeholder="<?php echo $cssMainBgCol; ?>" />
+    <input name="css_mainBgCol" type="text" class="color-field" value="<?php echo $cssMainBgCol; ?>" placeholder="<?php echo $cssMainBgCol; ?>" />
 <?php
 }
 ?>

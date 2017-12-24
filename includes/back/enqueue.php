@@ -28,8 +28,20 @@ function csseco_load_admin_scripts( $hook ) {
 	);
 	wp_enqueue_style('csseco_admin_style');
 
-	// Wordpress Media Uploader
+	// Wordpress Media Uploader style
 	wp_enqueue_media();
+
+	// Wordpress ColorPicker style
+	wp_enqueue_style( 'wp-color-picker' );
+	// Wordpress ColorPicker script
+	wp_enqueue_script(
+		'custom-script-handle',
+		get_template_directory_uri() . '/js/colorpicwp-init.js',
+		array( 'wp-color-picker' ),
+		false,
+		true
+	);
+
 	// Admin js
 	wp_register_script(
 		'csseco_admin_js',
