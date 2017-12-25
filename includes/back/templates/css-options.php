@@ -13,21 +13,24 @@ function cssecoth_css_options() {
 function csseco_css_bg() {
     $cssBgCol = get_option('css_bgCol');
 ?>
-    <input name="css_bgCol" type="text" class="color-field" value="<?php echo $cssBgCol; ?>" placeholder="<?php echo $cssBgCol; ?>" />
+    <input name="css_bgCol" type="text" class="color-field" value="<?php echo $cssBgCol; ?>"
+           placeholder="<?php echo $cssBgCol; ?>" />
 <?php
 }
 
 function csseco_font_size() {
     $cssFontSize = get_option('css_fontSize');
 ?>
-    <input name="css_fontSize" type="number" class="regular-text" value="<?php echo $cssFontSize; ?>" placeholder="<?php echo $cssFontSize; ?>" />
+    <input name="css_fontSize" type="number" class="small-text" value="<?php echo $cssFontSize; ?>"
+           placeholder="<?php echo $cssFontSize; ?>" />
 <?php
 }
 
 function csseco_mainBgCol() {
 	$cssMainBgCol = get_option('css_mainBgCol');
 ?>
-    <input name="css_mainBgCol" type="text" class="color-field" value="<?php echo $cssMainBgCol; ?>" placeholder="<?php echo $cssMainBgCol; ?>" />
+    <input name="css_mainBgCol" type="text" class="color-field" value="<?php echo $cssMainBgCol; ?>"
+           placeholder="<?php echo $cssMainBgCol; ?>" />
 <?php
 }
 ?>

@@ -13,19 +13,12 @@ function cssecoth_sidebar_options() {
 function csseco_sidebar_width() {
     $sidebarWidth = get_option('sidebar_width');
 ?>
-    <select name="sidebar_width" title="" class="regular-text">
-        <option value="1" <?php selected( $sidebarWidth, 1 ); ?>>1</option>
-        <option value="2" <?php selected( $sidebarWidth, 2 ); ?>>2</option>
-        <option value="3" <?php selected( $sidebarWidth, 3 ); ?>>3</option>
-        <option value="4" <?php selected( $sidebarWidth, 4 ); ?>>4</option>
-        <option value="5" <?php selected( $sidebarWidth, 5 ); ?>>5</option>
-        <option value="6" <?php selected( $sidebarWidth, 6 ); ?>>6</option>
-        <option value="7" <?php selected( $sidebarWidth, 7 ); ?>>7</option>
-        <option value="8" <?php selected( $sidebarWidth, 8 ); ?>>8</option>
-        <option value="9" <?php selected( $sidebarWidth, 9 ); ?>>9</option>
-        <option value="10" <?php selected( $sidebarWidth, 10 ); ?>>10</option>
-        <option value="11" <?php selected( $sidebarWidth, 11 ); ?>>11</option>
-        <option value="12" <?php selected( $sidebarWidth, 12 ); ?>>12</option>
+    <select name="sidebar_width" title="" class="small-text">
+        <?php
+            for ($x = 1; $x <= 12; $x++) {
+                echo '<option value="' . $x . '" ' . selected( $sidebarWidth, $x ) . '>' . $x . '</option>';
+            }
+        ?>
     </select>
 <?php
 }
@@ -33,7 +26,7 @@ function csseco_sidebar_width() {
 function csseco_sidebar_location() {
     $sidebarLocation = get_option('sidebar_location');
 ?>
-    <select name="sidebar_location" title="" class="regular-text">
+    <select name="sidebar_location" title="" class="small-text">
         <option value="sidebarLeft" <?php selected( $sidebarLocation, 'sidebarLeft' ); ?>>Sidebar Left</option>
         <option value="sidebarRight" <?php selected( $sidebarLocation, 'sidebarRight' ); ?>>Sidebar Right</option>
         <option value="sidebarBottom" <?php selected( $sidebarLocation, 'sidebarBottom' ); ?>>Sidebar Bottom</option>
@@ -45,7 +38,8 @@ function csseco_sidebar_location() {
 function csseco_sidebar_bgcol() {
     $sidebarBgCol = get_option('sidebar_bgcol');
 ?>
-    <input name="sidebar_bgcol" type="text" class="color-field" placeholder="<?php echo $sidebarBgCol ?>" value="<?php echo $sidebarBgCol ?>" />
+    <input name="sidebar_bgcol" type="text" class="color-field" placeholder="<?php echo $sidebarBgCol ?>"
+           value="<?php echo $sidebarBgCol ?>" />
 <?php
 }
 ?>
