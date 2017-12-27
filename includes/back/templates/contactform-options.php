@@ -6,11 +6,11 @@
  *
  */
 
-function cssecoth_contactF_options() {
+function cssecoth_contactF_options_callback() {
 	echo 'Activate or Deactivate Contact Form!';
 }
 
-function contactF_checkActiv() {
+function contactF_checkActiv_callback() {
 	$options = get_option( 'contactF_activate' );
 	$checked = ( @$options == 1 ? 'checked' : '' );
 	echo '<label for="contactF_activate"><input ' . $checked . ' name="contactF_activate" type="checkbox" 

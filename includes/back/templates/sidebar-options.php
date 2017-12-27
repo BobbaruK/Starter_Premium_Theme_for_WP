@@ -6,11 +6,11 @@
  *
  */
 
-function cssecoth_sidebar_options() {
+function cssecoth_sidebar_options_callback() {
 	echo 'Sidebar Width, Location and BgColor';
 }
 
-function csseco_sidebar_width() {
+function csseco_sidebar_width_callback() {
     $sidebarWidth = get_option('sidebar_width');
 ?>
     <select name="sidebar_width" title="" class="small-text">
@@ -23,7 +23,7 @@ function csseco_sidebar_width() {
 <?php
 }
 
-function csseco_sidebar_location() {
+function csseco_sidebar_location_callback() {
     $sidebarLocation = get_option('sidebar_location');
 ?>
     <select name="sidebar_location" title="" class="small-text">
@@ -35,7 +35,7 @@ function csseco_sidebar_location() {
 <?php
 }
 
-function csseco_sidebar_bgcol() {
+function csseco_sidebar_bgcol_callback() {
     $sidebarBgCol = get_option('sidebar_bgcol');
 ?>
     <input name="sidebar_bgcol" type="text" class="color-field" placeholder="<?php echo $sidebarBgCol ?>"

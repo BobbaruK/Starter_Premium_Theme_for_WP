@@ -17,6 +17,12 @@ include( get_template_directory() . '/includes/back/enqueue.php' );
 
 
 /**
+ * Custom Post Types
+ */
+include( get_template_directory() . '/includes/custom-post-types/contact-post-type.php' );
+
+
+/**
  * Action & Filter Hooks
  */
 add_action( 'admin_menu', 'csseco_add_admin_page' ); // Add admin page(CSSeco Options)

@@ -6,11 +6,11 @@
  *
  */
 
-function cssecoth_about_options() {
+function cssecoth_about_options_callback() {
 	echo 'Write something about you!';
 }
 
-function csseco_about_logo() {
+function csseco_about_logo_callback() {
 	$aboutLogo = get_option('about_logo');
 	if( empty($aboutLogo) ){
 		?>
@@ -27,7 +27,7 @@ function csseco_about_logo() {
 	}
 }
 
-function csseco_postFormats() {
+function csseco_postFormats_callback() {
 	$options = get_option( 'about_postFormat' );
 	$formats = array( 'aside', 'gallery', 'link', 'image', 'quote', 'status', 'video', 'audio', 'chat' );
 	$output = '';
@@ -40,21 +40,21 @@ function csseco_postFormats() {
 	echo $output;
 }
 
-function csseco_customHeader() {
+function csseco_customHeader_callback() {
 	$options = get_option( 'about_customHeader' );
 	$checked = ( @$options == 1 ? 'checked' : '' );
 	echo '<label for="about_customHeader"><input ' . $checked . ' name="about_customHeader" type="checkbox" 
           id="about_customHeader" value="1" />Activate Custom Header</label>';
 }
 
-function csseco_customBackground() {
+function csseco_customBackground_callback() {
 	$options = get_option( 'about_customBackground' );
 	$checked = ( @$options == 1 ? 'checked' : '' );
 	echo '<label for="about_customBackground"><input ' . $checked . ' name="about_customBackground" type="checkbox" 
           id="about_customBackground" value="1" />Activate Custom Background</label>';
 }
 
-function csseco_description() {
+function csseco_description_callback() {
 	$description =  get_option('about_description');
 	?>
     <label for="about_description">Write here a long description... i dont care how long...
