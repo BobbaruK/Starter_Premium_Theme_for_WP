@@ -35,12 +35,16 @@ function csseco_mainBgCol_callback() {
 }
 
 function csseco_customCSS_callback() {
-    echo 'Custom CSS here...';
+    $css = get_option('css_customcss');
+    $css = ( empty($css) ? '/* CSSeco Starter Theme - Custom CSS */' : $css );
+    echo '<textarea id="css_customcss" name="css_customcss" style="display: none; visibility: hidden; opacity: 0;">' .
+         $css . '</textarea>';
+    echo '<div id="customCss">' . $css . '</div>';
 }
 ?>
 
 <?php settings_errors(); ?>
-<form method="post" action="options.php">
+<form method="post" action="options.php" id="csseco_save_css">
 	<?php settings_fields( 'cssecoSettingsGroup-CSS' ); ?>
 	<?php do_settings_sections('csseco_th_css_settings') ?>
 	<?php submit_button(); ?>

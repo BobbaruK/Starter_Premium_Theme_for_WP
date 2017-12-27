@@ -1,0 +1,9 @@
+/**
+ * @package CSSecoThemes
+ * csseco.ace.css
+ */
+#customCss {
+    min-height: 400px;
+    position: relative;
+    width: 100%;
+}

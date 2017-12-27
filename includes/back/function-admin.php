@@ -91,7 +91,7 @@ function csseco_custom_settings() {
 	register_setting(
 		'cssecoSettingsGroup-About',
 		'about_description',//
-		'csseco_about_description_sanitization'// sanitization functions in their (section) page
+		'csseco_about_description_sanitization'// sanitization functions further down
 	);
 	// Sidebar Options settings
 	register_setting(
@@ -121,7 +121,8 @@ function csseco_custom_settings() {
 	);
 	register_setting(
 		'cssecoSettingsGroup-CSS',
-		'css_customcss'//
+		'css_customcss',//
+		'csseco_customcss_sanitize'
 	);
 	// Contact Form Options settings
 	register_setting(
@@ -276,6 +277,11 @@ function csseco_custom_settings() {
 function csseco_about_description_sanitization( $input ) {
 	$output = sanitize_text_field( $input );
 	$output = str_replace( '@', ' at ', $output);
+	return $output;
+}
+
+function csseco_customcss_sanitize( $input ) {
+	$output = esc_textarea( $input );
 	return $output;
 }
 
