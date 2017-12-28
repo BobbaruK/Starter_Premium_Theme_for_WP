@@ -11,7 +11,7 @@ $output = array();
 foreach ( $formats as $format ) {
 	$output[] = ( @$optionsPostFormats[ $format ] == 1 ? $format : '' );
 }
-if( !empty( $optionsPostFormats ) ) {
+if( @$optionsPostFormats ) {
 	add_theme_support( 'post-formats', $output );
 }
 
