@@ -7,7 +7,7 @@
  */
 
 function cssecoth_contactF_options_callback() {
-	echo 'Activate or Deactivate Contact Form!';
+	_e( 'Activate or Deactivate Contact Form!', 'cssecotheme' );
 }
 
 function contactF_checkActiv_callback() {

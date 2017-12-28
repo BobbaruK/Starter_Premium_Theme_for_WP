@@ -10,8 +10,8 @@
 function csseco_add_admin_page() {
 	// Generate CSSeco Options Page
 	add_menu_page(
-		'CSSeco Theme Option',
-		'CSSeco Theme',
+		__('CSSeco Theme Option', 'cssecotheme'),
+		__('CSSeco Theme', 'cssecotheme'),
 		'manage_options',
 		'csseco_th',
 		'csseco_th_create_pg',
@@ -26,8 +26,8 @@ function csseco_add_admin_page() {
 	// Generate About subpage(first subpage(this) is the same as the above(CSSeco Theme Option))
 	add_submenu_page(
 		'csseco_th',
-		'About CSSeco Theme',
-		'About',
+		__('About CSSeco Theme', 'cssecotheme'),
+		__('About', 'cssecotheme'),
 		'manage_options',
 		'csseco_th',
 		'csseco_th_create_pg'
@@ -35,8 +35,8 @@ function csseco_add_admin_page() {
 	// Generate Sidebar Options subpage -> Options Sidebar
 	add_submenu_page(
 		'csseco_th',
-		'CSSeco Theme: Sidebar Options',
-		'Sidebar Options',
+		__('CSSeco Theme: Sidebar Options', 'cssecotheme'),
+		__('Sidebar Options', 'cssecotheme'),
 		'manage_options',
 		'csseco_th_sidebar_options',
 		'csseco_th_opts_sidebar_subpage'
@@ -44,8 +44,8 @@ function csseco_add_admin_page() {
 	// Generate CSS Options subpage -> Options CSS
 	add_submenu_page(
 		'csseco_th',
-		'CSSeco Theme: CSS Settings',
-		'CSS Options',
+		__('CSSeco Theme: CSS Settings', 'cssecotheme'),
+		__('CSS Options', 'cssecotheme'),
 		'manage_options',
 		'csseco_th_css_settings',
 		'csseco_th_opts_css_subpage'
@@ -53,8 +53,8 @@ function csseco_add_admin_page() {
 	// Generate Contact Form Options subpage -> Options Contact Form
 	add_submenu_page(
 		'csseco_th',
-		'CSSeco Theme: Contact Form',
-		'Contact Form Options',
+		__('CSSeco Theme: Contact Form', 'cssecotheme'),
+		__('Contact Form Options', 'cssecotheme'),
 		'manage_options',
 		'csseco_th_contactForm_settings',
 		'csseco_th_opts_contactf_subpage'
@@ -139,28 +139,28 @@ function csseco_custom_settings() {
 	// About Options Section
 	add_settings_section(
 		'csseco-about-options',
-		'About CSSeco Theme...',
+		__('About CSSeco Theme...', 'cssecotheme'),
 		'cssecoth_about_options_callback',
 		'csseco_th'
 	);
 	//CSS Options Section
 	add_settings_section(
 		'csseco-css-options',
-		'CSS Options',
+		__('CSS Options', 'cssecotheme'),
 		'cssecoth_css_options_callback',
 		'csseco_th_css_settings'
 	);
 	//Sidebar Options Section
 	add_settings_section(
 		'csseco-sidebar-options',
-		'Sidebar Options',
+		__('Sidebar Options', 'cssecotheme'),
 		'cssecoth_sidebar_options_callback',
 		'csseco_th_sidebar_options'
 	);
 	//ContactF Options Section
 	add_settings_section(
 		'csseco-contactf-options',
-		'Contact Form Activation',
+		__('Contact Form Activation', 'cssecotheme'),
 		'cssecoth_contactF_options_callback',
 		'csseco_th_contactForm_settings'
 	);
@@ -173,35 +173,35 @@ function csseco_custom_settings() {
 	// Fields for about options
 	add_settings_field(
 		'about-logo',
-		'Logo',
+		__('Logo', 'cssecotheme'),
 		'csseco_about_logo_callback',// all callbacks in settings fields are in their files
 		'csseco_th',
 		'csseco-about-options'
 	);
 	add_settings_field(
 		'about-post-format',
-		'Post Formats',
+		__('Post Formats', 'cssecotheme'),
 		'csseco_postFormats_callback',// all callbacks in settings fields are in their files
 		'csseco_th',
 		'csseco-about-options'
 	);
 	add_settings_field(
 		'about-custom-header',
-		'Custom Header',
+		__('Custom Header', 'cssecotheme'),
 		'csseco_customHeader_callback',// all callbacks in settings fields are in their files
 		'csseco_th',
 		'csseco-about-options'
 	);
 	add_settings_field(
 		'about-custom-background',
-		'Custom background',
+		__('Custom background', 'cssecotheme'),
 		'csseco_customBackground_callback',// all callbacks in settings fields are in their files
 		'csseco_th',
 		'csseco-about-options'
 	);
 	add_settings_field(
 		'about-description',
-		'Long description',
+		__('Long description', 'cssecotheme'),
 		'csseco_description_callback',// all callbacks in settings fields are in their files
 		'csseco_th',
 		'csseco-about-options'
@@ -209,21 +209,21 @@ function csseco_custom_settings() {
 	// Fields for sidebar options
 	add_settings_field(
 		'sidebar-width',
-		'Sidebar Width',
+		__('Sidebar Width', 'cssecotheme'),
 		'csseco_sidebar_width_callback',// all callbacks in settings fields are in their files
 		'csseco_th_sidebar_options',
 		'csseco-sidebar-options'
 	);
 	add_settings_field(
 		'sidebar-location',
-		'Sidebar Location',
+		__('Sidebar Location', 'cssecotheme'),
 		'csseco_sidebar_location_callback',// all callbacks in settings fields are in their files
 		'csseco_th_sidebar_options',
 		'csseco-sidebar-options'
 	);
 	add_settings_field(
 		'sidebar-bgcol',
-		'Sidebar BgCol',
+		__('Sidebar BgCol', 'cssecotheme'),
 		'csseco_sidebar_bgcol_callback', // all callbacks in settings fields are in their files
 		'csseco_th_sidebar_options',
 		'csseco-sidebar-options'
@@ -231,28 +231,28 @@ function csseco_custom_settings() {
 	// Fields for css options
 	add_settings_field(
 		'css-bgcol',
-		'Background Color',
+		__('Background Color', 'cssecotheme'),
 		'csseco_css_bg_callback',// all callbacks in settings fields are in their files
 		'csseco_th_css_settings',
 		'csseco-css-options'
 	);
 	add_settings_field(
 		'css-fontSize',
-		'Font Size',
+		__('Font Size', 'cssecotheme'),
 		'csseco_font_size_callback',// all callbacks in settings fields are in their files
 		'csseco_th_css_settings',
 		'csseco-css-options'
 	);
 	add_settings_field(
 		'css-mainBgCol',
-		'Main Content BgColor',
+		__('Main Content BgColor', 'cssecotheme'),
 		'csseco_mainBgCol_callback',// all callbacks in settings fields are in their files
 		'csseco_th_css_settings',
 		'csseco-css-options'
 	);
 	add_settings_field(
 		'css-customcss',
-		'Custom CSS',
+		__('Custom CSS', 'cssecotheme'),
 		'csseco_customCSS_callback',// all callbacks in settings fields are in their files
 		'csseco_th_css_settings',
 		'csseco-css-options'
@@ -260,7 +260,7 @@ function csseco_custom_settings() {
 	// Fields for contact form options
 	add_settings_field(
 		'contactF-activate',
-		'Activate Contact Form',
+		__('Activate Contact Form', 'cssecotheme'),
 		'contactF_checkActiv_callback',// all callbacks in settings fields are in their files
 		'csseco_th_contactForm_settings',
 		'csseco-contactf-options'

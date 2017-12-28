@@ -7,7 +7,7 @@
  */
 
 function cssecoth_sidebar_options_callback() {
-	echo 'Sidebar Width, Location and BgColor';
+	_e( 'Sidebar Width, Location and BgColor', 'cssecotheme' );
 }
 
 function csseco_sidebar_width_callback() {
@@ -27,10 +27,18 @@ function csseco_sidebar_location_callback() {
     $sidebarLocation = get_option('sidebar_location');
 ?>
     <select name="sidebar_location" title="" class="small-text">
-        <option value="sidebarLeft" <?php selected( $sidebarLocation, 'sidebarLeft' ); ?>>Sidebar Left</option>
-        <option value="sidebarRight" <?php selected( $sidebarLocation, 'sidebarRight' ); ?>>Sidebar Right</option>
-        <option value="sidebarBottom" <?php selected( $sidebarLocation, 'sidebarBottom' ); ?>>Sidebar Bottom</option>
-        <option value="sidebarNone" <?php selected( $sidebarLocation, 'sidebarNone' ); ?>>Sidebar None</option>
+        <option value="sidebarLeft" <?php selected( $sidebarLocation, 'sidebarLeft' ); ?>>
+            <?php _e( 'Sidebar Left', 'cssecotheme' ); ?>
+        </option>
+        <option value="sidebarRight" <?php selected( $sidebarLocation, 'sidebarRight' ); ?>>
+	        <?php _e( 'Sidebar Right', 'cssecotheme' ); ?>
+        </option>
+        <option value="sidebarBottom" <?php selected( $sidebarLocation, 'sidebarBottom' ); ?>>
+	        <?php _e( 'Sidebar Bottom', 'cssecotheme' ); ?>
+        </option>
+        <option value="sidebarNone" <?php selected( $sidebarLocation, 'sidebarNone' ); ?>>
+	        <?php _e( 'Sidebar None', 'cssecotheme' ); ?>
+        </option>
     </select>
 <?php
 }

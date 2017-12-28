@@ -2,6 +2,9 @@
 /**
  * @package CSSecoThemes
  * navigation-menus.php
+ *
+ *
+ * Activate Nav Menu Options
  */
 
 function csseco_reg_menus() {

@@ -19,10 +19,10 @@ if( @$contactF == 1 ) {
 function csseco_contact_post_type() {
 
 	$labels = array(
-		'name'              =>      'Messages',
-		'singular_name'     =>      'Message',
-		'menu_name'         =>      'Messages',
-		'name_admin_bar'    =>      'Message'
+		'name'              =>      __('Messages', 'cssecotheme'),
+		'singular_name'     =>      __('Message', 'cssecotheme'),
+		'menu_name'         =>      __('Messages', 'cssecotheme'),
+		'name_admin_bar'    =>      __('Message', 'cssecotheme')
 	);
 	$args = array(
 		'labels'            =>      $labels,
@@ -47,10 +47,10 @@ function csseco_set_cssecocontact_columns( $columns ) {
 //	return $columns;
 
 	$cssecoContactFormCPT = array();
-	$cssecoContactFormCPT['title']      =      'Full Name';
-	$cssecoContactFormCPT['message']    =      'Message';
-	$cssecoContactFormCPT['email']      =      'Email';
-	$cssecoContactFormCPT['date']       =      'Date';
+	$cssecoContactFormCPT['title']      =      __('Full Name', 'cssecotheme');
+	$cssecoContactFormCPT['message']    =      __('Message', 'cssecotheme');
+	$cssecoContactFormCPT['email']      =      __('Email', 'cssecotheme');
+	$cssecoContactFormCPT['date']       =      __('Date', 'cssecotheme');
 	return $cssecoContactFormCPT;
 
 }
@@ -73,7 +73,7 @@ function csseco_contact_custom_column( $column, $post_id ) {
 function csseco_contact_add_meta_box() {
 	add_meta_box(
 		'contact_email',
-		'User Email',
+		__('User Email', 'cssecotheme'),
 		'csseco_contact_email_callback',
 		'cssecocontact',
 		'side'
@@ -86,7 +86,7 @@ function csseco_contact_email_callback( $post ) {
 
 	$value = get_post_meta( $post->ID, '_contact_email_value_key', true );
 
-	echo '<label for="csseco_contact_email_field">User Email Adress: </label>';
+	echo '<label for="csseco_contact_email_field">' . _e('User Email Adress:', 'cssecotheme') . '</label>';
 	echo '<input type="email" id="csseco_contact_email_field" name="csseco_contact_email_field" 
 				 value="' . esc_attr( $value ) . '" size="25" />';
 }

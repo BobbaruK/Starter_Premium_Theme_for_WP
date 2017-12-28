@@ -7,7 +7,7 @@
  */
 
 function cssecoth_css_options_callback() {
-    echo 'Here you can modify the CSS options';
+    _e( 'Here you can modify the CSS options', 'cssecotheme' );
 }
 
 function csseco_css_bg_callback() {
