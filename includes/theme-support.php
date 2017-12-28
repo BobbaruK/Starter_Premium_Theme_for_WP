@@ -30,3 +30,7 @@ $optionsCustomBg = get_option( 'about_customBackground' );
 if( @$optionsCustomBg == 1 ) {
 	add_theme_support( 'custom-background' );
 }
+
+/**
+ * Activate Nav Menu Options
+ */

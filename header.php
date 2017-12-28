@@ -29,7 +29,21 @@
     </head>
     <body <?php body_class(); ?>>
         <header id="cssecoHeader" class="site-header">
-            <p>Header</p>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <p>Header</p>
+	                    <?php
+                            wp_nav_menu(array(
+                                'theme_location'        =>      'primary',
+                                'container'             =>      'nav',
+                                'container_class'       =>      'header_menu',
+                                'container_id'          =>      'cssecoMenu' //
+                            ));
+	                    ?>
+                    </div><!-- /.col-xs-12 -->
+                </div><!-- /.row -->
+            </div><!-- /.container -->
         </header>
         <hr>
         <div id="cssecoContent" class="site-content">
