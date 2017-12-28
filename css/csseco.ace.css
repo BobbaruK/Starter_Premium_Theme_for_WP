@@ -3,6 +3,7 @@
  * csseco.ace.css
  */
 #customCss {
+    max-width: 600px;
     min-height: 400px;
     position: relative;
     width: 100%;

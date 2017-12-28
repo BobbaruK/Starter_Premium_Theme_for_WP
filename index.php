@@ -60,4 +60,5 @@ echo '<h1>Contact Form Options</h1>';
 echo 'contact form is: ' . $contactFf . '<br>';
 
 ?>
+
 <?php get_footer();

@@ -1,7 +1,7 @@
 <?php
 /**
  * @package CSSecoThemes
- * back/function-admin.php
+ * back/functions-admin.php
  * ================
  *      ADMIN PAGE
  * ================

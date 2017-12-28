@@ -5,10 +5,11 @@
  *
  */
 ?>
-	</div>
-    <hr>
-	<footer id="cssecoFooter">
-		<p>Footer</p>
-	</footer>
-<?php
-wp_footer();
+        </div> <!-- END #cssecoContent & .site-content-->
+        <hr>
+        <footer id="cssecoFooter" class="site-footer">
+            <p>Footer</p>
+        </footer>
+    <?php wp_footer(); ?>
+    </body>
+</html>
