@@ -16,7 +16,7 @@
                                 'theme_location'        =>      'footer',
                                 'container'             =>      'nav',
                                 'container_class'       =>      'footer_menu',
-                                'container_id'          =>      'footerMenu' //
+                                'container_id'          =>      'cssecoMenu' //
                             ));
 	                    ?>
                         <p>Footer</p>

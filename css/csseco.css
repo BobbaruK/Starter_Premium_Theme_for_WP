@@ -2,5 +2,277 @@
  * @package CSSecoThemes
  * csseco.css
  */
-/* CSSeco Theme Fonts */
+/*--------------------------------------------------------------
+>>>>>> CSSeco Styles(usualy overwrite bootsrap styles :))
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+    # CSSeco Fonts
+    # CSSeco Variables
+    # CSSeco Mixins
+    # Header
+    # Menu styles (wp ready)
+    # Footer
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# CSSeco Fonts
+--------------------------------------------------------------*/
 @import url(fonts/fonts.css);
+/*--------------------------------------------------------------
+# CSSeco Variables
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# CSSeco Mixins
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+/* line 61, ../scss/csseco.scss */
+#cssecoHeader nav.header_menu {
+  /* Header Menu */
+}
+
+/*------------------------------------------------------------
+# Menu styles (wp ready)
+------------------------------------------------------------*/
+/* line 68, ../scss/csseco.scss */
+nav#cssecoMenu {
+  background: #FFF;
+}
+/* line 70, ../scss/csseco.scss */
+nav#cssecoMenu i.csseco_menu_burger {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  /* line 70, ../scss/csseco.scss */
+  nav#cssecoMenu i.csseco_menu_burger {
+    display: inline-block;
+    font-size: 22px;
+    padding: 10px;
+  }
+}
+/* line 78, ../scss/csseco.scss */
+nav#cssecoMenu > ul.menu {
+  background: transparent;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  z-index: 20;
+}
+/* line 85, ../scss/csseco.scss */
+nav#cssecoMenu > ul.menu li {
+  position: relative;
+  width: auto;
+}
+/* line 88, ../scss/csseco.scss */
+nav#cssecoMenu > ul.menu li a {
+  display: block;
+  margin: 5px 20px;
+  padding: 0 15px;
+  text-align: center;
+  text-decoration: none;
+}
+@media screen and (max-width: 768px) {
+  /* line 88, ../scss/csseco.scss */
+  nav#cssecoMenu > ul.menu li a {
+    display: block;
+  }
+}
+/* line 98, ../scss/csseco.scss */
+nav#cssecoMenu > ul.menu li ul {
+  min-width: 100%;
+  z-index: 30;
+}
+/* line 102, ../scss/csseco.scss */
+nav#cssecoMenu > ul.menu li > ul {
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+@media screen and (max-width: 768px) {
+  /* line 102, ../scss/csseco.scss */
+  nav#cssecoMenu > ul.menu li > ul {
+    position: relative;
+    min-width: auto;
+    width: 100%;
+  }
+}
+/* line 116, ../scss/csseco.scss */
+nav#cssecoMenu > ul.menu li.opened > a, nav#cssecoMenu > ul.menu li:hover > a {
+  font-weight: bold;
+}
+/* line 120, ../scss/csseco.scss */
+nav#cssecoMenu > ul.menu li.opened > ul {
+  display: block;
+}
+/* line 123, ../scss/csseco.scss */
+nav#cssecoMenu > ul.menu li.opened {
+  background: rgba(0, 0, 0, 0.3);
+}
+/* line 128, ../scss/csseco.scss */
+nav#cssecoMenu > ul.menu li.menu-item-has-children > a::after {
+  background: transparent;
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  height: 15px;
+  position: absolute;
+  right: 2px;
+  text-align: center;
+  text-indent: initial;
+  text-rendering: auto;
+  top: 7px;
+  width: 15px;
+  z-index: 30;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+@media screen and (max-width: 768px) {
+  /* line 128, ../scss/csseco.scss */
+  nav#cssecoMenu > ul.menu li.menu-item-has-children > a::after {
+    right: 5px;
+  }
+}
+@media screen and (max-width: 768px) {
+  /* line 85, ../scss/csseco.scss */
+  nav#cssecoMenu > ul.menu li {
+    width: 100%;
+  }
+}
+/* line 154, ../scss/csseco.scss */
+nav#cssecoMenu > ul.menu > li {
+  display: inline-block;
+}
+/* line 156, ../scss/csseco.scss */
+nav#cssecoMenu > ul.menu > li > ul {
+  /* depth 1 */
+  background: #FFF;
+  left: 0;
+  text-align: left;
+  top: 100%;
+  width: auto;
+}
+/* line 162, ../scss/csseco.scss */
+nav#cssecoMenu > ul.menu > li > ul li {
+  display: inline-block;
+}
+@media screen and (max-width: 768px) {
+  /* line 166, ../scss/csseco.scss */
+  nav#cssecoMenu > ul.menu > li > ul > li > a {
+    text-indent: 20px;
+  }
+}
+/* line 171, ../scss/csseco.scss */
+nav#cssecoMenu > ul.menu > li > ul > li ul {
+  /* depth >=2 */
+  background: #FFF;
+  left: 100%;
+  position: absolute;
+  text-align: left;
+  top: 0;
+  width: auto;
+}
+@media screen and (max-width: 1200px) {
+  /* line 171, ../scss/csseco.scss */
+  nav#cssecoMenu > ul.menu > li > ul > li ul {
+    left: 0;
+    position: relative;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  /* line 171, ../scss/csseco.scss */
+  nav#cssecoMenu > ul.menu > li > ul > li ul {
+    border-color: #000;
+    border-style: solid;
+    border-width: 1px 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  /* line 188, ../scss/csseco.scss */
+  nav#cssecoMenu > ul.menu > li > ul > li ul > li > a {
+    text-indent: 40px;
+  }
+}
+@media screen and (max-width: 768px) {
+  /* line 171, ../scss/csseco.scss */
+  nav#cssecoMenu > ul.menu > li > ul > li ul {
+    left: 0;
+  }
+}
+/* line 200, ../scss/csseco.scss */
+nav#cssecoMenu > ul.menu > li > ul > li.menu-item-has-children > a::after {
+  content: '\f054';
+}
+@media screen and (max-width: 1200px) {
+  /* line 200, ../scss/csseco.scss */
+  nav#cssecoMenu > ul.menu > li > ul > li.menu-item-has-children > a::after {
+    content: '\f078';
+  }
+}
+/* line 209, ../scss/csseco.scss */
+nav#cssecoMenu > ul.menu > li > ul > li.menu-item-has-children.opened > a::after {
+  content: '\f053';
+}
+@media screen and (max-width: 1200px) {
+  /* line 209, ../scss/csseco.scss */
+  nav#cssecoMenu > ul.menu > li > ul > li.menu-item-has-children.opened > a::after {
+    content: '\f077';
+  }
+}
+@media screen and (max-width: 768px) {
+  /* line 165, ../scss/csseco.scss */
+  nav#cssecoMenu > ul.menu > li > ul > li {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+/* line 226, ../scss/csseco.scss */
+nav#cssecoMenu > ul.menu > li.menu-item-has-children > a::after {
+  content: '\f078';
+}
+/* line 232, ../scss/csseco.scss */
+nav#cssecoMenu > ul.menu > li.menu-item-has-children.opened > a::after {
+  content: '\f077';
+}
+@media screen and (max-width: 768px) {
+  /* line 238, ../scss/csseco.scss */
+  nav#cssecoMenu > ul.menu > li.opened {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+/* line 245, ../scss/csseco.scss */
+nav#cssecoMenu > ul.menu li.current-menu-item,
+nav#cssecoMenu > ul.menu li.current_page_item,
+nav#cssecoMenu > ul.menu li.current-page-ancestor,
+nav#cssecoMenu > ul.menu li.current-menu-ancestor {
+  /* active */
+  background: rgba(0, 0, 0, 0.3);
+}
+/* line 250, ../scss/csseco.scss */
+nav#cssecoMenu > ul.menu li.current-menu-item > a,
+nav#cssecoMenu > ul.menu li.current_page_item > a,
+nav#cssecoMenu > ul.menu li.current-page-ancestor > a,
+nav#cssecoMenu > ul.menu li.current-menu-ancestor > a {
+  font-weight: bold;
+}
+@media screen and (max-width: 768px) {
+  /* line 78, ../scss/csseco.scss */
+  nav#cssecoMenu > ul.menu {
+    display: none;
+  }
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+/* line 266, ../scss/csseco.scss */
+#cssecoFooter nav.footer_menu ul.menu {
+  display: block;
+}
+
+/*# sourceMappingURL=csseco.css.map */

@@ -33,17 +33,19 @@
                 <div class="row">
                     <div class="col-xs-12">
                         <p>Header</p>
-	                    <?php
+                        <?php
                             wp_nav_menu(array(
                                 'theme_location'        =>      'primary',
                                 'container'             =>      'nav',
                                 'container_class'       =>      'header_menu',
                                 'container_id'          =>      'cssecoMenu' //
                             ));
-	                    ?>
+                        ?>
                     </div><!-- /.col-xs-12 -->
                 </div><!-- /.row -->
             </div><!-- /.container -->
         </header>
+        <hr>
+        <hr>
         <hr>
         <div id="cssecoContent" class="site-content">

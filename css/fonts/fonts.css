@@ -1,6 +1,9 @@
 /* Merriweather */
 @import url('merriweather/css/merriweather.css');
 
+/* FontAwesome */
+@import url('fontawesome/css/font-awesome.min.css');
+
 /* Playfair_Display */
 @import url('playfair_display/css/playfair_display.css');
 

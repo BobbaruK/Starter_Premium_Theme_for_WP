@@ -2,5 +2,270 @@
  * @package CSSecoThemes
  * csseco.css
  */
-/* CSSeco Theme Fonts */
+/*--------------------------------------------------------------
+>>>>>> CSSeco Styles(usualy overwrite bootsrap styles :))
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+    # CSSeco Fonts
+    # CSSeco Variables
+    # CSSeco Mixins
+    # Header
+    # Menu styles (wp ready)
+    # Footer
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# CSSeco Fonts
+--------------------------------------------------------------*/
 @import 'fonts/fonts.css';
+
+/*--------------------------------------------------------------
+# CSSeco Variables
+--------------------------------------------------------------*/
+// Screen Sizes
+$csseco_screen-xs:                    480px !default;  // Extra small screen / phone
+$csseco_screen-sm:                    768px !default;  // Small screen / tablet
+$csseco_screen-md:                    992px !default;  // Medium screen / desktop
+$csseco_screen-lg:                    1200px !default; // Large screen / wide desktop
+// Others
+$csseco_menu_bg_color:                #FFF;
+$csseco_menu_bg_color_depth_1:        #FFF;
+$csseco_menu_bg_color_depth_2:        #FFF;
+$csseco_menu_bg_color_hover-active:   rgba(0, 0, 0, .3);
+
+/*--------------------------------------------------------------
+# CSSeco Mixins
+--------------------------------------------------------------*/
+@mixin animate( $attr, $time ) {
+  -webkit-transition: $attr $time ease;
+  -moz-transition: $attr $time ease;
+  -ms-transition: $attr $time ease;
+  -o-transition: $attr $time ease;
+  transition: $attr $time ease;
+  // @include animate( opacity, 320ms );
+}
+@mixin transl( $val ) {
+  -webkit-transform: $val;
+  -moz-transform: $val;
+  -ms-transform: $val;
+  -o-transform: $val;
+  transform: $val;
+  // @include transl( translateY(10px) );
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#cssecoHeader {
+
+  nav.header_menu {/* Header Menu */}
+
+}
+
+/*------------------------------------------------------------
+# Menu styles (wp ready)
+------------------------------------------------------------*/
+nav#cssecoMenu {
+  background: $csseco_menu_bg_color;
+  i.csseco_menu_burger {
+    display: none;
+    @media screen and (max-width: $csseco_screen-sm) {
+      display: inline-block;
+      font-size: 22px;
+      padding: 10px;
+    }
+  }
+  > ul.menu {
+    background: transparent;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    z-index: 20;
+    li {
+      position: relative;
+      width: auto;
+      a {
+        display: block;
+        margin: 5px 20px;
+        padding: 0 15px;
+        text-align: center;
+        text-decoration: none;
+        @media screen and (max-width: $csseco_screen-sm) {
+          display: block;
+        }
+      }
+      ul {
+        min-width: 100%;
+        z-index: 30;
+      }
+      > ul {
+        display: none;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        top: 0;
+        right: 0;
+        @media screen and (max-width: $csseco_screen-sm) {
+          position: relative;
+          min-width: auto;
+          width: 100%;
+        }
+      }
+      &.opened > a,
+      &:hover > a {
+        font-weight: bold;
+      }
+      &.opened > ul {
+        display: block;
+      }
+      &.opened {
+        background: $csseco_menu_bg_color_hover-active;
+      }
+      &.menu-item-has-children {
+        > a {
+          &::after {
+            background: transparent;
+            display: inline-block;
+            font: normal normal normal 14px/1 FontAwesome;
+            font-size: inherit;
+            height: 15px;
+            position: absolute;
+            right: 2px;
+            text-align: center;
+            text-indent: initial;
+            text-rendering: auto;
+            top: 7px;
+            width: 15px;
+            z-index: 30;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            @media screen and (max-width: $csseco_screen-sm) {
+              right: 5px;
+            }
+          }
+        }
+      }
+      @media screen and (max-width: $csseco_screen-sm) {
+        width: 100%;
+      }
+    }
+    > li {
+      display: inline-block;
+      > ul {/* depth 1 */
+        background: $csseco_menu_bg_color_depth_1;
+        left: 0;
+        text-align: left;
+        top: 100%;
+        width: auto;
+        li {
+          display: inline-block;
+        }
+        > li {
+          > a {
+            @media screen and (max-width: $csseco_screen-sm) {
+              text-indent: 20px;
+            }
+          }
+          ul {/* depth >=2 */
+            background: $csseco_menu_bg_color_depth_2;
+            left: 100%;
+            position: absolute;
+            text-align: left;
+            top: 0;
+            width: auto;
+            @media screen and (max-width: $csseco_screen-lg) {
+              left: 0;
+              position: relative;
+            }
+            @media screen and (min-width: $csseco_screen-sm) and (max-width: $csseco_screen-lg) {
+              border-color: #000;
+              border-style: solid;
+              border-width: 1px 0;
+            }
+            > li {
+              > a {
+                @media screen and (max-width: $csseco_screen-sm) {
+                  text-indent: 40px;
+                }
+              }
+            }
+            @media screen and (max-width: $csseco_screen-sm) {
+              left: 0;
+            }
+          }
+          &.menu-item-has-children {
+            > a {
+              &::after {
+                content: '\f054';
+                @media screen and (max-width: $csseco_screen-lg) {
+                  content: '\f078';
+                }
+              }
+            }
+            &.opened {
+              > a {
+                &::after {
+                  content: '\f053';
+                  @media screen and (max-width: $csseco_screen-lg) {
+                    content: '\f077';
+                  }
+                }
+              }
+            }
+          }
+          @media screen and (max-width: $csseco_screen-sm) {
+            padding-left: 0;
+            padding-right: 0;
+          }
+        }
+      }
+      &.menu-item-has-children {
+        > a {
+          &::after {
+            content: '\f078';
+          }
+        }
+        &.opened {
+          > a {
+            &::after {
+              content: '\f077';
+            }
+          }
+        }
+      }
+      &.opened {
+        @media screen and (max-width: $csseco_screen-sm) {
+          padding-left: 0;
+          padding-right: 0;
+        }
+      }
+    }
+    li.current-menu-item,
+    li.current_page_item,
+    li.current-page-ancestor,
+    li.current-menu-ancestor {/* active */
+      background: $csseco_menu_bg_color_hover-active;
+      > a {
+        font-weight: bold;
+      }
+    }
+    @media screen and (max-width: $csseco_screen-sm) {
+      display: none;
+    }
+  }
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+#cssecoFooter {
+
+  nav.footer_menu {
+    ul.menu {
+      display: block;
+    }
+  }
+
+}
