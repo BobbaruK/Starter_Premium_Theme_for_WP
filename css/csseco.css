@@ -6,27 +6,19 @@
 >>>>>> CSSeco Styles(usualy overwrite bootsrap styles :))
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
-    # CSSeco Fonts
-    # CSSeco Variables
-    # CSSeco Mixins
+    # CSSeco Imports
     # Header
     # Menu styles (wp ready)
     # Footer
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
-# CSSeco Fonts
+# CSSeco Imports
 --------------------------------------------------------------*/
 @import url(fonts/fonts.css);
-/*--------------------------------------------------------------
-# CSSeco Variables
---------------------------------------------------------------*/
 /**
  * @package CSSecoThemes
  * base/_variables.scss
  */
-/*--------------------------------------------------------------
-# CSSeco Mixins
---------------------------------------------------------------*/
 /**
  * @package CSSecoThemes
  * base/_mixins.scss
@@ -34,7 +26,7 @@
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
-/* line 38, ../scss/csseco.scss */
+/* line 28, ../scss/csseco.scss */
 #cssecoHeader nav.header_menu {
   /* Header Menu */
 }
@@ -42,11 +34,11 @@
 /*------------------------------------------------------------
 # Menu styles (wp ready)
 ------------------------------------------------------------*/
-/* line 45, ../scss/csseco.scss */
+/* line 35, ../scss/csseco.scss */
 nav#cssecoMenu {
   background: #FFF;
 }
-/* line 47, ../scss/csseco.scss */
+/* line 37, ../scss/csseco.scss */
 nav#cssecoMenu i.csseco_menu_burger {
   cursor: pointer;
   display: none;
@@ -54,12 +46,12 @@ nav#cssecoMenu i.csseco_menu_burger {
   padding: 10px;
 }
 @media screen and (max-width: 768px) {
-  /* line 47, ../scss/csseco.scss */
+  /* line 37, ../scss/csseco.scss */
   nav#cssecoMenu i.csseco_menu_burger {
     display: inline-block;
   }
 }
-/* line 56, ../scss/csseco.scss */
+/* line 46, ../scss/csseco.scss */
 nav#cssecoMenu > ul.menu {
   background: transparent;
   list-style: none;
@@ -68,12 +60,12 @@ nav#cssecoMenu > ul.menu {
   position: relative;
   z-index: 20;
 }
-/* line 63, ../scss/csseco.scss */
+/* line 53, ../scss/csseco.scss */
 nav#cssecoMenu > ul.menu li {
   position: relative;
   width: auto;
 }
-/* line 66, ../scss/csseco.scss */
+/* line 56, ../scss/csseco.scss */
 nav#cssecoMenu > ul.menu li a {
   display: block;
   margin: 5px 20px;
@@ -82,17 +74,17 @@ nav#cssecoMenu > ul.menu li a {
   text-decoration: none;
 }
 @media screen and (max-width: 768px) {
-  /* line 66, ../scss/csseco.scss */
+  /* line 56, ../scss/csseco.scss */
   nav#cssecoMenu > ul.menu li a {
     display: block;
   }
 }
-/* line 76, ../scss/csseco.scss */
+/* line 66, ../scss/csseco.scss */
 nav#cssecoMenu > ul.menu li ul {
   min-width: 100%;
   z-index: 30;
 }
-/* line 80, ../scss/csseco.scss */
+/* line 70, ../scss/csseco.scss */
 nav#cssecoMenu > ul.menu li > ul {
   display: none;
   list-style: none;
@@ -103,26 +95,26 @@ nav#cssecoMenu > ul.menu li > ul {
   right: 0;
 }
 @media screen and (max-width: 768px) {
-  /* line 80, ../scss/csseco.scss */
+  /* line 70, ../scss/csseco.scss */
   nav#cssecoMenu > ul.menu li > ul {
     position: relative;
     min-width: auto;
     width: 100%;
   }
 }
-/* line 94, ../scss/csseco.scss */
+/* line 84, ../scss/csseco.scss */
 nav#cssecoMenu > ul.menu li.opened > a, nav#cssecoMenu > ul.menu li:hover > a {
   font-weight: bold;
 }
-/* line 98, ../scss/csseco.scss */
+/* line 88, ../scss/csseco.scss */
 nav#cssecoMenu > ul.menu li.opened > ul {
   display: block;
 }
-/* line 101, ../scss/csseco.scss */
+/* line 91, ../scss/csseco.scss */
 nav#cssecoMenu > ul.menu li.opened {
   background: rgba(0, 0, 0, 0.3);
 }
-/* line 106, ../scss/csseco.scss */
+/* line 96, ../scss/csseco.scss */
 nav#cssecoMenu > ul.menu li.menu-item-has-children > a::after {
   background: transparent;
   display: inline-block;
@@ -141,22 +133,22 @@ nav#cssecoMenu > ul.menu li.menu-item-has-children > a::after {
   -moz-osx-font-smoothing: grayscale;
 }
 @media screen and (max-width: 768px) {
-  /* line 106, ../scss/csseco.scss */
+  /* line 96, ../scss/csseco.scss */
   nav#cssecoMenu > ul.menu li.menu-item-has-children > a::after {
     right: 5px;
   }
 }
 @media screen and (max-width: 768px) {
-  /* line 63, ../scss/csseco.scss */
+  /* line 53, ../scss/csseco.scss */
   nav#cssecoMenu > ul.menu li {
     width: 100%;
   }
 }
-/* line 132, ../scss/csseco.scss */
+/* line 122, ../scss/csseco.scss */
 nav#cssecoMenu > ul.menu > li {
   display: inline-block;
 }
-/* line 134, ../scss/csseco.scss */
+/* line 124, ../scss/csseco.scss */
 nav#cssecoMenu > ul.menu > li > ul {
   /* depth 1 */
   background: #FFF;
@@ -165,17 +157,17 @@ nav#cssecoMenu > ul.menu > li > ul {
   top: 100%;
   width: auto;
 }
-/* line 140, ../scss/csseco.scss */
+/* line 130, ../scss/csseco.scss */
 nav#cssecoMenu > ul.menu > li > ul li {
   display: inline-block;
 }
 @media screen and (max-width: 768px) {
-  /* line 144, ../scss/csseco.scss */
+  /* line 134, ../scss/csseco.scss */
   nav#cssecoMenu > ul.menu > li > ul > li > a {
     text-indent: 20px;
   }
 }
-/* line 149, ../scss/csseco.scss */
+/* line 139, ../scss/csseco.scss */
 nav#cssecoMenu > ul.menu > li > ul > li ul {
   /* depth >=2 */
   background: #FFF;
@@ -186,14 +178,14 @@ nav#cssecoMenu > ul.menu > li > ul > li ul {
   width: auto;
 }
 @media screen and (max-width: 1200px) {
-  /* line 149, ../scss/csseco.scss */
+  /* line 139, ../scss/csseco.scss */
   nav#cssecoMenu > ul.menu > li > ul > li ul {
     left: 0;
     position: relative;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1200px) {
-  /* line 149, ../scss/csseco.scss */
+  /* line 139, ../scss/csseco.scss */
   nav#cssecoMenu > ul.menu > li > ul > li ul {
     border-color: #000;
     border-style: solid;
@@ -201,60 +193,60 @@ nav#cssecoMenu > ul.menu > li > ul > li ul {
   }
 }
 @media screen and (max-width: 768px) {
-  /* line 166, ../scss/csseco.scss */
+  /* line 156, ../scss/csseco.scss */
   nav#cssecoMenu > ul.menu > li > ul > li ul > li > a {
     text-indent: 40px;
   }
 }
 @media screen and (max-width: 768px) {
-  /* line 149, ../scss/csseco.scss */
+  /* line 139, ../scss/csseco.scss */
   nav#cssecoMenu > ul.menu > li > ul > li ul {
     left: 0;
   }
 }
-/* line 178, ../scss/csseco.scss */
+/* line 168, ../scss/csseco.scss */
 nav#cssecoMenu > ul.menu > li > ul > li.menu-item-has-children > a::after {
   content: '\f054';
 }
 @media screen and (max-width: 1200px) {
-  /* line 178, ../scss/csseco.scss */
+  /* line 168, ../scss/csseco.scss */
   nav#cssecoMenu > ul.menu > li > ul > li.menu-item-has-children > a::after {
     content: '\f078';
   }
 }
-/* line 187, ../scss/csseco.scss */
+/* line 177, ../scss/csseco.scss */
 nav#cssecoMenu > ul.menu > li > ul > li.menu-item-has-children.opened > a::after {
   content: '\f053';
 }
 @media screen and (max-width: 1200px) {
-  /* line 187, ../scss/csseco.scss */
+  /* line 177, ../scss/csseco.scss */
   nav#cssecoMenu > ul.menu > li > ul > li.menu-item-has-children.opened > a::after {
     content: '\f077';
   }
 }
 @media screen and (max-width: 768px) {
-  /* line 143, ../scss/csseco.scss */
+  /* line 133, ../scss/csseco.scss */
   nav#cssecoMenu > ul.menu > li > ul > li {
     padding-left: 0;
     padding-right: 0;
   }
 }
-/* line 204, ../scss/csseco.scss */
+/* line 194, ../scss/csseco.scss */
 nav#cssecoMenu > ul.menu > li.menu-item-has-children > a::after {
   content: '\f078';
 }
-/* line 210, ../scss/csseco.scss */
+/* line 200, ../scss/csseco.scss */
 nav#cssecoMenu > ul.menu > li.menu-item-has-children.opened > a::after {
   content: '\f077';
 }
 @media screen and (max-width: 768px) {
-  /* line 216, ../scss/csseco.scss */
+  /* line 206, ../scss/csseco.scss */
   nav#cssecoMenu > ul.menu > li.opened {
     padding-left: 0;
     padding-right: 0;
   }
 }
-/* line 223, ../scss/csseco.scss */
+/* line 213, ../scss/csseco.scss */
 nav#cssecoMenu > ul.menu li.current-menu-item,
 nav#cssecoMenu > ul.menu li.current_page_item,
 nav#cssecoMenu > ul.menu li.current-page-ancestor,
@@ -262,7 +254,7 @@ nav#cssecoMenu > ul.menu li.current-menu-ancestor {
   /* active */
   background: rgba(0, 0, 0, 0.3);
 }
-/* line 228, ../scss/csseco.scss */
+/* line 218, ../scss/csseco.scss */
 nav#cssecoMenu > ul.menu li.current-menu-item > a,
 nav#cssecoMenu > ul.menu li.current_page_item > a,
 nav#cssecoMenu > ul.menu li.current-page-ancestor > a,
@@ -270,7 +262,7 @@ nav#cssecoMenu > ul.menu li.current-menu-ancestor > a {
   font-weight: bold;
 }
 @media screen and (max-width: 768px) {
-  /* line 56, ../scss/csseco.scss */
+  /* line 46, ../scss/csseco.scss */
   nav#cssecoMenu > ul.menu {
     display: none;
   }
@@ -279,7 +271,7 @@ nav#cssecoMenu > ul.menu li.current-menu-ancestor > a {
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
-/* line 244, ../scss/csseco.scss */
+/* line 234, ../scss/csseco.scss */
 #cssecoFooter nav.footer_menu ul.menu {
   display: block;
 }

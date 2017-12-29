@@ -6,28 +6,18 @@
 >>>>>> CSSeco Styles(usualy overwrite bootsrap styles :))
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
-    # CSSeco Fonts
-    # CSSeco Variables
-    # CSSeco Mixins
+    # CSSeco Imports
     # Header
     # Menu styles (wp ready)
     # Footer
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
-# CSSeco Fonts
+# CSSeco Imports
 --------------------------------------------------------------*/
-@import 'fonts/fonts.css';
-
-/*--------------------------------------------------------------
-# CSSeco Variables
---------------------------------------------------------------*/
-@import 'base/variables';
-
-/*--------------------------------------------------------------
-# CSSeco Mixins
---------------------------------------------------------------*/
-@import 'base/mixins';
+@import 'fonts/fonts.css'; // Fonts
+@import 'base/variables';  // Variables
+@import 'base/mixins';     // Mixins
 
 
 /*--------------------------------------------------------------

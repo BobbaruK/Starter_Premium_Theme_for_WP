@@ -45,7 +45,7 @@ function csseco_posted_footer() {
 		} else {
 			$comments = __( '1 Comment', 'cssecotheme' );
 		}
-		$comments = '<a href="' . get_comments_link() . '">' . $comments . '</a>';
+		$comments = '<a class="comments-link" href="' . get_comments_link() . '">' . $comments . '</a>';
 	} else {
 		$comments = __( 'Comments are closed', 'cssecotheme' );
 	}
