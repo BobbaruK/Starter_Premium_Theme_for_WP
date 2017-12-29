@@ -20,13 +20,21 @@
 /*--------------------------------------------------------------
 # CSSeco Variables
 --------------------------------------------------------------*/
+/**
+ * @package CSSecoThemes
+ * base/_variables.scss
+ */
 /*--------------------------------------------------------------
 # CSSeco Mixins
 --------------------------------------------------------------*/
+/**
+ * @package CSSecoThemes
+ * base/_mixins.scss
+ */
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
-/* line 61, ../scss/csseco.scss */
+/* line 38, ../scss/csseco.scss */
 #cssecoHeader nav.header_menu {
   /* Header Menu */
 }
@@ -34,11 +42,11 @@
 /*------------------------------------------------------------
 # Menu styles (wp ready)
 ------------------------------------------------------------*/
-/* line 68, ../scss/csseco.scss */
+/* line 45, ../scss/csseco.scss */
 nav#cssecoMenu {
   background: #FFF;
 }
-/* line 70, ../scss/csseco.scss */
+/* line 47, ../scss/csseco.scss */
 nav#cssecoMenu i.csseco_menu_burger {
   cursor: pointer;
   display: none;
@@ -46,12 +54,12 @@ nav#cssecoMenu i.csseco_menu_burger {
   padding: 10px;
 }
 @media screen and (max-width: 768px) {
-  /* line 70, ../scss/csseco.scss */
+  /* line 47, ../scss/csseco.scss */
   nav#cssecoMenu i.csseco_menu_burger {
     display: inline-block;
   }
 }
-/* line 79, ../scss/csseco.scss */
+/* line 56, ../scss/csseco.scss */
 nav#cssecoMenu > ul.menu {
   background: transparent;
   list-style: none;
@@ -60,12 +68,12 @@ nav#cssecoMenu > ul.menu {
   position: relative;
   z-index: 20;
 }
-/* line 86, ../scss/csseco.scss */
+/* line 63, ../scss/csseco.scss */
 nav#cssecoMenu > ul.menu li {
   position: relative;
   width: auto;
 }
-/* line 89, ../scss/csseco.scss */
+/* line 66, ../scss/csseco.scss */
 nav#cssecoMenu > ul.menu li a {
   display: block;
   margin: 5px 20px;
@@ -74,17 +82,17 @@ nav#cssecoMenu > ul.menu li a {
   text-decoration: none;
 }
 @media screen and (max-width: 768px) {
-  /* line 89, ../scss/csseco.scss */
+  /* line 66, ../scss/csseco.scss */
   nav#cssecoMenu > ul.menu li a {
     display: block;
   }
 }
-/* line 99, ../scss/csseco.scss */
+/* line 76, ../scss/csseco.scss */
 nav#cssecoMenu > ul.menu li ul {
   min-width: 100%;
   z-index: 30;
 }
-/* line 103, ../scss/csseco.scss */
+/* line 80, ../scss/csseco.scss */
 nav#cssecoMenu > ul.menu li > ul {
   display: none;
   list-style: none;
@@ -95,26 +103,26 @@ nav#cssecoMenu > ul.menu li > ul {
   right: 0;
 }
 @media screen and (max-width: 768px) {
-  /* line 103, ../scss/csseco.scss */
+  /* line 80, ../scss/csseco.scss */
   nav#cssecoMenu > ul.menu li > ul {
     position: relative;
     min-width: auto;
     width: 100%;
   }
 }
-/* line 117, ../scss/csseco.scss */
+/* line 94, ../scss/csseco.scss */
 nav#cssecoMenu > ul.menu li.opened > a, nav#cssecoMenu > ul.menu li:hover > a {
   font-weight: bold;
 }
-/* line 121, ../scss/csseco.scss */
+/* line 98, ../scss/csseco.scss */
 nav#cssecoMenu > ul.menu li.opened > ul {
   display: block;
 }
-/* line 124, ../scss/csseco.scss */
+/* line 101, ../scss/csseco.scss */
 nav#cssecoMenu > ul.menu li.opened {
   background: rgba(0, 0, 0, 0.3);
 }
-/* line 129, ../scss/csseco.scss */
+/* line 106, ../scss/csseco.scss */
 nav#cssecoMenu > ul.menu li.menu-item-has-children > a::after {
   background: transparent;
   display: inline-block;
@@ -133,22 +141,22 @@ nav#cssecoMenu > ul.menu li.menu-item-has-children > a::after {
   -moz-osx-font-smoothing: grayscale;
 }
 @media screen and (max-width: 768px) {
-  /* line 129, ../scss/csseco.scss */
+  /* line 106, ../scss/csseco.scss */
   nav#cssecoMenu > ul.menu li.menu-item-has-children > a::after {
     right: 5px;
   }
 }
 @media screen and (max-width: 768px) {
-  /* line 86, ../scss/csseco.scss */
+  /* line 63, ../scss/csseco.scss */
   nav#cssecoMenu > ul.menu li {
     width: 100%;
   }
 }
-/* line 155, ../scss/csseco.scss */
+/* line 132, ../scss/csseco.scss */
 nav#cssecoMenu > ul.menu > li {
   display: inline-block;
 }
-/* line 157, ../scss/csseco.scss */
+/* line 134, ../scss/csseco.scss */
 nav#cssecoMenu > ul.menu > li > ul {
   /* depth 1 */
   background: #FFF;
@@ -157,17 +165,17 @@ nav#cssecoMenu > ul.menu > li > ul {
   top: 100%;
   width: auto;
 }
-/* line 163, ../scss/csseco.scss */
+/* line 140, ../scss/csseco.scss */
 nav#cssecoMenu > ul.menu > li > ul li {
   display: inline-block;
 }
 @media screen and (max-width: 768px) {
-  /* line 167, ../scss/csseco.scss */
+  /* line 144, ../scss/csseco.scss */
   nav#cssecoMenu > ul.menu > li > ul > li > a {
     text-indent: 20px;
   }
 }
-/* line 172, ../scss/csseco.scss */
+/* line 149, ../scss/csseco.scss */
 nav#cssecoMenu > ul.menu > li > ul > li ul {
   /* depth >=2 */
   background: #FFF;
@@ -178,14 +186,14 @@ nav#cssecoMenu > ul.menu > li > ul > li ul {
   width: auto;
 }
 @media screen and (max-width: 1200px) {
-  /* line 172, ../scss/csseco.scss */
+  /* line 149, ../scss/csseco.scss */
   nav#cssecoMenu > ul.menu > li > ul > li ul {
     left: 0;
     position: relative;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1200px) {
-  /* line 172, ../scss/csseco.scss */
+  /* line 149, ../scss/csseco.scss */
   nav#cssecoMenu > ul.menu > li > ul > li ul {
     border-color: #000;
     border-style: solid;
@@ -193,60 +201,60 @@ nav#cssecoMenu > ul.menu > li > ul > li ul {
   }
 }
 @media screen and (max-width: 768px) {
-  /* line 189, ../scss/csseco.scss */
+  /* line 166, ../scss/csseco.scss */
   nav#cssecoMenu > ul.menu > li > ul > li ul > li > a {
     text-indent: 40px;
   }
 }
 @media screen and (max-width: 768px) {
-  /* line 172, ../scss/csseco.scss */
+  /* line 149, ../scss/csseco.scss */
   nav#cssecoMenu > ul.menu > li > ul > li ul {
     left: 0;
   }
 }
-/* line 201, ../scss/csseco.scss */
+/* line 178, ../scss/csseco.scss */
 nav#cssecoMenu > ul.menu > li > ul > li.menu-item-has-children > a::after {
   content: '\f054';
 }
 @media screen and (max-width: 1200px) {
-  /* line 201, ../scss/csseco.scss */
+  /* line 178, ../scss/csseco.scss */
   nav#cssecoMenu > ul.menu > li > ul > li.menu-item-has-children > a::after {
     content: '\f078';
   }
 }
-/* line 210, ../scss/csseco.scss */
+/* line 187, ../scss/csseco.scss */
 nav#cssecoMenu > ul.menu > li > ul > li.menu-item-has-children.opened > a::after {
   content: '\f053';
 }
 @media screen and (max-width: 1200px) {
-  /* line 210, ../scss/csseco.scss */
+  /* line 187, ../scss/csseco.scss */
   nav#cssecoMenu > ul.menu > li > ul > li.menu-item-has-children.opened > a::after {
     content: '\f077';
   }
 }
 @media screen and (max-width: 768px) {
-  /* line 166, ../scss/csseco.scss */
+  /* line 143, ../scss/csseco.scss */
   nav#cssecoMenu > ul.menu > li > ul > li {
     padding-left: 0;
     padding-right: 0;
   }
 }
-/* line 227, ../scss/csseco.scss */
+/* line 204, ../scss/csseco.scss */
 nav#cssecoMenu > ul.menu > li.menu-item-has-children > a::after {
   content: '\f078';
 }
-/* line 233, ../scss/csseco.scss */
+/* line 210, ../scss/csseco.scss */
 nav#cssecoMenu > ul.menu > li.menu-item-has-children.opened > a::after {
   content: '\f077';
 }
 @media screen and (max-width: 768px) {
-  /* line 239, ../scss/csseco.scss */
+  /* line 216, ../scss/csseco.scss */
   nav#cssecoMenu > ul.menu > li.opened {
     padding-left: 0;
     padding-right: 0;
   }
 }
-/* line 246, ../scss/csseco.scss */
+/* line 223, ../scss/csseco.scss */
 nav#cssecoMenu > ul.menu li.current-menu-item,
 nav#cssecoMenu > ul.menu li.current_page_item,
 nav#cssecoMenu > ul.menu li.current-page-ancestor,
@@ -254,7 +262,7 @@ nav#cssecoMenu > ul.menu li.current-menu-ancestor {
   /* active */
   background: rgba(0, 0, 0, 0.3);
 }
-/* line 251, ../scss/csseco.scss */
+/* line 228, ../scss/csseco.scss */
 nav#cssecoMenu > ul.menu li.current-menu-item > a,
 nav#cssecoMenu > ul.menu li.current_page_item > a,
 nav#cssecoMenu > ul.menu li.current-page-ancestor > a,
@@ -262,7 +270,7 @@ nav#cssecoMenu > ul.menu li.current-menu-ancestor > a {
   font-weight: bold;
 }
 @media screen and (max-width: 768px) {
-  /* line 79, ../scss/csseco.scss */
+  /* line 56, ../scss/csseco.scss */
   nav#cssecoMenu > ul.menu {
     display: none;
   }
@@ -271,7 +279,7 @@ nav#cssecoMenu > ul.menu li.current-menu-ancestor > a {
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
-/* line 267, ../scss/csseco.scss */
+/* line 244, ../scss/csseco.scss */
 #cssecoFooter nav.footer_menu ul.menu {
   display: block;
 }
