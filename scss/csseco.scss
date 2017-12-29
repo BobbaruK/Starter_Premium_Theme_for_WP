@@ -68,11 +68,12 @@ $csseco_menu_bg_color_hover-active:   rgba(0, 0, 0, .3);
 nav#cssecoMenu {
   background: $csseco_menu_bg_color;
   i.csseco_menu_burger {
+    cursor: pointer;
     display: none;
+    font-size: 22px;
+    padding: 10px;
     @media screen and (max-width: $csseco_screen-sm) {
       display: inline-block;
-      font-size: 22px;
-      padding: 10px;
     }
   }
   > ul.menu {

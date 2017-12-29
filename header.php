@@ -46,6 +46,4 @@
             </div><!-- /.container -->
         </header>
         <hr>
-        <hr>
-        <hr>
-        <div id="cssecoContent" class="site-content">
+        <div id="primary cssecoContent" class="content-area site-content">

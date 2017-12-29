@@ -30,3 +30,8 @@ $optionsCustomBg = get_option( 'about_customBackground' );
 if( @$optionsCustomBg == 1 ) {
 	add_theme_support( 'custom-background' );
 }
+
+/**
+ * Post Thumbnails(Featured Image)
+ */
+add_theme_support( 'post-thumbnails' );

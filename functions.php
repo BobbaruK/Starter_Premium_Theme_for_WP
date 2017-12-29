@@ -17,6 +17,7 @@ include( get_template_directory() . '/includes/back/functions-admin.php' );     
 include( get_template_directory() . '/includes/back/enqueue.php' );             // backend styles and scripts
 include( get_template_directory() . '/includes/front/enqueue.php' );            // frontend styles and scripts
 include( get_template_directory() . '/includes/front/reg-menus.php' );          // register menus file
+include( get_template_directory() . '/includes/front/functions-front.php' );    // functions that work in frontend
 
 
 /**
