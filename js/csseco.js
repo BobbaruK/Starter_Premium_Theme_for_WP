@@ -44,4 +44,11 @@ jQuery(document).ready(function ($) {
         menuCSSecoWP.find('.menu-item-has-children').removeClass('opened');
     });
 
+    // ==================
+    // Add bootstrap classes on different elements in the DOM
+    // ==================
+    $('img').addClass('img-responsive'); // add img-responsive(bootstrap) to all images
+    $('select').addClass('form-control'); // add form-control(bootstrap) class on all select elements on the site
+    $('table').addClass('table'); // add table(bootstrap) class on all table elements on the site
+
 });
