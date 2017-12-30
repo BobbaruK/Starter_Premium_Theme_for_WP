@@ -74,7 +74,7 @@ function csseco_get_post_attachment() {
 			'post_parent'       =>      get_the_ID(),
 			'post_type'         =>      'attachment',
 			'post_mime_type'    =>      'image',
-			'order'             =>      'ASC',
+			//'order'             =>      'ASC',
 			'posts_per_page'    =>      1
 		) );
 		if ( $attachments ) {
