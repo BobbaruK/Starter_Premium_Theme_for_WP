@@ -27,6 +27,9 @@ function csseco_about_logo_callback() {
         <input id="cssecoThLogo" title="" type="text" class="" name="about_logo" value="<?php echo $aboutLogo; ?>" />
         <input id="cssecoRemove-Logo" type="button" class="button button-secondary"
                value="<?php _e('Remove Logo', 'cssecotheme') ?>" />
+        <div class="csseco_admin_logo_preview">
+            <img id="cssecoAdminLogo" src="<?php echo $aboutLogo; ?>" alt="Logo Preview">
+        </div><!-- /.csseco_admin_logo_preview -->
 		<?php
 	}
 }
@@ -67,17 +70,8 @@ function csseco_description_callback() {
     <p class="description"><?php _e( 'HTML tags not allowed', 'cssecotheme' ); ?>(sanitize_text_field();)</p>
 	<?php
 }
-?>
 
-
-<?php $aboutLogo = get_option('about_logo'); ?>
-<div class="csseco_about_class">
-    <p>
-        <img id="cssecoAdminLogo" src="<?php print $aboutLogo; ?>" alt="">
-    </p>
-</div>
-
-<?php settings_errors(); ?>
+settings_errors(); ?>
 <form method="post" action="options.php" class="csseco_about_page_form">
 	<?php settings_fields( 'cssecoSettingsGroup-About' ); ?>
 	<?php do_settings_sections('csseco_th') ?>

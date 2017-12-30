@@ -92,4 +92,15 @@ function csseco_load_admin_scripts( $hook ) {
 		wp_enqueue_script( 'csseco_custom_css_js' );
 	}
 
+	/**
+	 * FontAwesome CDN
+	 */
+//	wp_enqueue_script(
+//		'csseco_admin_fontawesome_cdn',
+//		'https://use.fontawesome.com/7b9977e094.js',
+//		array(),
+//		false,
+//		true
+//	);
+
 }

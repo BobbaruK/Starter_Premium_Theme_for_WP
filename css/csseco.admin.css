@@ -1,24 +1,3 @@
-/**
- * @package CSSecoThemes
- * csseco.admin.css
- *
- */
+.csseco_admin_logo_preview{height:auto;margin:5px 0 0 15px;max-height:auto;max-width:150px;width:100%}.csseco_admin_logo_preview img{height:auto;max-width:100%;padding:3px;width:100%}label[class*="csseco-label-"]{text-transform:capitalize}
 
-/* Cacatu ala de titlu de pe about options */
-.csseco_about_class {
-    margin: 0 auto;
-    outline: 1px solid #2b2280;
-    text-align: center;
-    width: 80%;
-}
-
-.csseco_about_class p {
-    font-size: 24px;
-}
-/* END Cacatu ala de titlu de pe about options */
-
-/* On about admin options page the post fortmats have lower case */
-label[class*="csseco-label-"] {
-    text-transform: capitalize;
-}
-/* END On about admin options page the post fortmats have lower case */
+/*# sourceMappingURL=csseco.admin.css.map */
