@@ -7,7 +7,7 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'csseco-format-standard' ); ?>>
 	<header class="entry-header">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ) ?>
 		<div class="entry-meta">
@@ -17,7 +17,9 @@
 	<div class="entry-content">
 	    <?php if ( has_post_thumbnail() ) { ?>
 			<div class="standard-featured">
-			    <?php the_post_thumbnail(); ?>
+                <a class="standard-featured-link" href="<?php the_permalink(); ?>">
+			        <?php the_post_thumbnail(); ?>
+                </a>
 			</div><!-- /.standard-featured -->
 		<?php } ?>
 		<div class="entry-excerpt">

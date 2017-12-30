@@ -1,37 +1,54 @@
 /**
  * @package CSSecoThemes
- * csseco.css
+ * csseco.scss to css/csseco.css
  */
 /*--------------------------------------------------------------
 >>>>>> CSSeco Styles(usualy overwrite bootsrap styles :))
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
     # CSSeco Imports
+    # Generic
     # Header
+    ## Header Menu
     # Menu styles (wp ready)
     # Footer
+    ## Footer Menu
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
 # CSSeco Imports
 --------------------------------------------------------------*/
-@import 'fonts/fonts.css'; // Fonts
-@import 'base/variables';  // Variables
-@import 'base/mixins';     // Mixins
+@import 'fonts/fonts.css';             // Fonts
+@import 'base/variables';              // Variables
+@import 'base/mixins';                 // Mixins
+@import 'base/placeholders';           // Placeholders
+@import 'posts-formats/standard-pf';   // Post Format: Standard
+@import 'posts-formats/image-pf';      // Post Format: Image
 
+/*--------------------------------------------------------------
+# Generic
+--------------------------------------------------------------*/
+.bg-img-el {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
 #cssecoHeader {
 
-  nav.header_menu {/* Header Menu */}
+  /*------------------------------------------------------------
+  ## Header Menu
+  ------------------------------------------------------------*/
+  nav.header_menu {}
 
 }
 
-/*------------------------------------------------------------
+/*--------------------------------------------------------------
 # Menu styles (wp ready)
-------------------------------------------------------------*/
+--------------------------------------------------------------*/
 nav#cssecoMenu {
   background: $csseco_menu_bg_color;
   i.csseco_menu_burger {
@@ -230,6 +247,9 @@ nav#cssecoMenu {
 --------------------------------------------------------------*/
 #cssecoFooter {
 
+  /*------------------------------------------------------------
+  ## Footer Menu
+  ------------------------------------------------------------*/
   nav.footer_menu {
     ul.menu {
       display: block;

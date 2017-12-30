@@ -3,7 +3,7 @@
  * @package CSSecoThemes
  * front/functions-front.php
  *
- * Blog Loop Custom Functions
+ * FrontEnd Functions
  */
 
 /**
@@ -60,4 +60,29 @@ function csseco_posted_footer() {
 					</div>
 				</div>
 			</div>';
+}
+
+/**
+ * Get post attachment
+ */
+function csseco_get_post_attachment() {
+	$output = '';
+	if ( has_post_thumbnail() ) {
+		$output = wp_get_attachment_url( get_post_thumbnail_id( get_the_ID() ) );
+	} else { // TODO: mai bine fac o eroare decat sa ma cac pe asta ca nu are sens
+		$attachments = get_posts( array(
+			'post_parent'       =>      get_the_ID(),
+			'post_type'         =>      'attachment',
+			'post_mime_type'    =>      'image',
+			'order'             =>      'ASC',
+			'posts_per_page'    =>      1
+		) );
+		if ( $attachments ) {
+			foreach ( $attachments as $attachment ) {
+				$output = wp_get_attachment_url( $attachment->ID );
+			}
+		}
+		wp_reset_postdata();
+	}
+	return $output;
 }

@@ -32,6 +32,10 @@
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12">
+                        <div class="csseco_logo_header">
+	                            <?php $aboutLogo = get_option('about_logo'); ?>
+                                <img id="cssecoAdminLogo" src="<?php print $aboutLogo; ?>" alt="">
+                        </div>
                         <p>Header</p>
                         <?php
                             wp_nav_menu(array(

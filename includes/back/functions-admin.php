@@ -2,9 +2,8 @@
 /**
  * @package CSSecoThemes
  * back/functions-admin.php
- * ================
- *      ADMIN PAGE
- * ================
+ *
+ * BackEnd Functions(mostly)
  */
 
 function csseco_add_admin_page() {
