@@ -5,4 +5,21 @@
  * Standard Post Format
  */
 
-article.csseco-format-standard {}
+article.csseco-format-standard {
+  header.entry-header {
+    h1.entry-title {}
+    .entry-meta {}
+  }
+  .entry-content {
+    a.standard-featured-link {
+      .standard-featured {
+        min-height: $csseco_header_height;
+      }
+    }
+    .entry-excerpt {}
+    .button-container {
+      > a.btn {}
+    }
+  }
+  /* .entry-footer in _globals.scss */
+}

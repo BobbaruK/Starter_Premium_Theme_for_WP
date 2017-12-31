@@ -1,0 +1,40 @@
+/**
+ * @package CSSecoThemes
+ * base/_globals.scss
+ *
+ * Global Elements
+ *
+ *
+ * Article posts footer ** the footer is the same on all post formats
+ */
+article {
+  .entry-footer {
+    border-color: #c5c4cd;
+    border-radius: 0 0 5px 5px;
+    border-style: solid;
+    border-width: 0 1px 1px 1px;
+    padding: 10px 3px 3px;
+    .post-footer-container {
+      .footer-left {
+        .tags-list {
+          i {}
+          a {}
+          span {}
+        }
+      }
+      .footer-right {
+        text-align: right;
+        a {}
+        i {
+          @media screen and (max-width: $csseco_screen-sm) {
+            float: left;
+            margin-right: 5px;
+          }
+        }
+        @media screen and (max-width: $csseco_screen-sm) {
+          text-align: left;
+        }
+      }
+    }
+  }
+}

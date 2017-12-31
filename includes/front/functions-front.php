@@ -51,10 +51,10 @@ function csseco_posted_footer() {
 	}
 	return '<div class="post-footer-container">
 				<div class="row">
-					<div class="col-xs-12 col-sm-6">
-						' . get_the_tag_list( '<div class="tags-list"><i class="fa fa-tags" aria-hidden="true"></i> ', ', ', '</div>' ) . '
+					<div class="col-xs-12 col-sm-6 footer-left">
+						' . get_the_tag_list( '<div class="tags-list"><i class="fa fa-tags" aria-hidden="true"></i> ', '<span>, </span>', '</div>' ) . '
 					</div>
-					<div class="col-xs-12 col-sm-6 text-right">
+					<div class="col-xs-12 col-sm-6 footer-right">
 						' . $comments . '
 						<i class="fa fa-comments" aria-hidden="true"></i>
 					</div>

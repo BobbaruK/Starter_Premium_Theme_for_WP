@@ -4,10 +4,10 @@
  */
 
 // Screen Sizes
-$csseco_screen-xs:                    480px !default;  // Extra small screen / phone
-$csseco_screen-sm:                    768px !default;  // Small screen / tablet
-$csseco_screen-md:                    992px !default;  // Medium screen / desktop
-$csseco_screen-lg:                    1200px !default; // Large screen / wide desktop
+$csseco_screen-xs:                    480px;  // Extra small screen / phone
+$csseco_screen-sm:                    768px;  // Small screen / tablet
+$csseco_screen-md:                    992px;  // Medium screen / desktop
+$csseco_screen-lg:                    1200px; // Large screen / wide desktop
 // FontFamily
 $csseco_body_font:                    'Merriweather', 'Helvetica Neue', 'Helvetica', Arial, Verdana, sans-serif;
 // Colors
@@ -15,3 +15,5 @@ $csseco_menu_bg_color:                #FFF;
 $csseco_menu_bg_color_depth_1:        #FFF;
 $csseco_menu_bg_color_depth_2:        #FFF;
 $csseco_menu_bg_color_hover-active:   rgba(0, 0, 0, .3);
+// Header
+$csseco_header_height:                350px;

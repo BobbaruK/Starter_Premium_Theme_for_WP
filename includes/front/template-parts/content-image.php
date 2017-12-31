@@ -9,7 +9,12 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'csseco-format-image' ); ?>>
     <header class="entry-header bg-img-el" style="background-image: url(<?php echo csseco_get_post_attachment(); ?>)">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ) ?>
+	    <?php
+            the_title(
+                '<h1 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">',
+                '</a></h1>'
+            );
+	    ?>
         <div class="entry-meta">
 			<?php echo csseco_posted_meta(); ?>
         </div><!-- /.entry-meta -->

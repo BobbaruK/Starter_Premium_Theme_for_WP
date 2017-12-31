@@ -6,7 +6,11 @@
  */
 
 article.csseco-format-image {
-  header {
-    min-height: 450px;
+  header.entry-header {
+    min-height: $csseco_header_height;
+    h1.entry-title {}
+    .entry-meta {}
+    .entry-excerpt {}
   }
+  /* .entry-footer in _globals.scss */
 }
