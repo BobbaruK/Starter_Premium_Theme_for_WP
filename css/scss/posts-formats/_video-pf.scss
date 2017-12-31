@@ -1,0 +1,21 @@
+/**
+ * @package CSSecoThemes
+ * posts-formats/_standard-pf.scss
+ *
+ * Video Post Format
+ */
+article.csseco-format-video {
+  header.entry-header {
+    .embed-responsive {}
+    h1.entry-title {
+      text-align: center;
+      a {}
+    }
+    .entry-meta {}
+  }
+  .entry-content {
+    .entry-excerpt {}
+    .button-container {}
+  }
+  /* .entry-footer in base/_globals.scss */
+}
