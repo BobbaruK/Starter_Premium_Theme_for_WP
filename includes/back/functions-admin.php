@@ -3,7 +3,7 @@
  * @package CSSecoThemes
  * back/functions-admin.php
  *
- * BackEnd Functions(mostly)
+ * BackEnd Functions(mostly...)
  */
 
 function csseco_add_admin_page() {

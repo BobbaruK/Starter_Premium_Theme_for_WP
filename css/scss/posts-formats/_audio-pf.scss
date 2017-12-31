@@ -1,0 +1,27 @@
+/**
+ * @package CSSecoThemes
+ * posts-formats/_standard-pf.scss
+ *
+ * Audio Post Format
+ */
+
+article.csseco-format-audio {
+  header.entry-header {
+    h1.entry-title {
+      display: inline-block;
+      width: auto;
+      a {}
+    }
+    .entry-meta {
+      display: inline-block;
+      width: auto;
+    }
+  }
+  .entry-content {
+    iframe {
+      height: 166px;
+      width: 100%;
+    }
+  }
+  /* .entry-footer in _globals.scss */
+}

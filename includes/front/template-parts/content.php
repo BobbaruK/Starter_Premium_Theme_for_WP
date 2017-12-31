@@ -9,15 +9,17 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'csseco-format-standard' ); ?>>
 	<header class="entry-header">
-		<?php
-            the_title(
-                '<h1 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">',
-                '</a></h1>'
-            );
-		?>
-		<div class="entry-meta">
-			<?php echo csseco_posted_meta(); ?>
-		</div><!-- /.entry-meta -->
+        <a href="<?php the_permalink(); ?>">
+            <?php
+                the_title(
+                    '<h1 class="entry-title">',
+                    '</h1>'
+                );
+            ?>
+            <div class="entry-meta">
+                <?php echo csseco_posted_meta(); ?>
+            </div><!-- /.entry-meta -->
+        </a>
 	</header><!--/.entry-header-->
 	<div class="entry-content">
 	    <?php

@@ -6,8 +6,7 @@
  * Audio Post Format
  */
 ?>
-
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'csseco-format-standard' ); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'csseco-format-audio' ); ?>>
 	<header class="entry-header">
 		<?php
             the_title(
@@ -20,11 +19,7 @@
 		</div><!-- /.entry-meta -->
 	</header><!--/.entry-header-->
 	<div class="entry-content">
-		<?php if ( has_post_thumbnail() ) { ?>
-            <a class="standard-featured-link" href="<?php the_permalink(); ?>">
-                <div class="standard-featured bg-img-el" style="background-image: url(<?php echo csseco_get_post_attachment(); ?>)"></div>
-            </a>
-		<?php } ?>
+		<?php echo csseco_get_embedded_media( array( 'audio', 'iframe' ) ); ?>
 	</div><!-- /.entry-content -->
 	<footer class="entry-footer">
 		<?php echo csseco_posted_footer(); ?>
