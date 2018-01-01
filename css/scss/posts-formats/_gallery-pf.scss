@@ -1,0 +1,24 @@
+/**
+ * @package CSSecoThemes
+ * posts-formats/_gallery-pf.scss
+ *
+ * Gallery Post Format style
+ */
+
+article.csseco-format-gallery {
+  header.entry-header {
+    .carousel {
+      .carousel-inner {
+        .csseco_slides {
+          height: 350px;
+        }
+      }
+    }
+    h1.entry-title {}
+    .entry-meta {}
+  }
+  .entry-content {}
+  footer.entry-footer {
+    /* ../base/_globals.scss */
+  }
+}

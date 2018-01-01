@@ -18,20 +18,22 @@
 /*--------------------------------------------------------------
 # CSSeco Imports
 --------------------------------------------------------------*/
-@import 'fonts/fonts.css';             // Fonts
-@import 'base/variables';              // Variables
-@import 'base/mixins';                 // Mixins
-@import 'base/placeholders';           // Placeholders
-@import 'base/globals';                // Global Elements
-@import 'posts-formats/standard-pf';   // Post Format: Standard
-@import 'posts-formats/image-pf';      // Post Format: Image
-@import 'posts-formats/audio-pf';      // Post Format: Audio
-@import 'posts-formats/video-pf';      // Post Format: Video
-
-//@import 'posts-formats/gallery-pf';    // Post Format: Gallery
-//@import 'posts-formats/quote-pf';      // Post Format: Quote
-//@import 'posts-formats/link-pf';       // Post Format: Link
-//@import 'posts-formats/aside-pf';      // Post Format: Aside
+@import 'fonts/fonts.css';               // Fonts
+@import 'base/variables';                // Variables
+@import 'base/mixins';                   // Mixins
+@import 'base/placeholders';             // Placeholders
+@import 'base/globals';                  // Global Elements
+/* Posts Formats */
+@import 'posts-formats/standard-pf';     // Post Format: Standard
+@import 'posts-formats/image-pf';        // Post Format: Image
+@import 'posts-formats/audio-pf';        // Post Format: Audio
+@import 'posts-formats/video-pf';        // Post Format: Video
+@import 'posts-formats/gallery-pf';      // Post Format: Gallery
+@import 'posts-formats/quote-pf';        // Post Format: Quote
+@import 'posts-formats/link-pf';         // Post Format: Link
+@import 'posts-formats/aside-pf';        // Post Format: Aside
+@import 'posts-formats/status-pf';       // Post Format: Status
+@import 'posts-formats/chat-pf';         // Post Format: Chat
 
 /*--------------------------------------------------------------
 # Generic

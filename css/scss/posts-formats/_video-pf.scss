@@ -1,6 +1,6 @@
 /**
  * @package CSSecoThemes
- * posts-formats/_standard-pf.scss
+ * posts-formats/_video-pf.scss
  *
  * Video Post Format
  */
@@ -17,5 +17,7 @@ article.csseco-format-video {
     .entry-excerpt {}
     .button-container {}
   }
-  /* .entry-footer in base/_globals.scss */
+  footer.entry-footer {
+    /* ../base/_globals.scss */
+  }
 }

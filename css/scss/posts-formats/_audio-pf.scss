@@ -1,8 +1,8 @@
 /**
  * @package CSSecoThemes
- * posts-formats/_standard-pf.scss
+ * posts-formats/_audio-pf.scss
  *
- * Audio Post Format
+ * Audio Post Format style
  */
 
 article.csseco-format-audio {
@@ -23,5 +23,7 @@ article.csseco-format-audio {
       width: 100%;
     }
   }
-  /* .entry-footer in base/_globals.scss */
+  footer.entry-footer {
+    /* ../base/_globals.scss */
+  }
 }

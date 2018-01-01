@@ -13,7 +13,7 @@ article.csseco-format-standard {
   .entry-content {
     a.standard-featured-link {
       .standard-featured {
-        min-height: $csseco_header_height;
+        min-height: $csseco_post_header_height;
       }
     }
     .entry-excerpt {}
@@ -21,5 +21,7 @@ article.csseco-format-standard {
       > a.btn {}
     }
   }
-  /* .entry-footer in base/_globals.scss */
+  footer.entry-footer {
+    /* ../base/_globals.scss */
+  }
 }

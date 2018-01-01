@@ -1,17 +1,19 @@
 /**
  * @package CSSecoThemes
- * posts-formats/_standard-pf.scss
+ * posts-formats/_image-pf.scss
  *
  * Image Post Format
  */
 
 article.csseco-format-image {
   header.entry-header {
-    min-height: $csseco_header_height;
+    min-height: $csseco_post_header_height;
     text-align: center;
     h1.entry-title {}
     .entry-meta {}
     .entry-excerpt {}
   }
-  /* .entry-footer in base/_globals.scss */
+  footer.entry-footer {
+    /* ../base/_globals.scss */
+  }
 }

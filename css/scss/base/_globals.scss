@@ -8,6 +8,13 @@
  * Article posts footer ** the footer is the same on all post formats
  */
 article {
+  margin-bottom: 10px;
+  padding-bottom: 30px;
+  header.entry-header {
+    h1.entry-title {
+      margin-top: 0;
+    }
+  }
   .entry-footer {
     border-color: #c5c4cd;
     border-radius: 0 0 5px 5px;

@@ -29,9 +29,8 @@
     </head>
     <body <?php body_class(); ?>>
         <header id="cssecoHeader" class="site-header">
-            <div class="container">
+            <div class="container-fluid">
                 <div class="row">
-                    <div class="col-xs-12">
                         <?php
                             $aboutLogo = get_option('about_logo');
                             if ( @$aboutLogo ) {
@@ -53,7 +52,6 @@
                                 'container_id'          =>      'cssecoMenu' //
                             ));
                         ?>
-                    </div><!-- /.col-xs-12 -->
                 </div><!-- /.row -->
             </div><!-- /.container -->
         </header>

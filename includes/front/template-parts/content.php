@@ -21,7 +21,7 @@
 	</header><!--/.entry-header-->
 	<div class="entry-content">
 	    <?php
-            if ( has_post_thumbnail() ) {
+            if ( csseco_get_post_attachment() ) {
         ?>
             <a class="standard-featured-link" href="<?php the_permalink(); ?>">
                 <div class="standard-featured bg-img-el" style="background-image: url(<?php echo csseco_get_post_attachment(); ?>)"></div>
