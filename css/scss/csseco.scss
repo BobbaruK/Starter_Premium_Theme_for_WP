@@ -38,10 +38,38 @@
 /*--------------------------------------------------------------
 # Generic
 --------------------------------------------------------------*/
+body {
+  font-family: $csseco_body_font;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: greyscale;
+}
+
+a {
+  color: $csseco_primary-color;
+  @include animate( color, 320ms );
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    color: $csseco_dark-grey;
+  }
+}
+
 .bg-img-el {
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.table {
+  display: table;
+  width: 100%;
+  height: 100%;
+  .table-cell {
+    display: table-cell;
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+  }
 }
 
 /*--------------------------------------------------------------

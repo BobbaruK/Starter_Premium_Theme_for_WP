@@ -11,8 +11,8 @@
   -o-transition: $attr $time ease;
   transition: $attr $time ease;
 }
-// transl ** @include transl( translateY(10px) );
-@mixin transl( $val ) {
+// transl ** @include transform( translateY(10px) );
+@mixin transform( $val ) {
   -webkit-transform: $val;
   -moz-transform: $val;
   -ms-transform: $val;

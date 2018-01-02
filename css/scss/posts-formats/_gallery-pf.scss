@@ -8,9 +8,57 @@
 article.csseco-format-gallery {
   header.entry-header {
     .carousel {
+      .carousel-indicators {}
       .carousel-inner {
         .csseco_slides {
           height: 350px;
+        }
+      }
+      .carousel-control {
+        background: none;
+        width: auto;
+        .control-wrapper {
+          position: relative;
+          i {
+            padding: 2px;
+          }
+          .preview-thumb {
+            background: red;
+            border: 1px solid green;
+            border-radius: 5px;
+            bottom: -5px;
+            display: inline-block;
+            height: 68px;
+            position: absolute;
+            width: 68px;
+            @include animate( transform, 320ms );
+            @include transform(scale(0));
+          }
+        }
+        &.left {
+          padding-left: 30px;
+          .control-wrapper {
+            .preview-thumb {
+              left: 30px;
+              top: -10px;
+            }
+          }
+        }
+        &.right {
+          padding-right: 30px;
+          .control-wrapper {
+            .preview-thumb {
+              right: 30px;
+              top: -10px;
+            }
+          }
+        }
+        &:hover {
+          .control-wrapper {
+            .preview-thumb {
+              @include transform(scale(1));
+            }
+          }
         }
       }
     }

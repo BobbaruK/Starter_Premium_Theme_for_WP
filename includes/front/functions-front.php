@@ -64,6 +64,18 @@ function csseco_posted_footer() {
 
 /**
  * Get post attachment
+ *
+ *      daca are post-thumb(feat img) si $num == 1
+ *          atunci $output = attachment url
+ *      daca nu
+ *          $attachments = get_posts(array( sa ia primu[pt asta e to do..] attachment din post,
+ *                         'posts_per_page' => $num; unde $num inseamna cate attachmenturi sa ia din post
+ *          daca exista $attachments si $num == 1
+ *              $output = url-ul attchmentului
+ *          sau daca exista $attachments si $num > 1
+ *              $output = $attachments; care $attachments este array cu toate urlurile attachmentului
+ *          reset post data
+ *      return $output;
  */
 function csseco_get_post_attachment( $num = 1 ) {
 	$output = '';
@@ -92,6 +104,9 @@ function csseco_get_post_attachment( $num = 1 ) {
 
 /**
  * Audio post format iframe generator
+ *
+ * TODO: de explicat functia csseco_get_embedded_media()
+ * https://www.youtube.com/watch?v=HXLviEusCyE&index=24&list=PLriKzYyLb28kpEnFFi9_vJWPf5-_7d3rX
  */
 function csseco_get_embedded_media( $type = array() ) {
 	$content = do_shortcode( apply_filters( 'the_content', get_the_content() ) );

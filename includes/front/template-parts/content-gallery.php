@@ -11,8 +11,8 @@
     <header class="entry-header">
 	    <?php
 	        if ( csseco_get_post_attachment() ) {
-	            $attacments = csseco_get_post_attachment(10);
-	            //var_dump($attacments);
+		        $attachments = csseco_get_post_attachment(10);
+	            //var_dump($attachments);
         ?>
             
             <div id="post-gallery-<?php the_ID(); ?>" class="carousel slide" data-ride="carousel">
@@ -20,7 +20,7 @@
                 <ol class="carousel-indicators">
                     <?php
                         $i = 0;
-                        foreach ($attacments as $attachment) {
+                        foreach ($attachments as $attachment) {
 	                        $active = ($i == 0 ? 'active' : '');
                     ?>
                         <li data-target="#post-gallery-<?php the_ID(); ?>" class="<?php echo $active; ?>" data-slide-to="<?php echo $i; ?>"></li>
@@ -32,26 +32,38 @@
                 <!-- Wrapper for slides -->
                 <div class="carousel-inner" role="listbox">
                     <?php
-                        $i = 0;
-                        foreach ( $attacments as $attachment ) {
+                        /* Ca sa vezi preview de la urmatoare si anterioara imagine: https://youtu.be/w0ViEuTgUDI?t=32m43s */
+                        for ( $i = 0; $i < count($attachments); $i++ ) {
                             $active = ($i == 0 ? 'active' : '');
                     ?>
-                        <div class="item <?php echo $active; ?> csseco_slides bg-img-el" style="background-image: url(<?php echo wp_get_attachment_url( $attachment->ID ); ?>)">
-
+                        <div class="item <?php echo $active; ?> csseco_slides bg-img-el" style="background-image: url(<?php echo wp_get_attachment_url( $attachments[$i]->ID ); ?>)">
                         </div><!-- /.item -->
                     <?php
-                            $i++;
                         }
                     ?>
                 </div><!-- /.carousel-inner -->
                 <!-- Controls -->
                 <a class="left carousel-control" href="#post-gallery-<?php the_ID(); ?>" role="button" data-slide="prev">
-                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
+                    <div class="table">
+                        <div class="table-cell">
+                            <div class="control-wrapper">
+                                <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                                <span class="preview-thumb preview-thumb-prev bg-img-el"></span>
+                                <span class="sr-only">Previous</span>
+                            </div><!-- /.control-wrapper -->
+                        </div><!-- /.table-cell -->
+                    </div><!-- /.table -->
                 </a>
                 <a class="right carousel-control" href="#post-gallery-<?php the_ID(); ?>" role="button" data-slide="next">
-                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
+                    <div class="table">
+                        <div class="table-cell">
+                            <div class="control-wrapper">
+                                <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                <span class="preview-thumb preview-thumb-next bg-img-el"></span>
+                                <span class="sr-only">Next</span>
+                            </div><!-- /.control-wrapper -->
+                        </div><!-- /.table-cell -->
+                    </div><!-- /.table -->
                 </a>
             </div><!-- /.carousel -->
                 
