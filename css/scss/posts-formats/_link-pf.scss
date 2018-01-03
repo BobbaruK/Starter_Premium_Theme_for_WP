@@ -5,4 +5,20 @@
  * Link Post Format style
  */
 
-article.csseco-format-link {}
+article.csseco-format-link {
+  header.entry-header {
+    h1.entry-title {
+      text-align: center;
+      i {
+        color: #999999;
+        display: block;
+        margin: 7px auto 0;
+        text-align: center;
+        width: 50px;
+      }
+    }
+  }
+  footer.entry-footer {
+    /* ../base/_globals.scss */
+  }
+}

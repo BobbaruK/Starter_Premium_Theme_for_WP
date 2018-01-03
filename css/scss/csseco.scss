@@ -28,7 +28,7 @@
 # Generic
 --------------------------------------------------------------*/
 body {
-  font-family: $csseco_body_font;
+  font-family: $csseco_body_font_fira;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: greyscale;
 }
@@ -39,7 +39,7 @@ a {
   &:hover,
   &:focus {
     text-decoration: none;
-    color: $csseco_dark-grey;
+    color: $csseco_light-grey;
   }
 }
 

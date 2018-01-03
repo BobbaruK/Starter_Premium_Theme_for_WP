@@ -109,7 +109,7 @@ function csseco_get_post_attachment( $num = 1 ) {
  * https://www.youtube.com/watch?v=HXLviEusCyE&index=24&list=PLriKzYyLb28kpEnFFi9_vJWPf5-_7d3rX
  */
 function csseco_get_embedded_media( $type = array() ) {
-	$content = do_shortcode( apply_filters( 'the_content', get_the_content() ) );
+	$content = do_shortcode( apply_filters( 'the_content', get_the_content() ) ); // getting the content(get_the_content()), apply the filters(the_content)
 	$embed = get_media_embedded_in_content( $content, $type );
 
 	if ( in_array( 'audio', $type ) ) {
@@ -146,4 +146,14 @@ function csseco_get_bs_slides( $attachments ) {
 
 	return $output;
 
+}
+
+/**
+ * Link for Link Post Format
+ */
+function csseco_grab_url() {
+	if ( !preg_match('/<a\s[^>]*?href=[\'"](.+?)[\'"]/i', get_the_content(), $links ) ) {
+		return false;
+	}
+	return esc_url_raw($links[1]);
 }

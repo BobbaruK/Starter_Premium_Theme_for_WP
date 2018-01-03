@@ -16,11 +16,9 @@ article {
     }
   }
   .entry-footer {
-    border-color: #c5c4cd;
-    border-radius: 0 0 5px 5px;
-    border-style: solid;
-    border-width: 0 1px 1px 1px;
-    padding: 10px 3px 3px;
+    border-bottom: 2px solid #c5c4cd;
+    margin: 15px 0;
+    padding: 0 0 10px;
     .post-footer-container {
       .footer-left {
         .tags-list {

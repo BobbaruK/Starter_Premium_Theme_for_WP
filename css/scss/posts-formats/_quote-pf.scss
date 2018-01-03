@@ -5,4 +5,40 @@
  * Quote Post Format style
  */
 
-article.csseco-format-quote {}
+article.csseco-format-quote {
+  header.entry-header {
+    h1.qote-content {
+      font-size: 34px;
+      letter-spacing: 0.03em;
+      position: relative;
+      a {}
+      &::before,
+      &::after {
+        color: #999999;
+        display: inline-block;
+        position: relative;
+      }
+      &::before {
+        content: '\201C';
+      }
+      &::after {
+        content: '\201E';
+      }
+    }
+    h2.quote-author {
+      font-size: 18px;
+      font-weight: bold;
+      position: relative;
+      text-align: right;
+      &::before {
+        content: '\2014 ';
+        display: inline-block;
+        margin: 0 5px 0 0;
+        position: relative;
+      }
+    }
+  }
+  footer.entry-footer {
+    /* ../base/_globals.scss */
+  }
+}

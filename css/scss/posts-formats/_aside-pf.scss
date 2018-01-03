@@ -5,4 +5,17 @@
  * Aside Post Format style
  */
 
-article.csseco-format-aside {}
+article.csseco-format-aside {
+  .aside-featured {
+    height: 120px;
+  }
+  header.entry-header {
+    .entry-meta {}
+  }
+  .entry-content {
+    .entry-excerpt {}
+  }
+  footer.entry-footer {
+    /* ../base/_globals.scss */
+  }
+}

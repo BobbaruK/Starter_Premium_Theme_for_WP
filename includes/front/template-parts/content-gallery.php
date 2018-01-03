@@ -29,8 +29,6 @@
                 <!-- Wrapper for slides -->
                 <div class="carousel-inner" role="listbox">
 					<?php
-
-
                         foreach ( $attachments as $attachment ) {
                     ?>
                             <div class="item <?php echo $attachment['class']; ?> csseco_slides bg-img-el" style="background-image: url(<?php echo $attachment['url']; ?>)">

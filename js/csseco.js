@@ -60,10 +60,12 @@ jQuery(document).ready(function ($) {
         csseco_get_bs_thumbs(carousel);
     });
     function csseco_get_bs_thumbs( carousel ) {
-        var prevThumb = $('.item.active').find('.prev-thumb-preview').data('image');
-        $(carousel).find('.carousel-control.left').find('.preview-thumb').css('background-image', 'url('+prevThumb+')');
-        var nextThumb = $('.item.active').find('.next-thumb-preview').data('image');
-        $(carousel).find('.carousel-control.right').find('.preview-thumb').css('background-image', 'url('+nextThumb+')');
+        $(carousel).each(function () {
+            var prevThumb = $(this).find('.item.active').find('.prev-thumb-preview').data('image');
+            $(this).find('.carousel-control.left').find('.preview-thumb').css('background-image', 'url('+prevThumb+')');
+            var nextThumb = $(this).find('.item.active').find('.next-thumb-preview').data('image');
+            $(this).find('.carousel-control.right').find('.preview-thumb').css('background-image', 'url('+nextThumb+')');
+        });
     }
 
 
