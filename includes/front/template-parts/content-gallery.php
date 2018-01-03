@@ -18,6 +18,7 @@
 					$attachments = csseco_get_bs_slides( csseco_get_post_attachment(10) );
                         $i = 0;
                         foreach ($attachments as $attachment) {
+						    $active = ($i == 0 ? 'active' : '');
                     ?>
                             <li data-target="#post-gallery-<?php the_ID(); ?>" class="<?php echo $active; ?>" data-slide-to="<?php echo $i; ?>"></li>
                     <?php
