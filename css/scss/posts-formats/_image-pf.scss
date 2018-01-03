@@ -8,10 +8,26 @@
 article.csseco-format-image {
   header.entry-header {
     min-height: $csseco_post_header_height;
+    position: relative;
     text-align: center;
     h1.entry-title {}
     .entry-meta {}
-    .entry-excerpt {}
+    .entry-excerpt {
+      &.image-caption {
+        bottom: 0;
+        color: $csseco_light-grey;
+        left: 0;
+        margin: 0;
+        padding: 0 15px;
+        position: absolute;
+        right: 0;
+        @extend %background-gradient;
+        p {
+          margin: 40px 0;
+          font-size: 14px;
+        }
+      }
+    }
   }
   footer.entry-footer {
     /* ../base/_globals.scss */

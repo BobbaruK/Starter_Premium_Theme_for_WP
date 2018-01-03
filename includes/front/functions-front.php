@@ -119,3 +119,31 @@ function csseco_get_embedded_media( $type = array() ) {
 	}
 	return $output;
 }
+
+/**
+ * Generate slider on Gallery Post Format
+ */
+function csseco_get_bs_slides( $attachments ) {
+
+	$output = array();
+	for ( $i = 0; $i < count($attachments); $i++ ) {
+		$active = ($i == 0 ? 'active' : '');
+
+		$countA = count($attachments)-1;
+		$n = ( $i == $countA ? 0 : $i+1 );
+		$nextImg = wp_get_attachment_thumb_url( $attachments[$n]->ID );
+		$p = ( $i == 0 ? $countA : $i-1 );
+		$prevImg = wp_get_attachment_thumb_url( $attachments[$p]->ID );
+
+		$output[$i] = array(
+			'class'     =>  $active,
+			'url'       =>  wp_get_attachment_url( $attachments[$i]->ID ),
+			'next_img'  =>  $nextImg,
+			'prev_img'  =>  $prevImg,
+			'caption'   =>  $attachments[$i]->post_excerpt
+		);
+	}
+
+	return $output;
+
+}

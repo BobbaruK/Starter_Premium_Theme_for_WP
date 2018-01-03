@@ -18,7 +18,7 @@
         <div class="entry-meta">
 			<?php echo csseco_posted_meta(); ?>
         </div><!-- /.entry-meta -->
-        <div class="entry-excerpt">
+        <div class="entry-excerpt image-caption">
 			<?php the_excerpt(); ?>
         </div><!-- /.entry-excerpt -->
     </header><!--/.entry-header-->

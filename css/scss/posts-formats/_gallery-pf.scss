@@ -8,14 +8,36 @@
 article.csseco-format-gallery {
   header.entry-header {
     .carousel {
-      .carousel-indicators {}
+      .carousel-indicators {
+        bottom: 0;
+      }
       .carousel-inner {
         .csseco_slides {
           height: 350px;
+          .entry-excerpt {
+            &.image-caption {
+              bottom: 0;
+              color: $csseco_light-grey;
+              left: 0;
+              margin: 0;
+              padding: 0 15px;
+              position: absolute;
+              right: 0;
+              text-align: center;
+              @extend %background-gradient;
+              @include animate( transform, 320ms );
+              @include transform( translateY(100%) );
+              p {
+                margin: 40px 0;
+                font-size: 14px;
+              }
+            }
+          }
         }
       }
       .carousel-control {
         background: none;
+        padding: 0 30px;
         width: auto;
         .control-wrapper {
           position: relative;
@@ -23,33 +45,28 @@ article.csseco-format-gallery {
             padding: 2px;
           }
           .preview-thumb {
-            background: red;
-            border: 1px solid green;
             border-radius: 5px;
             bottom: -5px;
             display: inline-block;
             height: 68px;
             position: absolute;
+            top: -10px;
             width: 68px;
             @include animate( transform, 320ms );
             @include transform(scale(0));
           }
         }
         &.left {
-          padding-left: 30px;
           .control-wrapper {
             .preview-thumb {
               left: 30px;
-              top: -10px;
             }
           }
         }
         &.right {
-          padding-right: 30px;
           .control-wrapper {
             .preview-thumb {
               right: 30px;
-              top: -10px;
             }
           }
         }
@@ -57,6 +74,17 @@ article.csseco-format-gallery {
           .control-wrapper {
             .preview-thumb {
               @include transform(scale(1));
+            }
+          }
+        }
+      }
+      &:hover {
+        .carousel-inner {
+          .csseco_slides {
+            .entry-excerpt {
+              &.image-caption {
+                @include transform(translateY(0));
+              }
             }
           }
         }

@@ -51,4 +51,20 @@ jQuery(document).ready(function ($) {
     //$('select').addClass('form-control'); // add form-control(bootstrap) class on all select elements on the site
     //$('table').addClass('table'); // add table(bootstrap) class on all table elements on the site
 
+    // ==================
+    // Carousel next and prev thumb preview
+    // ==================
+    var carousel = '.csseco-carousel-thumb';
+    csseco_get_bs_thumbs(carousel);
+    $(carousel).on('slid.bs.carousel', function () {
+        csseco_get_bs_thumbs(carousel);
+    });
+    function csseco_get_bs_thumbs( carousel ) {
+        var prevThumb = $('.item.active').find('.prev-thumb-preview').data('image');
+        $(carousel).find('.carousel-control.left').find('.preview-thumb').css('background-image', 'url('+prevThumb+')');
+        var nextThumb = $('.item.active').find('.next-thumb-preview').data('image');
+        $(carousel).find('.carousel-control.right').find('.preview-thumb').css('background-image', 'url('+nextThumb+')');
+    }
+
+
 });
