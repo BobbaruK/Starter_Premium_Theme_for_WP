@@ -1,12 +1,12 @@
-<h1>CSSeco Theme - Sidebar</h1>
+<h1>CSSeco Theme: Content/Sidebar</h1>
 <?php
 /**
  * @package CSSecoThemes
- * sidebar-options.php
+ * contentsidebar-options.php
  *
  */
 
-function cssecoth_sidebar_options_callback() {
+function cssecoth_contentsidebar_options_callback() {
 	_e( 'Sidebar Width, Location and BgColor', 'cssecotheme' );
 }
 
@@ -54,7 +54,7 @@ function csseco_sidebar_bgcol_callback() {
 
 <?php settings_errors(); ?>
 <form method="post" action="options.php">
-	<?php settings_fields( 'cssecoSettingsGroup-sidebarOptions' ); ?>
-	<?php do_settings_sections('csseco_th_sidebar_options') ?>
+	<?php settings_fields( 'cssecoSettingsGroup-ContentSidebar' ); ?>
+	<?php do_settings_sections('csseco_third_content_sidebar') ?>
 	<?php submit_button(); ?>
 </form>

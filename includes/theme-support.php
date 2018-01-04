@@ -18,7 +18,7 @@ if( @$optionsPostFormats ) {
 /**
  * Custom Header
  */
-$optionsCustomHeader = get_option( 'about_customHeader' );
+$optionsCustomHeader = get_option( 'themefeatures_customHeader' );
 if( @$optionsCustomHeader == 1 ) {
 	add_theme_support( 'custom-header' );
 }

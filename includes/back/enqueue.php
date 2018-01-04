@@ -10,10 +10,11 @@ function csseco_load_admin_scripts( $hook ) {
 	//echo $hook;
 
 	if ( // all pages($hook) that i want to have the style and scripts after if
-		('toplevel_page_csseco_th' != $hook) &&
-		('csseco-theme_page_csseco_th_sidebar_options' != $hook) &&
-		('csseco-theme_page_csseco_th_css_settings' != $hook) &&
-		('csseco-theme_page_csseco_th_contact_form_settings' != $hook)
+		('toplevel_page_csseco_first_theme_features' != $hook) &&
+		('csseco-theme_page_csseco_second_header' != $hook) &&
+		('csseco-theme_page_csseco_third_content_sidebar' != $hook) &&
+		('csseco-csseco-theme_page_csseco_fourth_footer' != $hook) &&
+		('csseco-theme_page_csseco_fifth_custom_css' != $hook)
 	) {
 		return;
 	}
@@ -60,7 +61,7 @@ function csseco_load_admin_scripts( $hook ) {
 	);
 	wp_enqueue_script( 'custom-wp-color-pic-script-handle' );
 
-	if ('csseco-theme_page_csseco_th_css_settings' == $hook) {
+	if ('csseco-theme_page_csseco_fifth_custom_css' == $hook) {
 		/**
 		 * Ace(makes textarea and other tags, like IDE's(phpStorm))
 		 */

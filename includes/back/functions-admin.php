@@ -12,8 +12,8 @@ function csseco_add_admin_page() {
 		__('CSSeco Theme Option', 'cssecotheme'),
 		__('CSSeco Theme', 'cssecotheme'),
 		'manage_options',
-		'csseco_th',
-		'csseco_th_create_pg',
+		'csseco_first_theme_features',
+		'csseco_first_themefeatures',
 		get_template_directory_uri() . '/imgs/back_icons/csseco_admin_icon.png',
 		110
 	);
@@ -22,41 +22,50 @@ function csseco_add_admin_page() {
  *      ADMIN SUBPAGES
  * ================
  */
-	// Generate About subpage(first subpage(this) is the same as the above(CSSeco Theme Option))
+	// Generate 1.Theme Features(first subpage(this) is the same as the above(CSSeco Theme))
 	add_submenu_page(
-		'csseco_th',
-		__('About CSSeco Theme', 'cssecotheme'),
-		__('About', 'cssecotheme'),
+		'csseco_first_theme_features',
+		__('CSSeco Theme: Theme Features Options', 'cssecotheme'),
+		__('Theme Features', 'cssecotheme'),
 		'manage_options',
-		'csseco_th',
-		'csseco_th_create_pg'
+		'csseco_first_theme_features',
+		'csseco_first_themefeatures'
 	);
-	// Generate Sidebar Options subpage -> Options Sidebar
+	// Generate 2.Header(second subpage)
 	add_submenu_page(
-		'csseco_th',
-		__('CSSeco Theme: Sidebar Options', 'cssecotheme'),
-		__('Sidebar Options', 'cssecotheme'),
+		'csseco_first_theme_features',
+		__('CSSeco Theme: Header Options', 'cssecotheme'),
+		__('Header', 'cssecotheme'),
 		'manage_options',
-		'csseco_th_sidebar_options',
-		'csseco_th_opts_sidebar_subpage'
+		'csseco_second_header',
+		'csseco_second_header_f'
 	);
-	// Generate CSS Options subpage -> Options CSS
+	// Generate 3.Content/Sidebar(third subpage)
 	add_submenu_page(
-		'csseco_th',
-		__('CSSeco Theme: CSS Settings', 'cssecotheme'),
-		__('CSS Options', 'cssecotheme'),
+		'csseco_first_theme_features',
+		__('CSSeco Theme: Content/Sidebar Options', 'cssecotheme'),
+		__('Content/Sidebar', 'cssecotheme'),
 		'manage_options',
-		'csseco_th_css_settings',
-		'csseco_th_opts_css_subpage'
+		'csseco_third_content_sidebar',
+		'csseco_third_contentsidebar'
 	);
-	// Generate Contact Form Options subpage -> Options Contact Form
+	// Generate 4.Footer(fourth subpage)
 	add_submenu_page(
-		'csseco_th',
-		__('CSSeco Theme: Contact Form', 'cssecotheme'),
-		__('Contact Form Options', 'cssecotheme'),
+		'csseco_first_theme_features',
+		__('CSSeco Theme: Footer Options', 'cssecotheme'),
+		__('Footer', 'cssecotheme'),
 		'manage_options',
-		'csseco_th_contactForm_settings',
-		'csseco_th_opts_contactf_subpage'
+		'csseco_fourth_footer',
+		'csseco_fourth_footer_f'
+	);
+	// Generate 5.Custom CSS(fifth subpage)
+	add_submenu_page(
+		'csseco_first_theme_features',
+		__('CSSeco Theme: Custom CSS', 'cssecotheme'),
+		__('Custom CSS', 'cssecotheme'),
+		'manage_options',
+		'csseco_fifth_custom_css',
+		'csseco_fifth_customcss'
 	);
 
 	// Activate custom settings
@@ -70,63 +79,64 @@ function csseco_custom_settings() {
 	 *      Settings ** register custom settings
 	 * ================
 	 */
-	// About Options Settings
+	// Theme Features Options Settings
 	register_setting(
-		'cssecoSettingsGroup-About',
-		'about_logo'//
+		'cssecoSettingsGroup-ThemeFeatures',
+		'themefeatures_postFormat'//
 	);
 	register_setting(
-		'cssecoSettingsGroup-About',
-		'about_postFormat'//
+		'cssecoSettingsGroup-ThemeFeatures',
+		'themefeatures_customHeader'//
 	);
 	register_setting(
-		'cssecoSettingsGroup-About',
-		'about_customHeader'//
-	);
-	register_setting(
-		'cssecoSettingsGroup-About',
+		'cssecoSettingsGroup-ThemeFeatures',
 		'about_customBackground'//
 	);
 	register_setting(
-		'cssecoSettingsGroup-About',
-		'about_description',//
-		'csseco_about_description_sanitization'// sanitization functions further down
+		'cssecoSettingsGroup-ThemeFeatures',
+		'contactF_activate'//
 	);
-	// Sidebar Options settings
+	// Header Options Settings
 	register_setting(
-		'cssecoSettingsGroup-sidebarOptions',
+		'cssecoSettingsGroup-Header',
+		'header_logo'//
+	);
+	// Content/Sidebar Options settings
+	register_setting(
+		'cssecoSettingsGroup-ContentSidebar',
 		'sidebar_width'//
 	);
 	register_setting(
-		'cssecoSettingsGroup-sidebarOptions',
+		'cssecoSettingsGroup-ContentSidebar',
 		'sidebar_location'//
 	);
 	register_setting(
-		'cssecoSettingsGroup-sidebarOptions',
+		'cssecoSettingsGroup-ContentSidebar',
 		'sidebar_bgcol'//
 	);
-	// CSS Options settings
+	// Footer Options Settings
 	register_setting(
-		'cssecoSettingsGroup-CSS',
-		'css_bgCol'
+		'cssecoSettingsGroup-Footer',
+		'footer_description',//
+		'csseco_about_description_sanitization'// sanitization functions further down
+	);
+	// CustomCSS Options settings
+	register_setting(
+		'cssecoSettingsGroup-CustomCss',
+		'customcss_bgCol'
 	);
 	register_setting(
-		'cssecoSettingsGroup-CSS',
-		'css_fontSize'//
+		'cssecoSettingsGroup-CustomCss',
+		'customcss_fontSize'//
 	);
 	register_setting(
-		'cssecoSettingsGroup-CSS',
-		'css_mainBgCol'//
+		'cssecoSettingsGroup-CustomCss',
+		'customcss_mainBgCol'//
 	);
 	register_setting(
-		'cssecoSettingsGroup-CSS',
-		'css_customcss',//
-		'csseco_customcss_sanitize'
-	);
-	// Contact Form Options settings
-	register_setting(
-		'cssecoSettingsGroup-ContactF',
-		'contactF_activate'//
+		'cssecoSettingsGroup-CustomCss',
+		'customcss_thecss',//
+		'csseco_customcss_sanitize'// sanitization functions further down
 	);
 
 	/**
@@ -135,27 +145,42 @@ function csseco_custom_settings() {
 	 * ================
 	 */
 	// SECTION // add custom setting to page
-	// About Options Section
+	// Theme Features Options Section
 	add_settings_section(
-		'csseco-about-options',
-		__('About CSSeco Theme...', 'cssecotheme'),
-		'cssecoth_about_options_callback',
-		'csseco_th'
+		'csseco-thfeatures-options',
+		__('Theme Features...', 'cssecotheme'),
+		'cssecoth_themefeatures_options_callback',
+		'csseco_first_theme_features'
+	);
+	// Header Options Section
+	add_settings_section(
+		'csseco-header-options',
+		__('Header Options...', 'cssecotheme'),
+		'cssecoth_header_options_callback',
+		'csseco_second_header'
+	);
+	// Content/Sidebar Options Section
+	add_settings_section(
+		'csseco-content-sidebar-options',
+		__('Sidebar Options', 'cssecotheme'),
+		'cssecoth_contentsidebar_options_callback',
+		'csseco_third_content_sidebar'
+	);
+	//Footer Options Section
+	add_settings_section(
+		'csseco-footer-options',
+		__('Sidebar Options', 'cssecotheme'),
+		'cssecoth_footer_options_callback',
+		'csseco_fourth_footer'
 	);
 	//CSS Options Section
 	add_settings_section(
 		'csseco-css-options',
 		__('CSS Options', 'cssecotheme'),
 		'cssecoth_css_options_callback',
-		'csseco_th_css_settings'
+		'csseco_fifth_custom_css'
 	);
-	//Sidebar Options Section
-	add_settings_section(
-		'csseco-sidebar-options',
-		__('Sidebar Options', 'cssecotheme'),
-		'cssecoth_sidebar_options_callback',
-		'csseco_th_sidebar_options'
-	);
+
 	//ContactF Options Section
 	add_settings_section(
 		'csseco-contactf-options',
@@ -169,100 +194,101 @@ function csseco_custom_settings() {
 	 *      FIELDS ** add custom fields opts to section
 	 * ================
 	 */
-	// Fields for about options
-	add_settings_field(
-		'about-logo',
-		__('Logo', 'cssecotheme'),
-		'csseco_about_logo_callback',// all callbacks in settings fields are in their files
-		'csseco_th',
-		'csseco-about-options'
-	);
+	// Fields for Theme Features Options
 	add_settings_field(
 		'about-post-format',
 		__('Post Formats', 'cssecotheme'),
 		'csseco_postFormats_callback',// all callbacks in settings fields are in their files
-		'csseco_th',
-		'csseco-about-options'
+		'csseco_first_theme_features',
+		'csseco-thfeatures-options'
 	);
 	add_settings_field(
 		'about-custom-header',
 		__('Custom Header', 'cssecotheme'),
 		'csseco_customHeader_callback',// all callbacks in settings fields are in their files
-		'csseco_th',
-		'csseco-about-options'
+		'csseco_first_theme_features',
+		'csseco-thfeatures-options'
 	);
 	add_settings_field(
 		'about-custom-background',
 		__('Custom background', 'cssecotheme'),
 		'csseco_customBackground_callback',// all callbacks in settings fields are in their files
-		'csseco_th',
-		'csseco-about-options'
+		'csseco_first_theme_features',
+		'csseco-thfeatures-options'
 	);
 	add_settings_field(
-		'about-description',
-		__('Long description', 'cssecotheme'),
-		'csseco_description_callback',// all callbacks in settings fields are in their files
-		'csseco_th',
-		'csseco-about-options'
+		'contactF-activate',
+		__('Activate Contact Form', 'cssecotheme'),
+		'contactF_checkActiv_callback',// all callbacks in settings fields are in their files
+		'csseco_first_theme_features',
+		'csseco-thfeatures-options'
 	);
-	// Fields for sidebar options
+	// Fields for Header Options
+	add_settings_field(
+		'header-logo',
+		__('Logo', 'cssecotheme'),
+		'csseco_about_logo_callback',// all callbacks in settings fields are in their files
+		'csseco_second_header',
+		'csseco-header-options'
+	);
+	// Fields for Content/Sidebar options
 	add_settings_field(
 		'sidebar-width',
 		__('Sidebar Width', 'cssecotheme'),
 		'csseco_sidebar_width_callback',// all callbacks in settings fields are in their files
-		'csseco_th_sidebar_options',
-		'csseco-sidebar-options'
+		'csseco_third_content_sidebar',
+		'csseco-content-sidebar-options'
 	);
 	add_settings_field(
 		'sidebar-location',
 		__('Sidebar Location', 'cssecotheme'),
 		'csseco_sidebar_location_callback',// all callbacks in settings fields are in their files
-		'csseco_th_sidebar_options',
-		'csseco-sidebar-options'
+		'csseco_third_content_sidebar',
+		'csseco-content-sidebar-options'
 	);
 	add_settings_field(
 		'sidebar-bgcol',
 		__('Sidebar BgCol', 'cssecotheme'),
 		'csseco_sidebar_bgcol_callback', // all callbacks in settings fields are in their files
-		'csseco_th_sidebar_options',
-		'csseco-sidebar-options'
+		'csseco_third_content_sidebar',
+		'csseco-content-sidebar-options'
+	);
+	// Fields for Footer options
+	add_settings_field(
+		'footer-description',
+		__('Long description', 'cssecotheme'),
+		'csseco_description_callback',// all callbacks in settings fields are in their files
+		'csseco_fourth_footer',
+		'csseco-footer-options'
 	);
 	// Fields for css options
 	add_settings_field(
 		'css-bgcol',
 		__('Background Color', 'cssecotheme'),
 		'csseco_css_bg_callback',// all callbacks in settings fields are in their files
-		'csseco_th_css_settings',
+		'csseco_fifth_custom_css',
 		'csseco-css-options'
 	);
 	add_settings_field(
 		'css-fontSize',
 		__('Font Size', 'cssecotheme'),
 		'csseco_font_size_callback',// all callbacks in settings fields are in their files
-		'csseco_th_css_settings',
+		'csseco_fifth_custom_css',
 		'csseco-css-options'
 	);
 	add_settings_field(
 		'css-mainBgCol',
 		__('Main Content BgColor', 'cssecotheme'),
 		'csseco_mainBgCol_callback',// all callbacks in settings fields are in their files
-		'csseco_th_css_settings',
+		'csseco_fifth_custom_css',
 		'csseco-css-options'
 	);
 	add_settings_field(
 		'css-customcss',
 		__('Custom CSS', 'cssecotheme'),
 		'csseco_customCSS_callback',// all callbacks in settings fields are in their files
-		'csseco_th_css_settings',
+		'csseco_fifth_custom_css',
 		'csseco-css-options'
-	);
-	// Fields for contact form options
-	add_settings_field(
-		'contactF-activate',
-		__('Activate Contact Form', 'cssecotheme'),
-		'contactF_checkActiv_callback',// all callbacks in settings fields are in their files
-		'csseco_th_contactForm_settings',
-		'csseco-contactf-options'
 	);
 
 }
@@ -290,19 +316,29 @@ function csseco_customcss_sanitize( $input ) {
  *      Generate Pages
  * ================
  */
-function csseco_th_create_pg() {
-	// function used by: "CSSeco Theme" and "About CSSeco Theme"
-	require_once( get_template_directory() . '/includes/back/templates/about-options.php' );
+function csseco_first_themefeatures() {
+	// function used by: "CSSeco Theme" and "Theme Features"
+	require_once( get_template_directory() . '/includes/back/templates/themefeatures-options.php' );
 }
 
-function csseco_th_opts_sidebar_subpage() {
-	// function used by: "CSSeco Theme: Sidebar Options"
-	require_once( get_template_directory() . '/includes/back/templates/sidebar-options.php' );
+function csseco_second_header_f() {
+	// function used by: "Header"
+	require_once( get_template_directory() . '/includes/back/templates/header-options.php' );
 }
 
-function csseco_th_opts_css_subpage() {
-	// function used by: "CSSeco Theme: CSS Settings"
-	require_once( get_template_directory() . '/includes/back/templates/css-options.php' );
+function csseco_third_contentsidebar() {
+	// function used by: "Content/Sidebar"
+	require_once( get_template_directory() . '/includes/back/templates/contentsidebar-options.php' );
+}
+
+function csseco_fourth_footer_f() {
+	// function used by: "Footer"
+	require_once( get_template_directory() . '/includes/back/templates/footer-options.php' );
+}
+
+function csseco_fifth_customcss() {
+	// function used by: "Custom CSS"
+	require_once( get_template_directory() . '/includes/back/templates/customcss-options.php' );
 }
 
 function csseco_th_opts_contactf_subpage() {

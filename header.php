@@ -21,7 +21,7 @@
         <?php wp_head(); ?>
 
         <?php
-            $csseco_front_customcss = esc_attr( get_option( 'css_customcss' ) );
+            $csseco_front_customcss = esc_attr( get_option( 'customcss_thecss' ) );
             if( !empty($csseco_front_customcss) ) {
                 echo '<style type="text/css" media="all">' . $csseco_front_customcss . '</style>';
             }

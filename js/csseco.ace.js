@@ -5,7 +5,7 @@
 jQuery(document).ready(function ($) {
 
     var updateCSS = function () {
-        $("#css_customcss").val( editor.getSession().getValue() );
+        $("#customcss_thecss").val( editor.getSession().getValue() );
     };
 
     $('#csseco_save_css').submit( updateCSS );
