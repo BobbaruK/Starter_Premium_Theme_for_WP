@@ -32,12 +32,12 @@
             <div class="container-fluid">
                 <div class="row">
                         <?php
-                            $aboutLogo = get_option('about_logo');
+                            $aboutLogo = get_option('header_logo');
                             if ( @$aboutLogo ) {
                         ?>
                             <div class="csseco_logo_header">
                                 <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
-                                    <img id="cssecoAdminLogo" src="<?php print $aboutLogo; ?>" alt="">
+                                    <img id="cssecoAdminLogo" src="<?php print $aboutLogo; ?>" alt="Logo" />
                                 </a>
                             </div>
                         <?php

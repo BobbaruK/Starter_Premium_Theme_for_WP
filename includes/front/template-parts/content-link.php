@@ -7,7 +7,7 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'csseco-format-link' ); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( array( 'csseco-format-link' ) ); ?>>
 	<header class="entry-header">
 		<?php
 		$link = csseco_grab_url();

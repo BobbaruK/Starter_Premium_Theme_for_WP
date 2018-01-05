@@ -5,9 +5,10 @@
  *
  * Aside Post Format
  */
+//$class = get_query_var('post-class');
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'csseco-format-aside' ); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( array( 'csseco-format-aside' ) ); ?>>
 
 	<div class="row">
 	    <div class="col-xs-12 col-sm-4 col-md-3 text-center">

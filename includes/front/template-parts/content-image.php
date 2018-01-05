@@ -7,7 +7,7 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'csseco-format-image' ); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( array( 'csseco-format-image' ) ); ?>>
     <header class="entry-header bg-img-el" style="background-image: url(<?php echo csseco_get_post_attachment(); ?>);">
 	    <?php
             the_title(

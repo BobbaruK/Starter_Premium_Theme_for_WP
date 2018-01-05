@@ -7,7 +7,7 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'csseco-format-standard' ); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( array( 'csseco-format-standard' ) ); ?>>
 	<header class="entry-header">
         <?php
             the_title(

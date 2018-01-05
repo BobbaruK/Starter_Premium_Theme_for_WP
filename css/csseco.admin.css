@@ -1,3 +1,27 @@
-.csseco_admin_logo_preview{height:auto;margin:5px 0 0 15px;max-height:auto;max-width:150px;width:100%}.csseco_admin_logo_preview img{height:auto;max-width:100%;padding:3px;width:100%}label[class*="csseco-label-"]{text-transform:capitalize}
+/**
+ * @package CSSecoThemes
+ * csseco.admin.css
+ */
+/* line 6, scss/csseco.admin.scss */
+.csseco_admin_logo_preview {
+  height: auto;
+  margin: 5px 0 0 15px;
+  max-height: auto;
+  max-width: 150px;
+  width: 100%;
+}
+/* line 12, scss/csseco.admin.scss */
+.csseco_admin_logo_preview img {
+  height: auto;
+  max-width: 100%;
+  padding: 3px;
+  width: 100%;
+}
+
+/* On about admin options page the post fortmats have lower case */
+/* line 21, scss/csseco.admin.scss */
+label[class*="csseco-label-"] {
+  text-transform: capitalize;
+}
 
 /*# sourceMappingURL=csseco.admin.css.map */

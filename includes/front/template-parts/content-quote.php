@@ -7,7 +7,7 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'csseco-format-quote' ); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( array( 'csseco-format-quote' ) ); ?>>
 	<header class="entry-header text-center">
 		<div class="row">
 		    <div class="col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">

@@ -7,7 +7,7 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'csseco-format-gallery' ); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( array( 'csseco-format-gallery' ) ); ?>>
     <header class="entry-header">
 		<?php if ( csseco_get_post_attachment() ) {//var_dump($attachments);?>
 

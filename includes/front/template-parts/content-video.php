@@ -7,7 +7,7 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'csseco-format-video' ); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( array( 'csseco-format-video' ) ); ?>>
 
 	<header class="entry-header">
         <div class="embed-responsive embed-responsive-16by9">

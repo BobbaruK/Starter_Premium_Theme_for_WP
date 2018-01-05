@@ -6,7 +6,7 @@
  * Audio Post Format
  */
 ?>
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'csseco-format-audio' ); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( array( 'csseco-format-audio' ) ); ?>>
 	<header class="entry-header">
 		<?php
             the_title(
