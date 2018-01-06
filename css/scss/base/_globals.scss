@@ -12,7 +12,7 @@ article {
   padding-bottom: 30px;
   opacity: 0;
   @include animate( all, 320ms );
-  @include transform( translateY(50px) );
+  @include transform( translateY(30px) );
   &.reveal {
     @include transform( translateY(0) );
     opacity: 1;

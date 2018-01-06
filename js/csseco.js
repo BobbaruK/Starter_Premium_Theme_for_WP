@@ -76,6 +76,11 @@ jQuery(document).ready(function ($) {
         var page = that.data('page');
         var newPage = page+1;
         var ajaxurl = that.data('url');
+        var prev = that.data('prev');
+
+        if( typeof prev === 'undefined' ) {
+            prev = 0;
+        }
 
         that.addClass( 'load' ).find('.text').text('Loading'); // add class load on the button
         that.find('i').addClass('fa-spin'); // add class fa-spin ont the i(fontawesome)
@@ -85,29 +90,65 @@ jQuery(document).ready(function ($) {
             type : 'post',//method(post or get)
             data : {
                 page : page,
+                prev : prev,
                 action : 'csseco_load_more'
             },
             error : function( response ){
                 console.log(response);
             },
             success : function( response ){
-                setTimeout(function () {
-                    that.data('page', newPage);
-                    $('.csseco-posts-container').append( response );
-                    that.removeClass( 'load' ).find('.text').text('Load More'); // remove class load on the button
-                    that.find('i').removeClass('fa-spin'); // remove class fa-spin on the i(fontawesome)
-                    revealPosts();
-                    csseco_restart_bs();
-                }, 600);
+                if( response == 0 ) {
+                    $('.csseco-posts-container').append('<h3>No more posts to load.</h3>');
+                    that.fadeOut(320).slideUp();
+                } else {
+                    setTimeout(function () {
+
+                        if ( prev == 1 ) {
+                            $('.csseco-posts-container').prepend( response );
+                            newPage = page-1;
+                            that.find('.text').text('Load Prev');
+                        } else {
+                            $('.csseco-posts-container').append( response );
+                        }
+
+                        if ( newPage == 1 ) {
+                            that.fadeOut(320).slideUp();
+                        } else  {
+                            that.data('page', newPage);
+                            that.removeClass( 'load' ).find('.text').text('Load More'); // remove class load on the button
+                            that.find('i').removeClass('fa-spin'); // remove class fa-spin on the i(fontawesome)
+                        }
+
+                        revealPosts();
+                        csseco_restart_bs();
+                    }, 600);
+                }
             }
         });
     });
 
-    /**
-     * Helper Functions
-     */
+    // ==================
+    // Scroll Functions
+    // ==================
+    var last_scroll = 0;
+    $(window).scroll( function() {
+        var scroll = $(window).scrollTop();
+        if( Math.abs( scroll - last_scroll ) > $(window).height()*0.1 ){
+            last_scroll = scroll;
+            $('.page-limit').each(function( index ){
+                if( isVisible( $(this) ) ) {
+                    history.replaceState( null, null, $(this).attr("data-page") );
+                    return(false);
+                }
+            });
+        }
+    } );
+
+    // ==================
+    // Helper Functions
+    // ==================
     // Reveal Posts
-    revealPosts();
+    revealPosts(); // init
     function revealPosts() {
         var posts = $('.csseco-posts-container article:not(.reveal)');
         var i = 0;
@@ -119,7 +160,7 @@ jQuery(document).ready(function ($) {
                 $(el).addClass('reveal');
                 i++;
             }
-        }, 400);
+        }, 110);
     }
     // Force start carousel on loaded posts
     function csseco_restart_bs() {
@@ -128,6 +169,15 @@ jQuery(document).ready(function ($) {
         $(carousel).on('slid.bs.carousel', function () {
             csseco_get_bs_thumbs(carousel);
         });
+    }
+    //
+    function isVisible( element ) {/* https://www.youtube.com/watch?v=IizweXL-RPY&feature=youtu.be&t=20m16s */
+        var scroll_pos = $(window).scrollTop();
+        var window_height = $(window).height();
+        var el_top = $(element).offset().top;
+        var el_height = $(element).height();
+        var el_bottom = el_top + el_height;
+        return( ( el_bottom - el_height*0.25 > scroll_pos ) && ( el_top < ( scroll_pos+0.5*window_height ) ) );
     }
 
 });
