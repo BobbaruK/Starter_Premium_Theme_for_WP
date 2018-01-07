@@ -5,7 +5,7 @@
  *
  * Post Formats
  */
-$optionsPostFormats = get_option( 'about_postFormat' );
+$optionsPostFormats = get_option( 'themefeatures_postFormat' );
 $formats = array( 'aside', 'gallery', 'link', 'image', 'quote', 'status', 'video', 'audio', 'chat' );
 $output = array();
 foreach ( $formats as $format ) {

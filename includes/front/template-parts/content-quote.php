@@ -16,7 +16,7 @@
 				        <?php echo get_the_content(); ?>
 				    </a>
 			    </h1>
-			    <?php the_title('<h2 class="quote-author">','</h1>'); ?>
+			    <?php the_title('<h2 class="quote-author">','</h2>'); ?>
 		    </div><!-- /.col-sm-10 -->
 		</div><!-- /.row -->
 	</header><!--/.entry-header-->
