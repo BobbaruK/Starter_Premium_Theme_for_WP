@@ -77,9 +77,14 @@ jQuery(document).ready(function ($) {
         var newPage = page+1;
         var ajaxurl = that.data('url');
         var prev = that.data('prev');
+        var archive = that.data('archive');
 
         if( typeof prev === 'undefined' ) {
             prev = 0;
+        }
+
+        if( typeof archive === 'undefined') {
+            archive = 0;
         }
 
         that.addClass( 'load' ).find('.text').text('Loading'); // add class load on the button
@@ -91,6 +96,7 @@ jQuery(document).ready(function ($) {
             data : {
                 page : page,
                 prev : prev,
+                archive : archive,
                 action : 'csseco_load_more'
             },
             error : function( response ){
