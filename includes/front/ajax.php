@@ -68,8 +68,8 @@ function csseco_load_more() {
 		}
 
 	} else {
-		$page_trail = '/starter_premium_theme/'; // starter_premium_theme e numele folderului in care e instalat situl LocalHost
 		//$page_trail = '/';
+		$page_trail = '/starter_premium_theme/'; // starter_premium_theme e numele folderului in care e instalat situl LocalHost
 	}
 
 	$query = new WP_Query( $args );
