@@ -27,29 +27,49 @@ function csseco_load_more() {
 	if( $archive != '0' ) {
 		$archVal = explode( '/', $archive );
 		//print_r( $archVal );
-		/**
-		 * LocalHost
-		 * Array ( [0] => [1] => starter_premium_theme [2] => category [3] => uncategorized [4] => )
-		 * daca instalezi in site care e in root trebuie sa tii cont de arrayul asta
-		 */
-		//$type = ( $archVal[2] == "category" ? "category_name" : $archVal[2] );
 
-		//$args[ $type ] = $archVal[3];
+		// check if are "category" in archVal
+		if ( in_array( "category", $archVal ) ) {
+			$type = "category_name";
+			$currKey = array_keys( $archVal, "category" );
+			$nextKey = $currKey[0]+1;
+			$value = $archVal[ $nextKey ];
 
-		//$page_trail = '/' . $archVal[1] . '/' . $archVal[2] . '/' . $archVal[3] . '/';
-		/**
-		 * daca e site in root
-		 * Array ( [0] => [1] => category [2] => uncategorized [3] => )
-		 */
-		$type = ( $archVal[1] == "category" ? "category_name" : $archVal[1] );
+			$args[ $type ] = $value;
 
-		$args[ $type ] = $archVal[2];
+		}
 
-		$page_trail = '/' . $archVal[1] . '/' . $archVal[2] . '/';
+		if ( in_array( "tag", $archVal ) ) {
+			$type = "tag";
+			$currKey = array_keys( $archVal, "tag" );
+			$nextKey = $currKey[0]+1;
+			$value = $archVal[ $nextKey ];
+
+			$args[ $type ] = $value;
+
+		}
+
+		if ( in_array( "author", $archVal ) ) {
+			$type = "author";
+			$currKey = array_keys( $archVal, "author" );
+			$nextKey = $currKey[0]+1;
+			$value = $archVal[ $nextKey ];
+
+			$args[ $type ] = $value;
+
+		}
+
+		// check page trail and remove "page" value
+		if ( in_array( "page", $archVal ) ) {
+			$pageVal = explode( 'page', $archive );
+			$page_trail = $pageVal[0];
+		} else {
+			$page_trail = $archive;
+		}
 
 	} else {
-		//$page_trail = '/starter_premium_theme/'; // starter_premium_theme e numele folderului in care e instalat situl LocalHost
-		$page_trail = '/';
+		$page_trail = '/starter_premium_theme/'; // starter_premium_theme e numele folderului in care e instalat situl LocalHost
+		//$page_trail = '/';
 	}
 
 	$query = new WP_Query( $args );
@@ -70,7 +90,9 @@ function csseco_load_more() {
 
 function csseco_check_paged( $num = null ) {
 	$output = '';
-	if ( is_paged() ) { $output = 'page/' . get_query_var( 'paged' ); }
+	if ( is_paged() ) {
+		$output = 'page/' . get_query_var( 'paged' );
+	}
 	if ( $num == 1 ) {
 		$paged = ( get_query_var( 'paged' ) == 0 ? 1 : get_query_var( 'paged' ) );
 		return $paged;
