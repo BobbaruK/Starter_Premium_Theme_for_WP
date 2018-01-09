@@ -11,8 +11,8 @@
 	<header class="entry-header">
 		<?php
 		the_title(
-			'<h1 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">',
-			'</a></h1>'
+			'<h1 class="entry-title">',
+			'</h1>'
 		);
 		?>
 		<div class="entry-meta">
