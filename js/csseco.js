@@ -54,18 +54,22 @@ jQuery(document).ready(function ($) {
     // ==================
     // Carousel next and prev thumb preview
     // ==================
-    var carousel = '.csseco-carousel-thumb';
-    csseco_get_bs_thumbs(carousel);
-    $(carousel).on('slid.bs.carousel', function () {
-        csseco_get_bs_thumbs(carousel);
-    });
-    function csseco_get_bs_thumbs( carousel ) {
-        $(carousel).each(function () {
-            var prevThumb = $(this).find('.item.active').find('.prev-thumb-preview').data('image');
-            $(this).find('.carousel-control.left').find('.preview-thumb').css('background-image', 'url('+prevThumb+')');
-            var nextThumb = $(this).find('.item.active').find('.next-thumb-preview').data('image');
-            $(this).find('.carousel-control.right').find('.preview-thumb').css('background-image', 'url('+nextThumb+')');
+    var carouselClass = '.csseco-carousel-thumb';
+    $(document).on('click', carouselClass, function(){
+        var id = $("#"+$(this).attr("id"));
+        $(id).on('slid.bs.carousel', function(){
+            csseco_get_bs_thumbs(id);
         });
+    });
+    $(document).on('mouseenter', carouselClass, function(){
+        var id = $("#"+$(this).attr("id"));
+        csseco_get_bs_thumbs(id);
+    });
+    function csseco_get_bs_thumbs( id ) {
+        var prevThumb = $(id).find('.item.active').find('.prev-thumb-preview').data('image');
+        $(id).find('.carousel-control.left').find('.preview-thumb').css('background-image', 'url('+prevThumb+')');
+        var nextThumb = $(id).find('.item.active').find('.next-thumb-preview').data('image');
+        $(id).find('.carousel-control.right').find('.preview-thumb').css('background-image', 'url('+nextThumb+')');
     }
 
     // ==================
@@ -126,7 +130,6 @@ jQuery(document).ready(function ($) {
                         }
 
                         revealPosts();
-                        csseco_restart_bs();
                     }, 600);
                 }
             }
@@ -168,15 +171,7 @@ jQuery(document).ready(function ($) {
             }
         }, 110);
     }
-    // Force start carousel on loaded posts
-    function csseco_restart_bs() {
-        $('.csseco-carousel-thumb').carousel();
-        csseco_get_bs_thumbs(carousel);
-        $(carousel).on('slid.bs.carousel', function () {
-            csseco_get_bs_thumbs(carousel);
-        });
-    }
-    //
+    // Check if posts are loaded and update url
     function isVisible( element ) {/* https://www.youtube.com/watch?v=IizweXL-RPY&feature=youtu.be&t=20m16s */
         var scroll_pos = $(window).scrollTop();
         var window_height = $(window).height();

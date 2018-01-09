@@ -27,31 +27,21 @@ function csseco_load_more() {
 	if( $archive != '0' ) {
 		$archVal = explode( '/', $archive );
 		//print_r( $archVal );
+		$archValFlipped = array_flip($archVal);
+		if ( isset( $archValFlipped["category"] ) || isset( $archValFlipped["tag"] ) || isset( $archValFlipped["author"] ) ) {
 
-		// check if are "category" in archVal
-		if ( in_array( "category", $archVal ) ) {
-			$type = "category_name";
-			$currKey = array_keys( $archVal, "category" );
-			$nextKey = $currKey[0]+1;
-			$value = $archVal[ $nextKey ];
+			if ( isset( $archValFlipped["category"] ) ){
+				$type = "category_name";
+				$key = "category";
+			} elseif ( isset( $archValFlipped["tag"] ) ) {
+				$type = "tag";
+				$key = $type;
+			} elseif ( isset( $archValFlipped["author"] ) ) {
+				$type = "author";
+				$key = $type;
+			}
 
-			$args[ $type ] = $value;
-
-		}
-
-		if ( in_array( "tag", $archVal ) ) {
-			$type = "tag";
-			$currKey = array_keys( $archVal, "tag" );
-			$nextKey = $currKey[0]+1;
-			$value = $archVal[ $nextKey ];
-
-			$args[ $type ] = $value;
-
-		}
-
-		if ( in_array( "author", $archVal ) ) {
-			$type = "author";
-			$currKey = array_keys( $archVal, "author" );
+			$currKey = array_keys( $archVal, $key );
 			$nextKey = $currKey[0]+1;
 			$value = $archVal[ $nextKey ];
 
@@ -60,7 +50,7 @@ function csseco_load_more() {
 		}
 
 		// check page trail and remove "page" value
-		if ( in_array( "page", $archVal ) ) {
+		if ( isset( $archValFlipped["page"] ) ) {
 			$pageVal = explode( 'page', $archive );
 			$page_trail = $pageVal[0];
 		} else {
@@ -68,7 +58,7 @@ function csseco_load_more() {
 		}
 
 	} else {
-		//$page_trail = '/';
+		//$page_trail = '/'; // live server(if root)
 		$page_trail = '/starter_premium_theme/'; // starter_premium_theme e numele folderului in care e instalat situl LocalHost
 	}
 
