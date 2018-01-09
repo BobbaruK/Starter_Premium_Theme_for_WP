@@ -291,6 +291,7 @@ nav#cssecoMenu {
 # Globals and Posts Formats
 --------------------------------------------------------------*/
 @import 'base/globals';                  // Global Elements
+@import 'posts-formats/_single';         // Single Post Template
 @import 'posts-formats/standard-pf';     // Post Format: Standard
 @import 'posts-formats/image-pf';        // Post Format: Image
 @import 'posts-formats/audio-pf';        // Post Format: Audio

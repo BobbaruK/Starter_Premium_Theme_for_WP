@@ -28,26 +28,30 @@ function csseco_load_more() {
 		$archVal = explode( '/', $archive );
 		//print_r( $archVal );
 		$archValFlipped = array_flip($archVal);
-		if ( isset( $archValFlipped["category"] ) || isset( $archValFlipped["tag"] ) || isset( $archValFlipped["author"] ) ) {
+		switch ( isset( $archValFlipped ) ){
 
-			if ( isset( $archValFlipped["category"] ) ){
+			case $archValFlipped["category"] :
 				$type = "category_name";
 				$key = "category";
-			} elseif ( isset( $archValFlipped["tag"] ) ) {
+				break;
+
+			case $archValFlipped["tag"] :
 				$type = "tag";
 				$key = $type;
-			} elseif ( isset( $archValFlipped["author"] ) ) {
+				break;
+
+			case $archValFlipped["author"] :
 				$type = "author";
 				$key = $type;
-			}
-
-			$currKey = array_keys( $archVal, $key );
-			$nextKey = $currKey[0]+1;
-			$value = $archVal[ $nextKey ];
-
-			$args[ $type ] = $value;
+				break;
 
 		}
+
+		$currKey = array_keys( $archVal, $key );
+		$nextKey = $currKey[0]+1;
+		$value = $archVal[ $nextKey ];
+
+		$args[ $type ] = $value;
 
 		// check page trail and remove "page" value
 		if ( isset( $archValFlipped["page"] ) ) {
