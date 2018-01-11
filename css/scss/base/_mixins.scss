@@ -19,3 +19,10 @@
   -o-transform: $val;
   transform: $val;
 }
+
+// Full width
+@mixin fullWidth() {
+  height: auto;
+  max-width: 100%;
+  width: 100%;
+}

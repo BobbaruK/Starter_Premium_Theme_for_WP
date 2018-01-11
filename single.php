@@ -17,7 +17,7 @@ get_header(); ?>
 
 						get_template_part( 'includes/front/template-parts/single', get_post_format() );
 
-						the_post_navigation();
+						echo csseco_post_navigation();
 
 						if ( comments_open() ) {
 

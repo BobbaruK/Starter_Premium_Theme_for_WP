@@ -169,3 +169,23 @@ function csseco_grab_current_uri() {
 
 	return $archive_url;
 }
+
+/**
+ * Single post custom functions
+ */
+// Single Post Navigation
+function csseco_post_navigation() {
+
+	$nav = '<div class="row"><div class="csseco_custom_post_navigation">';
+
+	$prev = get_previous_post_link( '<div class="post-link-nav-prev"><i class="fa fa-chevron-left" aria-hidden="true"></i>%link</div>', '%title' );
+	$nav .= '<div class="col-xs-12 col-sm-6">' . $prev . '</div>';
+
+	$next = get_next_post_link( '<div class="post-link-nav-next">%link<i class="fa fa-chevron-right" aria-hidden="true"></i></div>', '%title' );
+	$nav .= '<div class="col-xs-12 col-sm-6">' . $next . '</div>';
+
+	$nav .= ' </div></div>';// .row
+
+	return $nav;
+
+}

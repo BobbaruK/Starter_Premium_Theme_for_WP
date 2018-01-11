@@ -19,7 +19,7 @@
 			<?php echo csseco_posted_meta(); ?>
 		</div><!-- /.entry-meta -->
 	</header><!--/.entry-header-->
-	<div class="entry-content">
+	<div class="entry-content clearfix">
 		<?php
 			if ( has_post_thumbnail() ) {
 		?>
@@ -27,6 +27,7 @@
 
 		<?php } ?>
 		<?php the_content(); ?>
+		<?php wp_link_pages(); ?>
 	</div><!-- /.entry-content -->
 	<footer class="entry-footer">
 		<?php echo csseco_posted_footer(); ?>

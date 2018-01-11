@@ -19,6 +19,7 @@ include( get_template_directory() . '/includes/front/enqueue.php' );            
 include( get_template_directory() . '/includes/front/reg-menus.php' );          // register menus file
 include( get_template_directory() . '/includes/front/functions-front.php' );    // functions that work in frontend
 include( get_template_directory() . '/includes/front/ajax.php' );               // ajax functions(load more posts)
+include( get_template_directory() . '/includes/front/shortcodes.php' );         // shortcodes functions
 
 
 /**
@@ -42,3 +43,5 @@ add_action( 'after_setup_theme', 'csseco_reg_menus' );                 // regist
 /**
  * Shortcodes
  */
+add_shortcode( 'tooltip', 'csseco_tooltip' );
+add_shortcode( 'popover', 'csseco_popover' );

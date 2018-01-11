@@ -13,6 +13,7 @@
     # Menu styles (wp ready)
     # Footer
     ## Footer Menu
+    # Body
     # Globals and Posts Formats
 --------------------------------------------------------------*/
 
@@ -23,6 +24,7 @@
 @import 'base/variables';                // Variables
 @import 'base/mixins';                   // Mixins
 @import 'base/placeholders';             // Placeholders
+@import 'base/wordpress';                // Wordpress default classes
 
 /*--------------------------------------------------------------
 # Generic
@@ -288,10 +290,35 @@ nav#cssecoMenu {
 }
 
 /*--------------------------------------------------------------
+# Body
+--------------------------------------------------------------*/
+// CSSeco Post Navigation
+.csseco_custom_post_navigation {
+  .post-link-nav-prev {
+    text-align: center;
+    i {
+      margin-right: 5px;
+    }
+    @media screen and (min-width: $csseco_screen-sm){
+      text-align: left;
+    }
+  }
+  .post-link-nav-next {
+    i {
+      margin-left: 5px;
+    }
+    text-align: center;
+    @media screen and (min-width: $csseco_screen-sm){
+      text-align: right;
+    }
+  }
+}
+
+/*--------------------------------------------------------------
 # Globals and Posts Formats
 --------------------------------------------------------------*/
 @import 'base/globals';                  // Global Elements
-@import 'posts-formats/_single';         // Single Post Template
+@import 'posts-formats/single';          // Single Post Template
 @import 'posts-formats/standard-pf';     // Post Format: Standard
 @import 'posts-formats/image-pf';        // Post Format: Image
 @import 'posts-formats/audio-pf';        // Post Format: Audio

@@ -301,7 +301,7 @@ function csseco_custom_settings() {
  */
 function csseco_about_description_sanitization( $input ) {
 	$output = sanitize_text_field( $input );
-	$output = str_replace( '@', ' at ', $output);
+	//$output = str_replace( '@', ' at ', $output);
 	return $output;
 }
 

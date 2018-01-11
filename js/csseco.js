@@ -159,6 +159,11 @@ jQuery(document).ready(function ($) {
     // Reveal Posts
     revealPosts(); // init
     function revealPosts() {
+        //Bootstrap tooltip
+        $('[data-toggle="tooltip"]').tooltip();
+        //Bootstrap popover
+        $('[data-toggle="popover"]').popover();
+
         var posts = $('.csseco-posts-container article:not(.reveal)');
         var i = 0;
         setInterval(function(){
