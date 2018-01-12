@@ -26,7 +26,7 @@ if( @$optionsCustomHeader == 1 ) {
 /**
  * Custom Background
  */
-$optionsCustomBg = get_option( 'about_customBackground' );
+$optionsCustomBg = get_option( 'themefeatures_customBackground' );
 if( @$optionsCustomBg == 1 ) {
 	add_theme_support( 'custom-background' );
 }

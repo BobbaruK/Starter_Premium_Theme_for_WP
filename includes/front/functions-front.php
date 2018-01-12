@@ -189,3 +189,29 @@ function csseco_post_navigation() {
 	return $nav;
 
 }
+
+// Single Post Share
+function csseco_sharethis() {
+
+	$output = '<div class="entry-share"><h4>Share this via</h4>';
+
+	$title = get_the_title();
+	$permalink = get_permalink();
+
+	$twitterHandler = ( get_option( 'themefeatures_social_twitter' ) ? '&amp;via='.get_option( 'themefeatures_social_twitter' ) : '' );
+
+	$facebook = 'https://www.facebook.com/sharer/sharer.php?u='.$permalink;
+	$twitter = 'https://twitter.com/intent/tweet?text=Hei! Read this: '.$title.'&amp;url='.$permalink.$twitterHandler;
+	$googleplus = 'https://plus.google.com/share?url='.$permalink;
+
+
+	$output .= '<ul>';
+	$output .= '<li><a href="'.$facebook.'" target="_blank" rel="nofollow"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>';
+	$output .= '<li><a href="'.$twitter.'" target="_blank" rel="nofollow"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>';
+	$output .= '<li><a href="'.$googleplus.'" target="_blank" rel="nofollow"><i class="fa fa-google-plus-square" aria-hidden="true"></i></a>';
+	$output .= '</ul></div><!-- /.entry-share -->';
+
+	return $output;
+
+}
+//add_filter( 'the_content', 'csseco_sharethis' ); // attach csseco_sharethis after the_content(single post content)

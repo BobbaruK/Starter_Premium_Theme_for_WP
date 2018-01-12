@@ -12,7 +12,7 @@ article {
   padding-bottom: 30px;
   opacity: 0;
   @include animate( all, 320ms );
-  @include transform( translateY(30px) );
+  @include transform( translateY(50px) );
   &.reveal {
     @include transform( translateY(0) );
     opacity: 1;
@@ -20,6 +20,25 @@ article {
   header.entry-header {
     h1.entry-title {
       margin-top: 0;
+    }
+  }
+  .entry-content {}
+  .entry-share {
+    h4 {
+      margin-bottom: 0;
+    }
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      li {
+        display: inline-block;
+        margin-right: 5px;
+        a {
+          font-size: 34px;
+          i {}
+        }
+      }
     }
   }
   .entry-footer {

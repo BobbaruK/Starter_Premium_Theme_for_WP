@@ -3,7 +3,7 @@
  * @package CSSecoThemes
  * custom-post-type.php
  */
-$contactF = get_option('contactF_activate');
+$contactF = get_option('themefeatures_contactF_activate');
 if( @$contactF == 1 ) {
 
 	add_action( 'init', 'csseco_contact_post_type' );

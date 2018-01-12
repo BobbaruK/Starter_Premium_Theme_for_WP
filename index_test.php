@@ -9,7 +9,7 @@ get_header(); ?>
 <?php
 $aboutLogo              = get_option('about_logo');
 $cstmHeader             = get_option( 'about_customHeader' );
-$cstmBackgr             = get_option( 'about_customBackground' );
+$cstmBackgr             = get_option( 'themefeatures_customBackground' );
 $aboutDescription       = sanitize_text_field( get_option('about_description') );
 
 $sidebarWidth           = get_option('sidebar_width');
@@ -20,7 +20,7 @@ $cssBgCol               = get_option('css_bgCol');
 $cssFontSize            = get_option('css_fontSize');
 $cssMainBgCol           = get_option('css_mainBgCol');
 
-$contactFf              = get_option( 'contactF_activate' );
+$contactFf              = get_option( 'themefeatures_contactF_activate' );
 
 
 echo '<h1>About Options</h1>';

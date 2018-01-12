@@ -29,6 +29,9 @@
 		<?php the_content(); ?>
 		<?php wp_link_pages(); ?>
 	</div><!-- /.entry-content -->
+    <?php
+        echo csseco_sharethis();
+    ?>
 	<footer class="entry-footer">
 		<?php echo csseco_posted_footer(); ?>
 	</footer><!-- /.entry-footer -->

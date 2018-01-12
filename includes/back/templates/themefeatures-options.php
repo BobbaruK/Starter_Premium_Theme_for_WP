@@ -31,22 +31,42 @@ function csseco_customHeader_callback() {
 }
 
 function csseco_customBackground_callback() {
-	$options = get_option( 'about_customBackground' );
+	$options = get_option( 'themefeatures_customBackground' );
 	$checked = ( @$options == 1 ? 'checked' : '' );
-	echo '<label for="about_customBackground"><input ' . $checked . ' name="about_customBackground" type="checkbox" 
-          id="about_customBackground" value="1" /></label>';
+	echo '<label for="themefeatures_customBackground"><input ' . $checked . ' name="themefeatures_customBackground" type="checkbox" 
+          id="themefeatures_customBackground" value="1" /></label>';
 }
 
 function contactF_checkActiv_callback() {
-	$options = get_option( 'contactF_activate' );
+	$options = get_option( 'themefeatures_contactF_activate' );
 	$checked = ( @$options == 1 ? 'checked' : '' );
-	echo '<label for="contactF_activate"><input ' . $checked . ' name="contactF_activate" type="checkbox" 
-          id="contactF_activate" value="1" /></label>';
+	echo '<label for="themefeatures_contactF_activate"><input ' . $checked . ' name="themefeatures_contactF_activate" type="checkbox" 
+          id="themefeatures_contactF_activate" value="1" /></label>';
+}
+
+function cssecoth_themefeatures_social_callback() {
+	_e( 'Set your social sharing sites', 'cssecotheme' );
+}
+
+function csseco_th_social_facebook_callback() {
+    $social_FB = get_option( 'themefeatures_social_facebook' );
+    echo '<input type="text" title="" name="themefeatures_social_facebook" value="' . $social_FB . '">';
+}
+
+function csseco_th_social_twitter_callback() {
+    $social_TW = get_option( 'themefeatures_social_twitter' );
+	echo '<input type="text" title="" name="themefeatures_social_twitter" value="' . $social_TW . '">';
+}
+
+function csseco_th_social_googlep_callback() {
+	$social_GP = get_option( 'themefeatures_social_googlep' );
+	echo '<input type="text" title="" name="themefeatures_social_googlep" value="' . $social_GP . '">';
 }
 
 settings_errors(); ?>
 <form method="post" action="options.php" class="csseco_about_page_form">
 	<?php settings_fields( 'cssecoSettingsGroup-ThemeFeatures' ); ?>
 	<?php do_settings_sections('csseco_first_theme_features') ?>
+	<?php do_settings_sections('csseco_first_theme_social') ?>
 	<?php submit_button('Save Changes', 'primary','btnSubmit'); ?>
 </form>

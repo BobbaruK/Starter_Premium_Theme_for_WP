@@ -90,11 +90,25 @@ function csseco_custom_settings() {
 	);
 	register_setting(
 		'cssecoSettingsGroup-ThemeFeatures',
-		'about_customBackground'//
+		'themefeatures_customBackground'//
 	);
 	register_setting(
 		'cssecoSettingsGroup-ThemeFeatures',
-		'contactF_activate'//
+		'themefeatures_contactF_activate'//
+	);
+		// Theme Features Social Settings
+	register_setting(
+		'cssecoSettingsGroup-ThemeFeatures',
+		'themefeatures_social_facebook'//
+	);
+	register_setting(
+		'cssecoSettingsGroup-ThemeFeatures',
+		'themefeatures_social_twitter',//
+		'themefeatures_social_twitter_sanitization'
+	);
+	register_setting(
+		'cssecoSettingsGroup-ThemeFeatures',
+		'themefeatures_social_googlep'//
 	);
 	// Header Options Settings
 	register_setting(
@@ -118,7 +132,7 @@ function csseco_custom_settings() {
 	register_setting(
 		'cssecoSettingsGroup-Footer',
 		'footer_description',//
-		'csseco_about_description_sanitization'// sanitization functions further down
+		'footer_description_sanitization'// sanitization functions further down
 	);
 	// CustomCSS Options settings
 	register_setting(
@@ -136,7 +150,7 @@ function csseco_custom_settings() {
 	register_setting(
 		'cssecoSettingsGroup-CustomCss',
 		'customcss_thecss',//
-		'csseco_customcss_sanitize'// sanitization functions further down
+		'customcss_thecss_sanitize'// sanitization functions further down
 	);
 
 	/**
@@ -148,8 +162,14 @@ function csseco_custom_settings() {
 	// Theme Features Options Section
 	add_settings_section(
 		'csseco-thfeatures-options',
-		__('Theme Features...', 'cssecotheme'),
+		__('Theme Features', 'cssecotheme'),
 		'cssecoth_themefeatures_options_callback',
+		'csseco_first_theme_features'
+	);
+	add_settings_section(
+		'csseco-thfeatures-social',
+		__('Social Sharing', 'cssecotheme'),
+		'cssecoth_themefeatures_social_callback',
 		'csseco_first_theme_features'
 	);
 	// Header Options Section
@@ -181,13 +201,6 @@ function csseco_custom_settings() {
 		'csseco_fifth_custom_css'
 	);
 
-	//ContactF Options Section
-	add_settings_section(
-		'csseco-contactf-options',
-		__('Contact Form Activation', 'cssecotheme'),
-		'cssecoth_contactF_options_callback',
-		'csseco_th_contactForm_settings'
-	);
 
 	/**
 	 * ================
@@ -196,32 +209,54 @@ function csseco_custom_settings() {
 	 */
 	// Fields for Theme Features Options
 	add_settings_field(
-		'about-post-format',
+		'themefeatures-post-format',
 		__('Post Formats', 'cssecotheme'),
 		'csseco_postFormats_callback',// all callbacks in settings fields are in their files
 		'csseco_first_theme_features',
 		'csseco-thfeatures-options'
 	);
 	add_settings_field(
-		'about-custom-header',
+		'themefeatures-custom-header',
 		__('Custom Header', 'cssecotheme'),
 		'csseco_customHeader_callback',// all callbacks in settings fields are in their files
 		'csseco_first_theme_features',
 		'csseco-thfeatures-options'
 	);
 	add_settings_field(
-		'about-custom-background',
+		'themefeatures-custom-background',
 		__('Custom background', 'cssecotheme'),
 		'csseco_customBackground_callback',// all callbacks in settings fields are in their files
 		'csseco_first_theme_features',
 		'csseco-thfeatures-options'
 	);
 	add_settings_field(
-		'contactF-activate',
+		'themefeatures-contactF-activate',
 		__('Activate Contact Form', 'cssecotheme'),
 		'contactF_checkActiv_callback',// all callbacks in settings fields are in their files
 		'csseco_first_theme_features',
 		'csseco-thfeatures-options'
+	);
+	// Fields for Theme Social Options
+	add_settings_field(
+		'themefeatures-social-facebook',
+		__('Facebook', 'cssecotheme'),
+		'csseco_th_social_facebook_callback',// all callbacks in settings fields are in their files
+		'csseco_first_theme_features',
+		'csseco-thfeatures-social'
+	);
+	add_settings_field(
+		'themefeatures-social-twitter',
+		__('Twitter', 'cssecotheme'),
+		'csseco_th_social_twitter_callback',// all callbacks in settings fields are in their files
+		'csseco_first_theme_features',
+		'csseco-thfeatures-social'
+	);
+	add_settings_field(
+		'themefeatures-social-googlep',
+		__('Google Plus', 'cssecotheme'),
+		'csseco_th_social_googlep_callback',// all callbacks in settings fields are in their files
+		'csseco_first_theme_features',
+		'csseco-thfeatures-social'
 	);
 	// Fields for Header Options
 	add_settings_field(
@@ -299,13 +334,18 @@ function csseco_custom_settings() {
  *      Sanitizations and Callback functions
  * ================
  */
-function csseco_about_description_sanitization( $input ) {
+function themefeatures_social_twitter_sanitization( $input ) {
 	$output = sanitize_text_field( $input );
-	//$output = str_replace( '@', ' at ', $output);
+	$output = str_replace( '@', '', $output);
 	return $output;
 }
 
-function csseco_customcss_sanitize( $input ) {
+function footer_description_sanitization( $input ) {
+	$output = sanitize_text_field( $input );
+	return $output;
+}
+
+function customcss_thecss_sanitize( $input ) {
 	$output = esc_textarea( $input );
 	return $output;
 }
