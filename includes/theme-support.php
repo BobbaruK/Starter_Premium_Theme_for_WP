@@ -35,3 +35,8 @@ if( @$optionsCustomBg == 1 ) {
  * Post Thumbnails(Featured Image)
  */
 add_theme_support( 'post-thumbnails' );
+
+/**
+ * HTML5 Features
+ */
+add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption' ) );

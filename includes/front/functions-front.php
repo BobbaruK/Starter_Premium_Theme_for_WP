@@ -41,7 +41,7 @@ function csseco_posted_footer() {
 		if ( $comments_num == 0 ) {
 			$comments = __( 'No Comments', 'cssecotheme' );
 		} elseif ( $comments_num > 1 ) {
-			$comments = $comments_num . __( 'Comments', 'cssecotheme' );
+			$comments = $comments_num . __( ' Comments', 'cssecotheme' );
 		} else {
 			$comments = __( '1 Comment', 'cssecotheme' );
 		}
@@ -55,7 +55,7 @@ function csseco_posted_footer() {
 						' . get_the_tag_list( '<div class="tags-list"><i class="fa fa-tags" aria-hidden="true"></i> ', '<span>, </span>', '</div>' ) . '
 					</div>
 					<div class="col-xs-12 col-sm-6 footer-right">
-						' . $comments . '
+						' . $comments . ' 
 						<i class="fa fa-comments" aria-hidden="true"></i>
 					</div>
 				</div>
@@ -176,7 +176,7 @@ function csseco_grab_current_uri() {
 // Single Post Navigation
 function csseco_post_navigation() {
 
-	$nav = '<div class="row"><div class="csseco_custom_post_navigation">';
+	$nav = '<div class="row"><div class="csseco_custom_post_navigation clearfix">';
 
 	$prev = get_previous_post_link( '<div class="post-link-nav-prev"><i class="fa fa-chevron-left" aria-hidden="true"></i>%link</div>', '%title' );
 	$nav .= '<div class="col-xs-12 col-sm-6">' . $prev . '</div>';
@@ -215,3 +215,10 @@ function csseco_sharethis() {
 
 }
 //add_filter( 'the_content', 'csseco_sharethis' ); // attach csseco_sharethis after the_content(single post content)
+
+// Post Navigation
+function csseco_get_post_navigation() {
+	if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) {
+		require( get_template_directory() . '/includes/front/templates/comment-nav.php' );
+	}
+}
