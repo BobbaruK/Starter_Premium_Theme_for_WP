@@ -338,10 +338,63 @@ nav#cssecoMenu {
   border-top: 3px solid #c5c4cd;
   margin: 10px 0 0;
   padding: 30px 0 0;
-  article.comment-body {
-    margin: 0;
-    opacity: 1;
-    padding: 0;
-    @include transform( translateY(0) );
+  li.comment {
+    article.comment-body {
+      margin: 0 0 25px 0;
+      opacity: 1;
+      padding: 0;
+      @include transform( translateY(0) );
+      footer.comment-meta {
+        .comment-author {
+          padding: 0 0 7px 0;
+          position: relative;
+          margin: 0 0 5px 0;
+          img.avatar {
+            border: 1px solid #d7d7d7;
+            border-radius: 50%;
+            display: inline-block;
+            padding: 2px;
+          }
+          b.fn {
+            a {
+              font-size: 22px;
+              padding: 0 0 0 10px;
+            }
+          }
+          span.says {}
+          &::before {
+            background: #CCCCCC;
+            bottom: 0;
+            content: '';
+            display: block;
+            height: 12px;
+            left: 0;
+            position: absolute;
+            width: 1px;
+          }
+          &::after {
+            background: #CCCCCC;
+            bottom: 0;
+            content: '';
+            display: block;
+            height: 1px;
+            position: absolute;
+            width: 70px;
+          }
+        }
+        .comment-metadata {
+          a {
+            time {}
+          }
+          span.edit-link {}
+        }
+      }
+      .comment-content {
+        p {}
+      }
+      .reply {
+        a.comment-reply-link {}
+      }
+    }
   }
 }

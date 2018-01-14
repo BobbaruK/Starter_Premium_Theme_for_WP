@@ -42,8 +42,8 @@ if ( post_password_required() ) {
 			        'page'              => '',
 			        'per_page'          => '',
 			        'avatar_size'       => 64,
-			        'reverse_top_level' => true,
-			        'reverse_children'  => false,
+			        'reverse_top_level' => null,
+			        'reverse_children'  => '',
 			        'format'            => 'html5', // or 'xhtml' if no 'HTML5'
 			        'short_ping'        => false,
 			        'echo'              => true
