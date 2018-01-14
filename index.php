@@ -5,24 +5,24 @@
  *
  */
 get_header(); ?>
-	<main id="main" class="site-main">
+	<main id="main" class="site-main col-xs-12 col-md-<?php echo $contentWidth; ?>" role="main">
         <?php
             if ( is_paged() ) {
         ?>
-        <div class="container text-center">
-            <a class="csseco_load_more btn btn-lg btn-default"
-               data-prev="1"
-               data-page="<?php echo csseco_check_paged(1) ?>"
-               data-url="<?php echo admin_url('admin-ajax.php'); ?>"
-               style="margin-bottom: 40px;">
-                <i class="fa fa-refresh" aria-hidden="true"></i>
-                <span class="text">Load Previous</span>
-            </a>
-        </div><!-- /.container -->
+            <div class="csseco-load-prev text-center">
+                <a class="csseco_load_more btn btn-lg btn-default"
+                   data-prev="1"
+                   data-page="<?php echo csseco_check_paged(1) ?>"
+                   data-url="<?php echo admin_url('admin-ajax.php'); ?>"
+                   style="margin-bottom: 40px;">
+                    <i class="fa fa-refresh" aria-hidden="true"></i>
+                    <span class="text">Load Previous</span>
+                </a>
+            </div><!-- /.container -->
         <?php
             }
         ?>
-		<div class="container csseco-posts-container">
+		<div class="csseco-posts-container">
 			<?php
 				if ( have_posts() ) {
 
@@ -40,7 +40,7 @@ get_header(); ?>
 				}
 			?>
 		</div><!-- /.container -->
-        <div class="container text-center">
+        <div class="csseco-load-next text-center">
             <a class="csseco_load_more btn btn-lg btn-default"
                data-page="<?php echo csseco_check_paged(1) ?>"
                data-url="<?php echo admin_url('admin-ajax.php'); ?>">
@@ -49,4 +49,5 @@ get_header(); ?>
             </a>
         </div><!-- /.container -->
 	</main><!-- /.site-main -->
+    <?php get_sidebar(); ?>
 <?php get_footer();

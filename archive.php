@@ -5,11 +5,11 @@
  *
  */
 get_header(); ?>
-	<main id="main" class="site-main">
+    <main id="main" class="site-main col-xs-12 col-md-8" role="main">
 		<?php
 			if ( is_paged() ) {
 		?>
-			<div class="container text-center">
+			<div class="csseco-load-prev text-center">
 				<a class="csseco_load_more btn btn-lg btn-default"
 				   data-prev="1"
 				   data-page="<?php echo csseco_check_paged(1); ?>"
@@ -26,7 +26,7 @@ get_header(); ?>
 		<header class="archive-header">
 			<?php the_archive_title( '<h1 class="page-title">', '</h1>' ); ?>
 		</header>
-		<div class="container csseco-posts-container">
+		<div class="csseco-posts-container">
 			<?php
 				if ( have_posts() ) {
 
@@ -44,7 +44,7 @@ get_header(); ?>
 			}
 			?>
 		</div><!-- /.container -->
-		<div class="container text-center">
+		<div class="csseco-load-next text-center">
 			<a class="csseco_load_more btn btn-lg btn-default"
 			   data-page="<?php echo csseco_check_paged(1); ?>"
 			   data-archive="<?php echo csseco_grab_current_uri(); ?>"
@@ -54,4 +54,5 @@ get_header(); ?>
 			</a>
 		</div><!-- /.container -->
 	</main><!-- /.site-main -->
+    <?php get_sidebar(); ?>
 <?php get_footer();

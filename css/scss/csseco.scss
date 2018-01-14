@@ -16,6 +16,7 @@
     # Body
     # Globals and Posts Formats
     # Single post Comments
+    # Sidebar Position
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
@@ -86,9 +87,7 @@ nav#cssecoMenu {
     display: none;
     font-size: 22px;
     padding: 10px;
-    @media screen and (max-width: $csseco_screen-sm) {
-      display: inline-block;
-    }
+    @media screen and (max-width: $csseco_screen-sm) { display: inline-block; }
   }
   > ul.menu {
     background: transparent;
@@ -106,9 +105,7 @@ nav#cssecoMenu {
         padding: 0 15px;
         text-align: center;
         text-decoration: none;
-        @media screen and (max-width: $csseco_screen-sm) {
-          display: block;
-        }
+        @media screen and (max-width: $csseco_screen-sm) { display: block; }
       }
       ul {
         min-width: 100%;
@@ -129,15 +126,9 @@ nav#cssecoMenu {
         }
       }
       &.opened > a,
-      &:hover > a {
-        font-weight: bold;
-      }
-      &.opened > ul {
-        display: block;
-      }
-      &.opened {
-        background: $csseco_menu_bg_color_hover-active;
-      }
+      &:hover > a { font-weight: bold; }
+      &.opened > ul { display: block; }
+      &.opened { background: $csseco_menu_bg_color_hover-active; }
       &.menu-item-has-children {
         > a {
           &::after {
@@ -156,15 +147,11 @@ nav#cssecoMenu {
             z-index: 30;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
-            @media screen and (max-width: $csseco_screen-sm) {
-              right: 5px;
-            }
+            @media screen and (max-width: $csseco_screen-sm) { right: 5px; }
           }
         }
       }
-      @media screen and (max-width: $csseco_screen-sm) {
-        width: 100%;
-      }
+      @media screen and (max-width: $csseco_screen-sm) { width: 100%; }
     }
     > li {
       display: inline-block;
@@ -174,14 +161,10 @@ nav#cssecoMenu {
         text-align: left;
         top: 100%;
         width: auto;
-        li {
-          display: inline-block;
-        }
+        li { display: inline-block; }
         > li {
           > a {
-            @media screen and (max-width: $csseco_screen-sm) {
-              text-indent: 20px;
-            }
+            @media screen and (max-width: $csseco_screen-sm) { text-indent: 20px; }
           }
           ul {/* depth >=2 */
             background: $csseco_menu_bg_color_depth_2;
@@ -201,31 +184,23 @@ nav#cssecoMenu {
             }
             > li {
               > a {
-                @media screen and (max-width: $csseco_screen-sm) {
-                  text-indent: 40px;
-                }
+                @media screen and (max-width: $csseco_screen-sm) { text-indent: 40px; }
               }
             }
-            @media screen and (max-width: $csseco_screen-sm) {
-              left: 0;
-            }
+            @media screen and (max-width: $csseco_screen-sm) { left: 0; }
           }
           &.menu-item-has-children {
             > a {
               &::after {
                 content: '\f054';
-                @media screen and (max-width: $csseco_screen-lg) {
-                  content: '\f078';
-                }
+                @media screen and (max-width: $csseco_screen-lg) { content: '\f078'; }
               }
             }
             &.opened {
               > a {
                 &::after {
                   content: '\f053';
-                  @media screen and (max-width: $csseco_screen-lg) {
-                    content: '\f077';
-                  }
+                  @media screen and (max-width: $csseco_screen-lg) { content: '\f077'; }
                 }
               }
             }
@@ -238,15 +213,11 @@ nav#cssecoMenu {
       }
       &.menu-item-has-children {
         > a {
-          &::after {
-            content: '\f078';
-          }
+          &::after { content: '\f078'; }
         }
         &.opened {
           > a {
-            &::after {
-              content: '\f077';
-            }
+            &::after { content: '\f077'; }
           }
         }
       }
@@ -262,13 +233,9 @@ nav#cssecoMenu {
     li.current-page-ancestor,
     li.current-menu-ancestor {/* active */
       background: $csseco_menu_bg_color_hover-active;
-      > a {
-        font-weight: bold;
-      }
+      > a { font-weight: bold; }
     }
-    @media screen and (max-width: $csseco_screen-sm) {
-      display: none;
-    }
+    @media screen and (max-width: $csseco_screen-sm) { display: none; }
   }
 }
 
@@ -283,9 +250,7 @@ nav#cssecoMenu {
   ## Footer Menu
   ------------------------------------------------------------*/
   nav.footer_menu {
-    ul.menu {
-      display: block;
-    }
+    ul.menu { display: block; }
   }
 
 }
@@ -297,21 +262,13 @@ nav#cssecoMenu {
 .csseco_custom_post_navigation {
   .post-link-nav-prev {
     text-align: center;
-    i {
-      margin-right: 5px;
-    }
-    @media screen and (min-width: $csseco_screen-sm){
-      text-align: left;
-    }
+    i { margin-right: 5px; }
+    @media screen and (min-width: $csseco_screen-sm){ text-align: left; }
   }
   .post-link-nav-next {
-    i {
-      margin-left: 5px;
-    }
+    i { margin-left: 5px; }
     text-align: center;
-    @media screen and (min-width: $csseco_screen-sm){
-      text-align: right;
-    }
+    @media screen and (min-width: $csseco_screen-sm){ text-align: right; }
   }
 }
 
@@ -397,4 +354,24 @@ nav#cssecoMenu {
       }
     }
   }
+}
+
+/*--------------------------------------------------------------
+# Sidebar Position
+--------------------------------------------------------------*/
+#sitePage.sidebarLeft {
+  #main { float: right; }
+  #secondary { float: left; }
+}
+#sitePage.sidebarRight {
+  #main { float: left; }
+  #secondary { float: right; }
+}
+#sitePage.sidebarBottom {
+  #main,
+  #secondary { width: 100%; }
+}
+#sitePage.sidebarNone {
+  #main { width: 100%; }
+  #secondary { display: none; }
 }

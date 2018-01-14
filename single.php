@@ -5,9 +5,9 @@
  *
  */
 get_header(); ?>
-	<main id="main" class="site-main">
+    <main id="main" class="site-main col-xs-12 col-md-8" role="main">
 
-		<div class="container">
+		<div class="csseco-post-container">
 			<?php
 				if ( have_posts() ) {
 
@@ -30,5 +30,6 @@ get_header(); ?>
 			?>
 		</div><!-- /.container -->
 
-	</main><!-- /.site-main -->
+    </main><!-- /.site-main -->
+    <?php get_sidebar(); ?>
 <?php get_footer();

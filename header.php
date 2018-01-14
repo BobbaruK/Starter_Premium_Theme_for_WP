@@ -28,6 +28,8 @@
         ?>
     </head>
     <body <?php body_class(); ?>>
+    <?php global $sidebarLocation; ?>
+    <div id="sitePage" class="csseco-site <?php echo $sidebarLocation; ?>">
         <header id="cssecoHeader" class="site-header">
             <div class="container-fluid">
                 <div class="row">
@@ -55,5 +57,5 @@
                 </div><!-- /.row -->
             </div><!-- /.container -->
         </header>
-        <hr>
         <div id="cssecoContent" class="content-area site-content">
+            <div class="container">

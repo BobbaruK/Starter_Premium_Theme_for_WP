@@ -20,6 +20,8 @@ include( get_template_directory() . '/includes/front/reg-menus.php' );          
 include( get_template_directory() . '/includes/front/functions-front.php' );    // functions that work in frontend
 include( get_template_directory() . '/includes/front/ajax.php' );               // ajax functions(load more posts)
 include( get_template_directory() . '/includes/front/shortcodes.php' );         // shortcodes functions
+include( get_template_directory() . '/includes/front/widgets.php' );            // Register sidebar and widgets
+include( get_template_directory() . '/includes/csseco-variables.php' );         // CSSeco variables and shit
 
 
 /**
@@ -38,6 +40,7 @@ add_action( 'admin_menu', 'csseco_add_admin_page' );                   // Add ad
 add_action( 'admin_enqueue_scripts', 'csseco_load_admin_scripts' );    // hook style and scripts to the BACKEND
 add_action( 'wp_enqueue_scripts', 'csseco_load_front_scripts' );       // hook style and scripts to the FRONTEND
 add_action( 'after_setup_theme', 'csseco_reg_menus' );                 // register menus function
+add_action( 'widgets_init', 'csseco_sidebar_init' );                   // register widget area(sidebar)
 
 
 /**

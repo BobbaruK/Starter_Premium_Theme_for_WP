@@ -12,7 +12,7 @@ $cstmHeader             = get_option( 'about_customHeader' );
 $cstmBackgr             = get_option( 'themefeatures_customBackground' );
 $aboutDescription       = sanitize_text_field( get_option('about_description') );
 
-$sidebarWidth           = get_option('sidebar_width');
+$sidebarWidth           = get_option('content_width');
 $sidebarLocation        = get_option('sidebar_location');
 $sidebarBgCol           = get_option('sidebar_bgcol');
 

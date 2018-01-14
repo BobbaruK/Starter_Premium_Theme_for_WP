@@ -10,13 +10,13 @@ function cssecoth_contentsidebar_options_callback() {
 	_e( 'Sidebar Width, Location and BgColor', 'cssecotheme' );
 }
 
-function csseco_sidebar_width_callback() {
-    $sidebarWidth = get_option('sidebar_width');
+function csseco_content_width_callback() {
+    $contentWidth = get_option('content_width');
 ?>
-    <select name="sidebar_width" title="" class="small-text">
+    <select name="content_width" title="" class="small-text">
         <?php
             for ($x = 1; $x <= 12; $x++) {
-                echo '<option value="' . $x . '" ' . selected( $sidebarWidth, $x ) . '>' . $x . '</option>';
+                echo '<option value="' . $x . '" ' . selected( $contentWidth, $x ) . '>' . $x . '</option>';
             }
         ?>
     </select>

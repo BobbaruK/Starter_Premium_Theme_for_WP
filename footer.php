@@ -5,8 +5,8 @@
  *
  */
 ?>
+            </div><!-- /.container -->
         </div> <!-- END #cssecoContent & .site-content-->
-        <hr>
         <footer id="cssecoFooter" class="site-footer">
             <div class="container">
                 <div class="row">
@@ -24,6 +24,7 @@
                 </div><!-- /.row -->
             </div><!-- /.container -->
         </footer>
+    </div><!-- /#sitePage -->
     <?php wp_footer(); ?>
     </body>
 </html>

@@ -118,7 +118,7 @@ function csseco_custom_settings() {
 	// Content/Sidebar Options settings
 	register_setting(
 		'cssecoSettingsGroup-ContentSidebar',
-		'sidebar_width'//
+		'content_width'//
 	);
 	register_setting(
 		'cssecoSettingsGroup-ContentSidebar',
@@ -268,9 +268,9 @@ function csseco_custom_settings() {
 	);
 	// Fields for Content/Sidebar options
 	add_settings_field(
-		'sidebar-width',
-		__('Sidebar Width', 'cssecotheme'),
-		'csseco_sidebar_width_callback',// all callbacks in settings fields are in their files
+		'content-width',
+		__('Content Width', 'cssecotheme'),
+		'csseco_content_width_callback',// all callbacks in settings fields are in their files
 		'csseco_third_content_sidebar',
 		'csseco-content-sidebar-options'
 	);
