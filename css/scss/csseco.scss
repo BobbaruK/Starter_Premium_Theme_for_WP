@@ -17,6 +17,7 @@
     # Globals and Posts Formats
     # Single post Comments
     # Sidebar Position
+    # Widgets
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
@@ -374,4 +375,11 @@ nav#cssecoMenu {
 #sitePage.sidebarNone {
   #main { width: 100%; }
   #secondary { display: none; }
+}
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+.csseco-widget {
+  h3.csseco-widget-title {}
 }

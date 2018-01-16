@@ -16,8 +16,11 @@ function csseco_remove_wp_version_strings( $src ) {
 	}
 	return $src;
 }
+add_filter( 'script_loader_src', 'csseco_remove_wp_version_strings' ); // Remove current wp version nr from Scripts
+add_filter( 'style_loader_src', 'csseco_remove_wp_version_strings' );  // Remove current wp version nr from Styles
 
 /* remove version number(string) from meta name="generator" */
 function csseco_remove_meta_verstion() {
 	return '';
 }
+add_filter( 'the_generator', 'csseco_remove_meta_verstion' );          // Remove current wp version nr from meta name="generator"

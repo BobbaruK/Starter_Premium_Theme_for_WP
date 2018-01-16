@@ -34,3 +34,12 @@ class CSSeco_custom_Widget extends WP_Widget {
 add_action( 'widgets_init', function(){
 	register_widget( 'CSSeco_custom_Widget' );
 } );
+
+/* Edit tag widget font size */
+function csseco_tag_cloud_font_change( $args ) {
+	$args['smallest'] = 8;
+	$args['largest'] = 18;
+
+	return $args;
+}
+add_filter( 'widget_tag_cloud_args', 'csseco_tag_cloud_font_change' );

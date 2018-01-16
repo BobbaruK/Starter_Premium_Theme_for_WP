@@ -71,6 +71,7 @@ function csseco_add_admin_page() {
 	// Activate custom settings
 	add_action( 'admin_init', 'csseco_custom_settings' );
 }
+add_action( 'admin_menu', 'csseco_add_admin_page' );                   // Add admin page(CSSeco Options) - BACKEND
 
 // These are the custom settings
 function csseco_custom_settings() {

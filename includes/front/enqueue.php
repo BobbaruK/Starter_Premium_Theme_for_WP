@@ -72,3 +72,4 @@ function csseco_load_front_scripts() {
 	wp_enqueue_script('csseco_front_js');
 
 }
+add_action( 'wp_enqueue_scripts', 'csseco_load_front_scripts' );       // hook style and scripts to the FRONTEND

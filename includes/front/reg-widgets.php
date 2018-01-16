@@ -18,3 +18,4 @@ function csseco_sidebar_init() {
 		'after_title'       => '</h3>'
 	) );
 }
+add_action( 'widgets_init', 'csseco_sidebar_init' );                   // register widget area(sidebar)
