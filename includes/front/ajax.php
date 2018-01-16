@@ -28,6 +28,7 @@ function csseco_load_more() {
 		$archVal = explode( '/', $archive );
 		//print_r( $archVal );
 		$archValFlipped = array_flip($archVal);
+		//print_r( $archValFlipped );
 		switch ( isset( $archValFlipped ) ){
 
 			case $archValFlipped["category"] :

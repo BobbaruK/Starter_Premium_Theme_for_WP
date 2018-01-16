@@ -20,8 +20,9 @@ include( get_template_directory() . '/includes/front/reg-menus.php' );          
 include( get_template_directory() . '/includes/front/functions-front.php' );    // functions that work in frontend
 include( get_template_directory() . '/includes/front/ajax.php' );               // ajax functions(load more posts)
 include( get_template_directory() . '/includes/front/shortcodes.php' );         // shortcodes functions
-include( get_template_directory() . '/includes/front/widgets.php' );            // Register sidebar and widgets
+include( get_template_directory() . '/includes/front/reg-widgets.php' );        // Register sidebar and widgets
 include( get_template_directory() . '/includes/csseco-variables.php' );         // CSSeco variables and shit
+include( get_template_directory() . '/includes/widgets.php' );                  // Custom widgets
 
 
 /**

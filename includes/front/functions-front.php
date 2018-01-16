@@ -27,7 +27,7 @@ function csseco_posted_meta() {
 		}
 	}
 	return '<span class="posted-on">
-				Posted <a href="' . esc_url( get_permalink() ) . '">' . $posted_on . '</a> ago
+				Posted <a data-toggle="tooltip" data-placement="top" title="' . get_the_time('jS F, Y g:ia') . '" href="' . esc_url( get_permalink() ) . '">' . $posted_on . '</a> ago
 			</span> / 
 			<span class="posted-in">' . $output . '</span>';
 }
