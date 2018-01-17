@@ -29,6 +29,11 @@ function csseco_load_more() {
 		//print_r( $archVal );
 		$archValFlipped = array_flip($archVal);
 		//print_r( $archValFlipped );
+
+//		$an =  get_the_date( 'Y' );
+//		$luna = get_the_date( 'm' );
+//		$zi = get_the_date( 'd' );
+
 		switch ( isset( $archValFlipped ) ){
 
 			case $archValFlipped["category"] :
@@ -45,6 +50,11 @@ function csseco_load_more() {
 				$type = "author";
 				$key = $type;
 				break;
+
+//			case $archValFlipped[$an] :
+//				$type = "year";
+//				$key = $type;
+//				break;
 
 		}
 
