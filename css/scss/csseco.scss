@@ -162,7 +162,14 @@ nav#cssecoMenu {
         text-align: left;
         top: 100%;
         width: auto;
-        li { display: inline-block; }
+        li {
+          display: block;
+          a {
+            margin-bottom: 0;
+            margin-top: 0;
+            padding: 5px 0;
+          }
+        }
         > li {
           > a {
             @media screen and (max-width: $csseco_screen-sm) { text-indent: 20px; }
