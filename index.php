@@ -18,7 +18,7 @@ get_header(); ?>
                     <i class="fa fa-refresh" aria-hidden="true"></i>
                     <span class="text">Load Previous</span>
                 </a>
-            </div><!-- /.container -->
+            </div><!-- /.csseco-load-prev -->
         <?php
             }
         ?>
@@ -39,7 +39,7 @@ get_header(); ?>
 					echo '</div>';
 				}
 			?>
-		</div><!-- /.container -->
+		</div><!-- /.csseco-posts-container -->
         <div class="csseco-load-next text-center">
             <a class="csseco_load_more btn btn-lg btn-default"
                data-page="<?php echo csseco_check_paged(1) ?>"
@@ -47,7 +47,7 @@ get_header(); ?>
                 <i class="fa fa-refresh" aria-hidden="true"></i>
                 <span class="text">Load More</span>
             </a>
-        </div><!-- /.container -->
+        </div><!-- /.csseco-load-next -->
 	</main><!-- /.site-main -->
     <?php get_sidebar(); ?>
 <?php get_footer();

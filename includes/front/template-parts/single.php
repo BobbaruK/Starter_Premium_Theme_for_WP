@@ -9,12 +9,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( array( 'csseco-single-post', 'reveal' ) ); ?>>
 	<header class="entry-header">
-		<?php
-		the_title(
-			'<h1 class="entry-title">',
-			'</h1>'
-		);
-		?>
+		<?php the_title('<h1 class="entry-title">','</h1>' ); ?>
 		<div class="entry-meta">
 			<?php echo csseco_posted_meta(); ?>
 		</div><!-- /.entry-meta -->

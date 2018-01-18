@@ -5,7 +5,7 @@
  *
  */
 get_header(); ?>
-    <main id="main" class="site-main col-xs-12 col-md-8" role="main">
+    <main id="main" class="site-main col-xs-12 col-md-<?php echo $contentWidth; ?>" role="main">
 
 		<div class="csseco-post-container">
 			<?php
@@ -31,7 +31,7 @@ get_header(); ?>
 					}
 				}
 			?>
-		</div><!-- /.container -->
+		</div><!-- /.csseco-post-container -->
 
     </main><!-- /.site-main -->
     <?php get_sidebar(); ?>
