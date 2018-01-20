@@ -30,7 +30,7 @@
     <body <?php body_class(); ?>>
     <?php global $sidebarLocation; ?>
     <div id="sitePage" class="csseco-site <?php echo $sidebarLocation; ?>">
-        <header id="cssecoHeader" class="site-header">
+        <header id="cssecoHeader" class="site-header" style="<?php echo csseco_check_custom_header(); ?>">
             <div class="container-fluid">
                 <div class="row">
                         <?php

@@ -222,3 +222,16 @@ function csseco_get_post_navigation() {
 		require( get_template_directory() . '/includes/front/templates/comment-nav.php' );
 	}
 }
+
+/**
+ * Custom Header
+ */
+function csseco_check_custom_header() {
+	$output = '';
+	$headerBgImg = ( empty( get_header_image() ) ? '' : 'background-image: url(\'' . get_header_image() . '\'); background-position: center center; background-size: cover; background-repeat: no-repeat;' );
+	$headerTextCol = ( empty( get_header_textcolor() ) ? '' : 'color: #' . get_header_textcolor() . ';' );
+	if ( get_option( 'themefeatures_customHeader' ) == 1 ) {
+		$output = $headerBgImg . ' ' . $headerTextCol;
+	}
+	return $output;
+}

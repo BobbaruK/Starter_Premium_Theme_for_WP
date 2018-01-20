@@ -41,7 +41,7 @@ function contactF_checkActiv_callback() {
 	$options = get_option( 'themefeatures_contactF_activate' );
 	$checked = ( @$options == 1 ? 'checked' : '' );
 	echo '<label for="themefeatures_contactF_activate"><input ' . $checked . ' name="themefeatures_contactF_activate" type="checkbox" 
-          id="themefeatures_contactF_activate" value="1" /></label>';
+          id="themefeatures_contactF_activate" value="1" />Use shortcode: </label><code>[contact_form]</code>';
 }
 
 function cssecoth_themefeatures_social_callback() {

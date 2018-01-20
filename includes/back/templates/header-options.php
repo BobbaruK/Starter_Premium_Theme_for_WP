@@ -13,15 +13,15 @@ function cssecoth_header_options_callback() {
 function csseco_about_logo_callback() {
 	$aboutLogo = get_option('header_logo');
 	if( empty($aboutLogo) ){
-		?>
+?>
 		<input id="cssecoUpload-Logo" type="button" class="button button-secondary"
 		       value="<?php _e('Upload Logo', 'cssecotheme') ?>" />
 		<input id="cssecoThLogo" title="" type="text" class="" name="header_logo" value="" />
 		<input id="cssecoRemove-Logo" type="button" class="button button-secondary" disabled
 		       value="<?php _e('Remove Logo', 'cssecotheme') ?>" />
-		<?php
+<?php
 	} else {
-		?>
+?>
 		<input id="cssecoUpload-Logo" type="button" class="button button-secondary"
 		       value="<?php _e('Replace Logo', 'cssecotheme') ?>" />
 		<input id="cssecoThLogo" title="" type="text" class="" name="header_logo" value="<?php echo $aboutLogo; ?>" />
@@ -30,7 +30,7 @@ function csseco_about_logo_callback() {
 		<div class="csseco_admin_logo_preview">
 			<img id="cssecoAdminLogo" src="<?php echo $aboutLogo; ?>" alt="Logo Preview">
 		</div><!-- /.csseco_admin_logo_preview -->
-		<?php
+<?php
 	}
 }
 

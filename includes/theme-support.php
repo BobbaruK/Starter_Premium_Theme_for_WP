@@ -19,8 +19,22 @@ if( @$optionsPostFormats ) {
  * Custom Header
  */
 $optionsCustomHeader = get_option( 'themefeatures_customHeader' );
+$optionsCustomHeaderArgs = array(
+	'default-image'          => '',
+	'width'                  => 800,
+	'height'                 => 300,
+	'flex-height'            => false,
+	'flex-width'             => false,
+	'uploads'                => true,
+	'random-default'         => false,
+	'header-text'            => true,
+	'default-text-color'     => '',
+	'wp-head-callback'       => '',
+	'admin-head-callback'    => '',
+	'admin-preview-callback' => '',
+);
 if( @$optionsCustomHeader == 1 ) {
-	add_theme_support( 'custom-header' );
+	add_theme_support( 'custom-header', $optionsCustomHeaderArgs );
 }
 
 /**
