@@ -6,7 +6,7 @@
  * Register sidebar and widgets
  */
 
-function csseco_sidebar_init() {
+function csseco_sidebar_widgets_init() {
 	register_sidebar( array (
 		'name'              => __('Sidebar', 'cssecotheme'),
 		'id'                => 'csseco_sidebar',
@@ -18,4 +18,4 @@ function csseco_sidebar_init() {
 		'after_title'       => '</h3>'
 	) );
 }
-add_action( 'widgets_init', 'csseco_sidebar_init' );                   // register widget area(sidebar)
+add_action( 'widgets_init', 'csseco_sidebar_widgets_init' );                   // register widget area(sidebar)

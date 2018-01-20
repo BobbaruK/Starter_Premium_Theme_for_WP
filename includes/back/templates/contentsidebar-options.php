@@ -7,38 +7,42 @@
  */
 
 function cssecoth_contentsidebar_options_callback() {
-	_e( 'Sidebar Width, Location and BgColor', 'cssecotheme' );
+	_e( 'Sidebar Location, Width and BgColor', 'cssecotheme' );
+}
+
+function csseco_sidebar_location_callback() {
+	$sidebarLocation = get_option('sidebar_location');
+	?>
+    <select id="csseco_sidebar_location" name="sidebar_location" title="" class="small-text">
+        <option value="sidebarLeft" <?php selected( $sidebarLocation, 'sidebarLeft' ); ?>>
+			<?php _e( 'Sidebar Left', 'cssecotheme' ); ?>
+        </option>
+        <option value="sidebarRight" <?php selected( $sidebarLocation, 'sidebarRight' ); ?>>
+			<?php _e( 'Sidebar Right', 'cssecotheme' ); ?>
+        </option>
+        <option value="sidebarBottom" <?php selected( $sidebarLocation, 'sidebarBottom' ); ?>>
+			<?php _e( 'Sidebar Bottom', 'cssecotheme' ); ?>
+        </option>
+        <option value="sidebarNone" <?php selected( $sidebarLocation, 'sidebarNone' ); ?>>
+			<?php _e( 'Sidebar None', 'cssecotheme' ); ?>
+        </option>
+    </select>
+	<?php
 }
 
 function csseco_content_width_callback() {
-    $contentWidth = get_option('content_width');
+    $contentWidth = ( get_option('sidebar_location') == 'sidebarBottom' || get_option('sidebar_location') == 'sidebarNone' ? 12 : get_option('content_width') );
+    $disabledS = ( get_option('sidebar_location') == 'sidebarBottom' || get_option('sidebar_location') == 'sidebarNone' ? 'disabled="disable"' : '' );
+    if( ( get_option('sidebar_location') == 'sidebarLeft' || get_option('sidebar_location') == 'sidebarRight' ) && get_option('content_width') == 12 ){
+        $contentWidth = 9;
+    }
 ?>
-    <select name="content_width" title="" class="small-text">
+    <select id="csseco_content_width" name="content_width" title="" class="small-text" <?php echo $disabledS; ?>>
         <?php
             for ($x = 1; $x <= 12; $x++) {
                 echo '<option value="' . $x . '" ' . selected( $contentWidth, $x ) . '>' . $x . '</option>';
             }
         ?>
-    </select>
-<?php
-}
-
-function csseco_sidebar_location_callback() {
-    $sidebarLocation = get_option('sidebar_location');
-?>
-    <select name="sidebar_location" title="" class="small-text">
-        <option value="sidebarLeft" <?php selected( $sidebarLocation, 'sidebarLeft' ); ?>>
-            <?php _e( 'Sidebar Left', 'cssecotheme' ); ?>
-        </option>
-        <option value="sidebarRight" <?php selected( $sidebarLocation, 'sidebarRight' ); ?>>
-	        <?php _e( 'Sidebar Right', 'cssecotheme' ); ?>
-        </option>
-        <option value="sidebarBottom" <?php selected( $sidebarLocation, 'sidebarBottom' ); ?>>
-	        <?php _e( 'Sidebar Bottom', 'cssecotheme' ); ?>
-        </option>
-        <option value="sidebarNone" <?php selected( $sidebarLocation, 'sidebarNone' ); ?>>
-	        <?php _e( 'Sidebar None', 'cssecotheme' ); ?>
-        </option>
     </select>
 <?php
 }

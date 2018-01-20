@@ -107,12 +107,13 @@ class CSSeco_Popular_Posts_Widget extends WP_Widget {
 		$tot = absint( $instance[ 'tot' ] );
 
 		$posts_args = array(
-			'post_type'         => 'post',
-			'posts_per_page'    => $tot,
-			//'year'              => 2018,
-			'meta_key'          => 'csseco_post_views',
-			'orderby'           => 'meta_value_num',
-			'order'             => 'DESC'
+			'post_type'             => 'post',
+			'posts_per_page'        => $tot,
+			//'year'                => 2018,
+			'ignore_sticky_posts'   => true,
+			'meta_key'              => 'csseco_post_views',
+			'orderby'               => 'meta_value_num',
+			'order'                 => 'DESC'
 		);
 
 		$posts_query = new WP_Query( $posts_args );

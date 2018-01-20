@@ -376,12 +376,14 @@ nav#cssecoMenu {
   #secondary { float: right; }
 }
 #sitePage.sidebarBottom {
-  #main,
-  #secondary { width: 100%; }
-}
-#sitePage.sidebarNone {
-  #main { width: 100%; }
-  #secondary { display: none; }
+  #secondary {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    .csseco-widget {
+      width: 32.5%;
+    }
+  }
 }
 
 /*--------------------------------------------------------------

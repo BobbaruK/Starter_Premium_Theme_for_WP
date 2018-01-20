@@ -119,11 +119,11 @@ function csseco_custom_settings() {
 	// Content/Sidebar Options settings
 	register_setting(
 		'cssecoSettingsGroup-ContentSidebar',
-		'content_width'//
+		'sidebar_location'//
 	);
 	register_setting(
 		'cssecoSettingsGroup-ContentSidebar',
-		'sidebar_location'//
+		'content_width'//
 	);
 	register_setting(
 		'cssecoSettingsGroup-ContentSidebar',
@@ -269,16 +269,16 @@ function csseco_custom_settings() {
 	);
 	// Fields for Content/Sidebar options
 	add_settings_field(
-		'content-width',
-		__('Content Width', 'cssecotheme'),
-		'csseco_content_width_callback',// all callbacks in settings fields are in their files
+		'sidebar-location',
+		__('Sidebar Location', 'cssecotheme'),
+		'csseco_sidebar_location_callback',// all callbacks in settings fields are in their files
 		'csseco_third_content_sidebar',
 		'csseco-content-sidebar-options'
 	);
 	add_settings_field(
-		'sidebar-location',
-		__('Sidebar Location', 'cssecotheme'),
-		'csseco_sidebar_location_callback',// all callbacks in settings fields are in their files
+		'content-width',
+		__('Content Width', 'cssecotheme'),
+		'csseco_content_width_callback',// all callbacks in settings fields are in their files
 		'csseco_third_content_sidebar',
 		'csseco-content-sidebar-options'
 	);

@@ -44,4 +44,14 @@ jQuery(document).ready(function ($) {
         // return; // remove comment if write something after this if
     });
 
+    /**
+     * Back-end Content/Sidebar
+     *  when select other than sidebar bottm or none will remove disabled on content width
+     */
+    $('#csseco_sidebar_location').change(function() {
+        if($(this).val() === 'sidebarLeft' || $(this).val() === 'sidebarRight') {
+            $('#csseco_content_width').removeAttr('disabled');
+        }
+    });
+
 });
