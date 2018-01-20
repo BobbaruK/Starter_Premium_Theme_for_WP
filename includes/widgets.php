@@ -70,7 +70,7 @@ class CSSeco_Popular_Posts_Widget extends WP_Widget {
 			'classname'     => 'csseco-popular-posts',
 			'description'   => 'CSSeco Popular Posts Widget'
 		);
-		parent::__construct( 'csseco_popuplar_posts_widget', 'CSSeo Popular Posts Widget', $widget_opts );
+		parent::__construct( 'csseco_widget_popuplar_posts', 'CSSeo Popular Posts Widget', $widget_opts );
 	}
 
 	// back-end display of widget
