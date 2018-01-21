@@ -263,7 +263,7 @@ function csseco_custom_settings() {
 	add_settings_field(
 		'header-logo',
 		__('Logo', 'cssecotheme'),
-		'csseco_about_logo_callback',// all callbacks in settings fields are in their files
+		'csseco_header_logo_callback',// all callbacks in settings fields are in their files
 		'csseco_second_header',
 		'csseco-header-options'
 	);

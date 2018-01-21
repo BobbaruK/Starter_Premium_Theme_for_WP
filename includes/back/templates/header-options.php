@@ -10,7 +10,7 @@ function cssecoth_header_options_callback() {
 	_e( 'Select Header options...', 'cssecotheme' );
 }
 
-function csseco_about_logo_callback() {
+function csseco_header_logo_callback() {
 	$aboutLogo = get_option('header_logo');
 	if( empty($aboutLogo) ){
 ?>
