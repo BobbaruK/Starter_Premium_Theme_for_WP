@@ -229,9 +229,10 @@ function csseco_get_post_navigation() {
 function csseco_check_custom_header() {
 	$output = '';
 	if ( get_option( 'themefeatures_customHeader' ) == 1 ) {
-		$headerBgImg = ( empty( get_header_image() ) ? '' : 'background-image: url(\'' . get_header_image() . '\'); background-position: center center; background-size: cover; background-repeat: no-repeat;' );
+		$bgElemStyle = ( empty( get_header_image() ) ? '' : 'background-position: center center; background-size: cover; background-repeat: no-repeat; ' );
+		$headerBgImg = ( empty( get_header_image() ) ? '' : 'background-image: url(\'' . get_header_image() . '\');' );
 		$headerTextCol = ( empty( get_header_textcolor() ) ? '' : 'color: #' . get_header_textcolor() . ';' );
-		$output = $headerBgImg . ' ' . $headerTextCol;
+		$output = $bgElemStyle . $headerBgImg . $headerTextCol;
 	}
 	return $output;
 }
