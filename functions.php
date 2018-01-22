@@ -36,3 +36,4 @@ include( get_template_directory() . '/includes/custom-post-types/contact-post-ty
  */
 add_shortcode( 'tooltip', 'csseco_tooltip' );
 add_shortcode( 'popover', 'csseco_popover' );
+add_shortcode( 'contact_form', 'csseco_contact_form' );

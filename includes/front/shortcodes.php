@@ -33,7 +33,7 @@ function csseco_tooltip( $atts, $content = null ) {
 // Popover function
 function csseco_popover( $atts, $content = null ) {
 
-	// [popover title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?"]Click to toggle popover[/popover]
+	// [popover title="Popover title" data-content="amazing content"]Click to toggle popover[/popover]
 
 	// get the attributes
 	$atts = shortcode_atts(
@@ -53,5 +53,26 @@ function csseco_popover( $atts, $content = null ) {
 			<span class="csseco-popover" data-toggle="popover" data-title="' . $atts['title'] . '"  
 				  data-placement="' . $atts['placement'] . '" data-content="' . $cntntP . '"
 				  data-trigger="' . $atts["trigger"] . '">' . $content . '</span>';
+
+}
+
+// Contact Form shortcode
+function csseco_contact_form( $atts, $content = null ) {
+
+	// [contact_form]
+
+	// get the attributes
+	$atts = shortcode_atts(
+		array(),
+		$atts,
+		'contact_form'
+	);
+
+
+	// return HTML
+	ob_start(); // Turn on the output buffering; ob = output buffering
+	include 'templates/contact-form.php'; // this will be "saved" in ob_start
+
+	return ob_get_clean(); // return the ob
 
 }

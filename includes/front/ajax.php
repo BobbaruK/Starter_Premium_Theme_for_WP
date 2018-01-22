@@ -2,10 +2,10 @@
 /**
  * @package CSSecoThemes
  * front/ajax.php
- *
  * Ajax Functions
+ *
+ * Load more(posts)
  */
-
 add_action( 'wp_ajax_nopriv_csseco_load_more', 'csseco_load_more' ); // for all users
 add_action( 'wp_ajax_csseco_load_more', 'csseco_load_more' ); // only for logged users
 
@@ -104,4 +104,33 @@ function csseco_check_paged( $num = null ) {
 	} else {
 		return $output;
 	}
+}
+
+/**
+ * Contact Form Submit and save Contact data
+ */
+add_action( 'wp_ajax_nopriv_csseco_save_user_contact_form', 'csseco_save_contact' ); // for all users
+add_action( 'wp_ajax_csseco_save_user_contact_form', 'csseco_save_contact' ); // only for logged users
+
+function csseco_save_contact() {
+	$title = wp_strip_all_tags($_POST["name"]);
+	$email = wp_strip_all_tags($_POST["email"]);
+	$message = wp_strip_all_tags($_POST["message"]);
+
+	$args = array(
+		'post_title'    => $title,
+		'post_content'  => $message,
+		'post_author'   => 1,
+		'post_status'   => 'publish',
+		'post_type'     => 'cssecocontact',
+		'meta_input'    => array(
+			'_contact_email_value_key' => $email
+		)
+	);
+
+	$postID = wp_insert_post( $args );
+
+	echo $postID;
+
+	die();
 }
