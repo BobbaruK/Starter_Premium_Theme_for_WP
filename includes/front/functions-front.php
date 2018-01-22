@@ -233,6 +233,12 @@ function csseco_check_custom_header() {
 		$headerBgImg = ( empty( get_header_image() ) ? '' : 'background-image: url(\'' . get_header_image() . '\');' );
 		$headerTextCol = ( empty( get_header_textcolor() ) ? '' : 'color: #' . get_header_textcolor() . ';' );
 		$output = $bgElemStyle . $headerBgImg . $headerTextCol;
+	} else {
+		$bgElemStyle = ( empty( get_option('header_bgimg') ) ? '' : 'background-position: center center; background-size: cover; background-repeat: no-repeat; ' );
+		$headerBgImg = ( empty( get_option('header_bgimg') ) ? '' : 'background-image: url(\'' . get_option('header_bgimg') . '\'); ' );
+		$headerBgCol = ( empty( get_option('header_bgcol') ) ? '' : 'background-color: ' . get_option('header_bgcol') . '; ' );
+		$headerTextCol = ( empty( get_option('header_textcol') ) ? '' : 'color: ' . get_option('header_textcol') .';' );
+		$output = $bgElemStyle . $headerBgImg . $headerBgCol . $headerTextCol;
 	}
 	return $output;
 }

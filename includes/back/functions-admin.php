@@ -114,6 +114,18 @@ function csseco_custom_settings() {
 	// Header Options Settings
 	register_setting(
 		'cssecoSettingsGroup-Header',
+		'header_bgcol'//
+	);
+	register_setting(
+		'cssecoSettingsGroup-Header',
+		'header_bgimg'//
+	);
+	register_setting(
+		'cssecoSettingsGroup-Header',
+		'header_textcol'//
+	);
+	register_setting(
+		'cssecoSettingsGroup-Header',
 		'header_logo'//
 	);
 	// Content/Sidebar Options settings
@@ -260,6 +272,29 @@ function csseco_custom_settings() {
 		'csseco-thfeatures-social'
 	);
 	// Fields for Header Options
+	if ( get_option( 'themefeatures_customHeader' ) != 1 ) {
+		add_settings_field(
+			'header-bgcol',
+			__('Background color', 'cssecotheme'),
+			'csseco_header_bgcol_callback',// all callbacks in settings fields are in their files
+			'csseco_second_header',
+			'csseco-header-options'
+		);
+		add_settings_field(
+			'header-bgimg',
+			__('Background image', 'cssecotheme'),
+			'csseco_header_bgimg_callback',// all callbacks in settings fields are in their files
+			'csseco_second_header',
+			'csseco-header-options'
+		);
+		add_settings_field(
+			'header-textcol',
+			__('Text color', 'cssecotheme'),
+			'csseco_header_textcol_callback',// all callbacks in settings fields are in their files
+			'csseco_second_header',
+			'csseco-header-options'
+		);
+	}
 	add_settings_field(
 		'header-logo',
 		__('Logo', 'cssecotheme'),
