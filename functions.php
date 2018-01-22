@@ -37,3 +37,15 @@ include( get_template_directory() . '/includes/custom-post-types/contact-post-ty
 add_shortcode( 'tooltip', 'csseco_tooltip' );
 add_shortcode( 'popover', 'csseco_popover' );
 add_shortcode( 'contact_form', 'csseco_contact_form' );
+
+// smtp on local environment
+//function mailtrap($phpmailer) {
+//	$phpmailer->isSMTP();
+//	$phpmailer->Host = 'smtp.mailtrap.io';
+//	$phpmailer->SMTPAuth = true;
+//	$phpmailer->Port = 2525;
+//	$phpmailer->Username = 'f1cba96ce93088';
+//	$phpmailer->Password = 'f2f86b37ba5106';
+//}
+//
+//add_action('phpmailer_init', 'mailtrap');
