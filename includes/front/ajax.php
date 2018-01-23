@@ -134,10 +134,10 @@ function csseco_save_contact() {
 
 		// Send an email to admin
 		$to = get_bloginfo('admin_email');
-		$subject = 'Email from your WordPress site: ' . get_bloginfo('name') . '. CSSeco Contact Form - ' . $title;
+		$subject = get_bloginfo('name') . '. CSSeco Contact Form - ' . $title;
 
-		//$headers[] = 'From: ' . $title . '<' . $email . '>'; // From: Krueger <bobbaru_krueger@yahoo.com>
-		$headers[] = 'From: ' . get_bloginfo('name') . '<' . $to . '>';
+		$headers[] = 'From: ' . $title . '<' . $email . '>'; // From: Krueger <bobbaru_krueger@yahoo.com>
+		// $headers[] = 'From: ' . get_bloginfo('name') . '<' . $to . '>';
 		$headers[] = 'Reply-to: ' . $title . '<' . $email . '>';
 		$headers[] = 'Content-Type: text/html: charset=UTF-8';
 
