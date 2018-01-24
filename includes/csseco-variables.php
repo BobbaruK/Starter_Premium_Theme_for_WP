@@ -7,13 +7,18 @@ function csseco_global_variables_init() {
 
 	global $sidebarLocation, $contentWidth, $sidebarWidth, $detect;
 
-	// Sidebar Location
+	/*
+	 * Sidebar Location
+	 */
 	$sidebarLocation = get_option('sidebar_location');
-	// Content and Sidebar width
+	/*
+	 * Content and Sidebar width
+	 */
 	$contentWidth = ( ( get_option('sidebar_location') == 'sidebarLeft' || get_option('sidebar_location') == 'sidebarRight' ) && get_option('content_width') == 12 ? $contentWidth = 9 : ( get_option('sidebar_location') == 'sidebarBottom' || get_option('sidebar_location') == 'sidebarNone' ? 12 : get_option('content_width') ) );
 	$sidebarWidth = ( get_option('sidebar_location') == 'sidebarBottom' ? 12 : 12 - $contentWidth );
-	// Mobile detect v2.8.30 - http://mobiledetect.net/
 	/**
+	 * Mobile detect v2.8.30 - http://mobiledetect.net/
+	 *
 	 * use:
 	 * if ( $detect->isMobile() ) {
 	 *      // code here to show on mobile
