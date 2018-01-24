@@ -132,14 +132,20 @@ function csseco_save_contact() {
 
 	if( $postID !== 0 ) {
 
+		/**
+		 * Better use WP Mail SMTP plugin
+		 * https://ro.wordpress.org/plugins/wp-mail-smtp/
+		 */
+
 		// Send an email to admin
 		$to = get_bloginfo('admin_email');
-		$subject = get_bloginfo('name') . '. CSSeco Contact Form - ' . $title;
+		$subject = get_bloginfo('name') . '. Contact Form - ' . $title;
 
-		$headers[] = 'From: ' . $title . '<' . $email . '>'; // From: Krueger <bobbaru_krueger@yahoo.com>
+		$headers[] = 'From: ' . $title . ' <' . $email . '>' . "\r\n"; // From: Krueger <bobbaru_krueger@yahoo.com>
 		// $headers[] = 'From: ' . get_bloginfo('name') . '<' . $to . '>';
-		$headers[] = 'Reply-to: ' . $title . '<' . $email . '>';
-		$headers[] = 'Content-Type: text/html: charset=UTF-8';
+		$headers[] = 'Reply-to: ' . $title . '<' . $email . '>' . "\r\n";
+		// $headers[] = 'MIME-Version: 1.0' . "\r\n";
+		$headers[] = 'Content-Type: text/html: charset=UTF-8' . "\r\n";
 
 		wp_mail( $to, $subject, $message, $headers );
 
@@ -147,7 +153,6 @@ function csseco_save_contact() {
 	} else {
 		echo 0;
 	}
-
 
 	die();
 }
