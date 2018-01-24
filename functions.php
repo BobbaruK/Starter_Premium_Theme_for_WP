@@ -4,6 +4,12 @@
  * functions.php
  *
  *
+ * Mobile Detect
+ */
+include( get_template_directory() . '/includes/vendor/Mobile_Detect.php' );     // Mobile Detect (PHP)
+
+
+/**
  * Set up
  */
 include( get_template_directory() . '/includes/theme-support.php' );            // theme support (multiple)
