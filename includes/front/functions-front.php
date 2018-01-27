@@ -27,7 +27,8 @@ function csseco_posted_meta() {
 		}
 	}
 	return '<span class="posted-on">
-				Posted <a data-toggle="tooltip" data-placement="top" title="' . get_the_time('jS F, Y g:ia') . '" href="' . esc_url( get_permalink() ) . '">' . $posted_on . '</a> ago
+				Posted <a data-toggle="tooltip" data-placement="top" title="' . get_the_time('jS F, Y g:ia') . '" 
+						  href="' . esc_url( get_permalink() ) . '">' . $posted_on . '</a> ago
 			</span> / 
 			<span class="posted-in">' . $output . '</span>';
 }
@@ -52,7 +53,8 @@ function csseco_posted_footer() {
 	return '<div class="post-footer-container">
 				<div class="row">
 					<div class="col-xs-12 col-sm-6 footer-left">
-						' . get_the_tag_list( '<div class="tags-list"><i class="fa fa-tags" aria-hidden="true"></i> ', '<span>, </span>', '</div>' ) . '
+						' . get_the_tag_list( '<div class="tags-list">
+						<i class="fa fa-tags" aria-hidden="true"></i> ', '<span>, </span>', '</div>' ) . '
 					</div>
 					<div class="col-xs-12 col-sm-6 footer-right">
 						' . $comments . ' 
@@ -240,5 +242,83 @@ function csseco_check_custom_header() {
 		$headerTextCol = ( empty( get_option('header_textcol') ) ? '' : 'color: ' . get_option('header_textcol') .';' );
 		$output = $bgElemStyle . $headerBgImg . $headerBgCol . $headerTextCol;
 	}
+	return $output;
+}
+
+/*
+ * Custom Pagination
+ */
+function csseco_pagination_top() {
+
+	$output = '';
+
+	if ( is_home() && get_option( 'themefeatures_loadMore_or_pagination' ) == 'loadMoreButtonPagination' ) {
+
+		$output .= '<div class="csseco-load-prev text-center">';
+		$output .= '<a class="csseco_load_more btn btn-lg btn-default"
+					   data-prev="1"
+					   data-page="'.csseco_check_paged(1).'"
+					   data-url="'.admin_url('admin-ajax.php').'"
+					   style="margin-bottom: 40px;">';
+		$output .= '<i class="fa fa-refresh" aria-hidden="true"></i>&nbsp;';
+		$output .= '<span class="text">Load Previous</span>';
+		$output .= '</a></div><!-- /.csseco-load-prev -->';
+
+	} elseif ( is_archive() && get_option( 'themefeatures_loadMore_or_pagination' ) == 'loadMoreButtonPagination' ) {
+
+		$output .= '<div class="csseco-load-prev text-center">';
+		$output .= '<a class="csseco_load_more btn btn-lg btn-default"
+					   data-prev="1"
+					   data-page="'.csseco_check_paged(1).'"
+					   data-archive="'.csseco_grab_current_uri().'"
+                       data-date="'.csseco_grab_current_uri().'"
+					   data-url="'.admin_url('admin-ajax.php').'"
+					   style="margin-bottom: 40px;">';
+		$output .= '<i class="fa fa-refresh" aria-hidden="true"></i>&nbsp;';
+		$output .= '<span class="text">Load Previous</span>';
+		$output .= '</a></div><!-- /.csseco-load-prev -->';
+
+	}
+
+	return $output;
+
+}
+function csseco_pagination_bottom() {
+
+	$output = '';
+
+	if ( is_home() && get_option( 'themefeatures_loadMore_or_pagination' ) == 'loadMoreButtonPagination' ) {
+
+		$output .= '<div class="csseco-load-next text-center">';
+		$output .= '<a class="csseco_load_more btn btn-lg btn-default"
+					   data-page="'.csseco_check_paged(1).'"
+					   data-url="'.admin_url('admin-ajax.php').'">';
+		$output .= '<i class="fa fa-refresh" aria-hidden="true"></i>&nbsp;';
+		$output .= '<span class="text">Load More</span>';
+		$output .= '</a></div><!-- /.csseco-load-next -->';
+
+	} elseif( is_archive() && get_option( 'themefeatures_loadMore_or_pagination' ) == 'loadMoreButtonPagination' ) {
+
+		$output .= '<div class="csseco-load-next text-center">';
+		$output .= '<a class="csseco_load_more btn btn-lg btn-default"
+					   data-page="'.csseco_check_paged(1).'"
+					   data-archive="'.csseco_grab_current_uri().'"
+					   data-date="'.csseco_grab_current_uri().'"
+					   data-url="'.admin_url('admin-ajax.php').'">';
+		$output .= '<i class="fa fa-refresh" aria-hidden="true"></i>&nbsp;';
+		$output .= '<span class="text">Load More</span>';
+		$output .= '</a></div><!-- /.csseco-load-next -->';
+
+	} elseif ( get_option( 'themefeatures_loadMore_or_pagination' ) == 'simplePagination' ) {
+
+		if ( function_exists("wp_bs_pagination") ) {
+
+			//wp_bs_pagination($the_query->max_num_pages);
+			wp_bs_pagination();
+
+		}
+
+	}
+
 	return $output;
 }

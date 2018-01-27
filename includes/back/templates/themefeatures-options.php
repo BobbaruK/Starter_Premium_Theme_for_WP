@@ -44,6 +44,39 @@ function contactF_checkActiv_callback() {
           id="themefeatures_contactF_activate" value="1" />Use shortcode: </label><code>[contact_form]</code>';
 }
 
+function loadmore_or_pagination_callback() {
+
+	$options = get_option( 'themefeatures_loadMore_or_pagination' );
+	$args = array( 'loadMoreButtonPagination', 'simplePagination' );
+	$output = '';
+
+	foreach ( $args as $arg ) {
+		if ( $arg == 'loadMoreButtonPagination' ) {
+			$argsHRName = 'Load More Button Pagination';
+		} elseif ( $arg == 'simplePagination' ) {
+			$argsHRName = 'Simple Pagination';
+		}
+		$checked = ( $options==$arg ? 'checked="checked"' : '' );
+		$output .= '<label for="' . $arg . '"><input '. $checked .' name="themefeatures_loadMore_or_pagination" 
+		            type="radio" id="' . $arg . '" class="post-format-' . $arg . '" value="'.$arg.'" />' . $argsHRName  . '</label><br>';
+	}
+	echo $output;
+
+
+
+//	$loadOrPag = get_option( 'themefeatures_loadMore_or_pagination' );
+//	$checked = ( @$loadOrPag == 1 ? 'checked' : '' );
+//	echo '<label for="themefeatures_loadMore_or_pagination">';
+//	echo '<input ' . $checked . ' name="themefeatures_loadMore_or_pagination" id="themefeatures_loadMore_or_pagination" value="'.$loadOrPag.'" type="radio">';
+//	echo '<span>Load More</span>'
+//    echo '</label>';
+//	echo '<label for="themefeatures_loadMore_or_pagination">';
+//    echo '<input ' . $checked . ' name="themefeatures_loadMore_or_pagination" id="themefeatures_loadMore_or_pagination" value="'.$loadOrPag.'" type="radio">';
+//    echo '<span>Load More</span>';
+//    echo '</label>';
+
+}
+
 function cssecoth_themefeatures_social_callback() {
 	_e( 'Set your social sharing sites', 'cssecotheme' );
 }

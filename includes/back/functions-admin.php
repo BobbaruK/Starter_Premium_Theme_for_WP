@@ -97,6 +97,10 @@ function csseco_custom_settings() {
 		'cssecoSettingsGroup-ThemeFeatures',
 		'themefeatures_contactF_activate'//
 	);
+	register_setting(
+		'cssecoSettingsGroup-ThemeFeatures',
+		'themefeatures_loadMore_or_pagination'//
+	);
 		// Theme Features Social Settings
 	register_setting(
 		'cssecoSettingsGroup-ThemeFeatures',
@@ -246,6 +250,13 @@ function csseco_custom_settings() {
 		'themefeatures-contactF-activate',
 		__('Activate Contact Form', 'cssecotheme'),
 		'contactF_checkActiv_callback',// all callbacks in settings fields are in their files
+		'csseco_first_theme_features',
+		'csseco-thfeatures-options'
+	);
+	add_settings_field(
+		'themefeatures-loadMore-or-pagination',
+		__('Pagination section', 'cssecotheme'),
+		'loadmore_or_pagination_callback',// all callbacks in settings fields are in their files
 		'csseco_first_theme_features',
 		'csseco-thfeatures-options'
 	);
