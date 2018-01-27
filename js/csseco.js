@@ -82,6 +82,7 @@ jQuery(document).ready(function ($) {
         var ajaxurl = that.data('url');
         var prev = that.data('prev');
         var archive = that.data('archive');
+        var date = that.data('date');
 
         if( typeof prev === 'undefined' ) {
             prev = 0;
@@ -90,6 +91,7 @@ jQuery(document).ready(function ($) {
         if( typeof archive === 'undefined') {
             archive = 0;
         }
+
 
         that.addClass( 'load' ).find('.text').text('Loading'); // add class load on the button
         that.find('i').addClass('fa-spin'); // add class fa-spin ont the i(fontawesome)
@@ -101,6 +103,7 @@ jQuery(document).ready(function ($) {
                 page : page,
                 prev : prev,
                 archive : archive,
+                date : date,
                 action : 'csseco_load_more'
             },
             error : function( response ){

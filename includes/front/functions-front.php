@@ -159,7 +159,7 @@ function csseco_grab_url() {
 }
 
 /**
- * Archive url
+ * Current url
  */
 function csseco_grab_current_uri() {
 	$http = ( isset( $_SERVER["HTTPS"] ) ? 'https://' : 'http://' );

@@ -14,6 +14,7 @@ get_header(); ?>
 				   data-prev="1"
 				   data-page="<?php echo csseco_check_paged(1); ?>"
                    data-archive="<?php echo csseco_grab_current_uri(); ?>"
+                   data-date="<?php echo csseco_grab_current_uri(); ?>"
 				   data-url="<?php echo admin_url('admin-ajax.php'); ?>"
 				   style="margin-bottom: 40px;">
 					<i class="fa fa-refresh" aria-hidden="true"></i>
@@ -48,6 +49,7 @@ get_header(); ?>
 			<a class="csseco_load_more btn btn-lg btn-default"
 			   data-page="<?php echo csseco_check_paged(1); ?>"
 			   data-archive="<?php echo csseco_grab_current_uri(); ?>"
+               data-date="<?php echo csseco_grab_current_uri(); ?>"
 			   data-url="<?php echo admin_url('admin-ajax.php'); ?>">
 				<i class="fa fa-refresh" aria-hidden="true"></i>
 				<span class="text">Load More</span>

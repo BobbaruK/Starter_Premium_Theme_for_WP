@@ -13,26 +13,39 @@ function csseco_load_more() {
 	$paged = $_POST["page"]+1;
 	$prev = $_POST["prev"];
 	$archive = $_POST["archive"];
+	$date = $_POST["date"];
 
 	if( $prev == 1 && $_POST["page"] != 1 ) {
 		$paged = $_POST["page"]-1;
 	}
 
+	if( $date != '0' ) {
+		$anNr    = 4; // localhost(starter_premium_theme) or in .../blog/
+//		$anNr    = 3; // liveserver or NOT in .../blog/
+		$lunaNr  = $anNr+1;
+		$ziNr    = $lunaNr+1;
+		$dateVal = explode( '/', $date );
+//		print_r( $dateVal );
+		$an      = ( empty( $dateVal[$anNr] ) ? '' : $dateVal[$anNr] );
+		$luna    = ( empty( $dateVal[$lunaNr] ) ? '' : $dateVal[$lunaNr] );
+		$zi      = ( empty( $dateVal[$ziNr] ) ? '' : $dateVal[$ziNr] );
+	}
+
 	$args = array(
-		'post_type' => 'post',
-		'post_status' => 'publish',
-		'paged' => $paged
+		'post_type'     => 'post',
+		'post_status'   => 'publish',
+		'year'          => $an,
+		'monthnum'      => $luna,
+		'day'           => $zi,
+		'paged'         => $paged
 	);
 
 	if( $archive != '0' ) {
-		$archVal = explode( '/', $archive );
-		//print_r( $archVal );
-		$archValFlipped = array_flip($archVal);
-		//print_r( $archValFlipped );
 
-//		$an =  get_the_date( 'Y' );
-//		$luna = get_the_date( 'm' );
-//		$zi = get_the_date( 'd' );
+		$archVal = explode( '/', $archive );
+//		print_r( $archVal );
+		$archValFlipped = array_flip($archVal);
+//		print_r( $archValFlipped );
 
 		switch ( isset( $archValFlipped ) ){
 
@@ -51,11 +64,6 @@ function csseco_load_more() {
 				$key = $type;
 				break;
 
-//			case $archValFlipped[$an] :
-//				$type = "year";
-//				$key = $type;
-//				break;
-
 		}
 
 		$currKey = array_keys( $archVal, $key );
@@ -64,12 +72,22 @@ function csseco_load_more() {
 
 		$args[ $type ] = $value;
 
-		// check page trail and remove "page" value
+		// check page trail and remove "page" value; for archive(category, tags, and author)
 		if ( isset( $archValFlipped["page"] ) ) {
 			$pageVal = explode( 'page', $archive );
 			$page_trail = $pageVal[0];
 		} else {
 			$page_trail = $archive;
+		}
+
+		// check page trail and remove "page" value; for archive(yearly, monthly and daily)
+		$dateValFlipped = array_flip($dateVal);
+//		print_r($dateValFlipped);
+		if ( isset( $dateValFlipped["page"] ) ) {
+			$pageVal = explode( 'page', $date );
+			$page_trail = $pageVal[0];
+		} else {
+			$page_trail = $date;
 		}
 
 	} else {
@@ -80,6 +98,7 @@ function csseco_load_more() {
 	$query = new WP_Query( $args );
 
 	if ( $query->have_posts() ) {
+
 		echo '<div class="page-limit" data-page="'.$page_trail.'page/'.$paged.'/">';
 		while ( $query->have_posts() ) {
 			$query->the_post();
