@@ -6,27 +6,7 @@
  */
 get_header(); ?>
 	<main id="main" class="site-main col-xs-12 col-md-<?php echo $contentWidth; ?>" role="main">
-		<?php
-            if ( is_paged() ) {
-                echo csseco_pagination_top();
-            }
-		?>
-<!--        --><?php
-//            if ( is_paged() ) {
-//        ?>
-<!--            <div class="csseco-load-prev text-center">-->
-<!--                <a class="csseco_load_more btn btn-lg btn-default"-->
-<!--                   data-prev="1"-->
-<!--                   data-page="--><?php //echo csseco_check_paged(1) ?><!--"-->
-<!--                   data-url="--><?php //echo admin_url('admin-ajax.php'); ?><!--"-->
-<!--                   style="margin-bottom: 40px;">-->
-<!--                    <i class="fa fa-refresh" aria-hidden="true"></i>-->
-<!--                    <span class="text">Load Previous</span>-->
-<!--                </a>-->
-<!--            </div><!-- /.csseco-load-prev -->
-<!--        --><?php
-//            }
-//        ?>
+		<?php if ( is_paged() ) { echo csseco_pagination_top(); } ?>
 		<div class="csseco-posts-container">
 			<?php
 				if ( have_posts() ) {
@@ -46,14 +26,6 @@ get_header(); ?>
 			?>
 		</div><!-- /.csseco-posts-container -->
 		<?php echo csseco_pagination_bottom(); ?>
-<!--        <div class="csseco-load-next text-center">-->
-<!--            <a class="csseco_load_more btn btn-lg btn-default"-->
-<!--               data-page="--><?php //echo csseco_check_paged(1) ?><!--"-->
-<!--               data-url="--><?php //echo admin_url('admin-ajax.php'); ?><!--">-->
-<!--                <i class="fa fa-refresh" aria-hidden="true"></i>-->
-<!--                <span class="text">Load More</span>-->
-<!--            </a>-->
-<!--        </div><!-- /.csseco-load-next -->
 	</main><!-- /.site-main -->
     <?php get_sidebar(); ?>
 <?php get_footer();

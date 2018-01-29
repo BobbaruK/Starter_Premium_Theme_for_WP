@@ -36,7 +36,7 @@ function csseco_load_more() {
 		'post_status'   => 'publish',
 		'year'          => $an,
 		'monthnum'      => $luna,
-		'day'           => $zi,
+//		'day'           => $zi,
 		'paged'         => $paged
 	);
 
