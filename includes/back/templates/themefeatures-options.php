@@ -61,20 +61,6 @@ function loadmore_or_pagination_callback() {
 		            type="radio" id="' . $arg . '" class="post-format-' . $arg . '" value="'.$arg.'" />' . $argsHRName  . '</label><br>';
 	}
 	echo $output;
-
-
-
-//	$loadOrPag = get_option( 'themefeatures_loadMore_or_pagination' );
-//	$checked = ( @$loadOrPag == 1 ? 'checked' : '' );
-//	echo '<label for="themefeatures_loadMore_or_pagination">';
-//	echo '<input ' . $checked . ' name="themefeatures_loadMore_or_pagination" id="themefeatures_loadMore_or_pagination" value="'.$loadOrPag.'" type="radio">';
-//	echo '<span>Load More</span>'
-//    echo '</label>';
-//	echo '<label for="themefeatures_loadMore_or_pagination">';
-//    echo '<input ' . $checked . ' name="themefeatures_loadMore_or_pagination" id="themefeatures_loadMore_or_pagination" value="'.$loadOrPag.'" type="radio">';
-//    echo '<span>Load More</span>';
-//    echo '</label>';
-
 }
 
 function cssecoth_themefeatures_social_callback() {
