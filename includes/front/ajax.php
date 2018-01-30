@@ -60,8 +60,8 @@ function csseco_load_more() {
 				break;
 
 			case $archValFlipped["author"] :
-				$type   = "author";
-				$key    = $type;
+				$type   = "author_name";
+				$key    = "author";
 				break;
 
 		}

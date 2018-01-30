@@ -252,28 +252,24 @@ function csseco_pagination_top() {
 
 	$output = '';
 
-	if ( is_home() && get_option( 'themefeatures_loadMore_or_pagination' ) == 'loadMoreButtonPagination' ) {
+	if ( get_option( 'themefeatures_loadMore_or_pagination' ) == 'loadMoreButtonPagination' ) {
 
 		$output .= '<div class="csseco-load-prev text-center">';
-		$output .= '<a class="csseco_load_more btn btn-lg btn-default"
+		if ( is_home() ) {
+			$output .= '<a class="csseco_load_more btn btn-lg btn-default"
 					   data-prev="1"
 					   data-page="'.csseco_check_paged(1).'"
 					   data-url="'.admin_url('admin-ajax.php').'"
 					   style="margin-bottom: 40px;">';
-		$output .= '<i class="fa fa-refresh" aria-hidden="true"></i>&nbsp;';
-		$output .= '<span class="text">Load Previous</span>';
-		$output .= '</a></div><!-- /.csseco-load-prev -->';
-
-	} elseif ( is_archive() && get_option( 'themefeatures_loadMore_or_pagination' ) == 'loadMoreButtonPagination' ) {
-
-		$output .= '<div class="csseco-load-prev text-center">';
-		$output .= '<a class="csseco_load_more btn btn-lg btn-default"
+		} elseif ( is_archive() ) {
+			$output .= '<a class="csseco_load_more btn btn-lg btn-default"
 					   data-prev="1"
 					   data-page="'.csseco_check_paged(1).'"
 					   data-archive="'.csseco_grab_current_uri().'"
                        data-date="'.csseco_grab_current_uri().'"
 					   data-url="'.admin_url('admin-ajax.php').'"
 					   style="margin-bottom: 40px;">';
+		}
 		$output .= '<i class="fa fa-refresh" aria-hidden="true"></i>&nbsp;';
 		$output .= '<span class="text">Load Previous</span>';
 		$output .= '</a></div><!-- /.csseco-load-prev -->';
