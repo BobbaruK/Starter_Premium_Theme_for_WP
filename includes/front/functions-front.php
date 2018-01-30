@@ -312,38 +312,5 @@ function csseco_pagination_bottom() {
 
 	}
 
-//	if ( is_home() && get_option( 'themefeatures_loadMore_or_pagination' ) == 'loadMoreButtonPagination' ) {
-//
-//		$output .= '<div class="csseco-load-next text-center">';
-//		$output .= '<a class="csseco_load_more btn btn-lg btn-default"
-//					   data-page="'.csseco_check_paged(1).'"
-//					   data-url="'.admin_url('admin-ajax.php').'">';
-//		$output .= '<i class="fa fa-refresh" aria-hidden="true"></i>&nbsp;';
-//		$output .= '<span class="text">Load More</span>';
-//		$output .= '</a></div><!-- /.csseco-load-next -->';
-//
-//	} elseif( is_archive() && get_option( 'themefeatures_loadMore_or_pagination' ) == 'loadMoreButtonPagination' ) {
-//
-//		$output .= '<div class="csseco-load-next text-center">';
-//		$output .= '<a class="csseco_load_more btn btn-lg btn-default"
-//					   data-page="'.csseco_check_paged(1).'"
-//					   data-archive="'.csseco_grab_current_uri().'"
-//					   data-date="'.csseco_grab_current_uri().'"
-//					   data-url="'.admin_url('admin-ajax.php').'">';
-//		$output .= '<i class="fa fa-refresh" aria-hidden="true"></i>&nbsp;';
-//		$output .= '<span class="text">Load More</span>';
-//		$output .= '</a></div><!-- /.csseco-load-next -->';
-//
-//	} elseif ( get_option( 'themefeatures_loadMore_or_pagination' ) == 'simplePagination' ) {
-//
-//		if ( function_exists("wp_bs_pagination") ) {
-//
-//			//wp_bs_pagination($the_query->max_num_pages);
-//			wp_bs_pagination();
-//
-//		}
-//
-//	}
-
 	return $output;
 }
