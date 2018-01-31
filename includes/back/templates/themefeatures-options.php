@@ -47,19 +47,24 @@ function contactF_checkActiv_callback() {
 function loadmore_or_pagination_callback() {
 
 	$options = get_option( 'themefeatures_loadMore_or_pagination' );
-	$args = array( 'loadMoreButtonPagination', 'simplePagination' );
+	$args = array( 'loadMoreButtonPagination', 'autoLoadMoreButtonPagination', 'simplePagination' );
 	$output = '';
 
 	foreach ( $args as $arg ) {
-		if ( $arg == 'loadMoreButtonPagination' ) {
-			$argsHRName = 'Load More Button Pagination';
-		} elseif ( $arg == 'simplePagination' ) {
-			$argsHRName = 'Simple Pagination';
+        if ( $arg == 'loadMoreButtonPagination' ) {
+            $argsHRName = __('Load more posts button pagination', 'cssecotheme');
+        } elseif ( $arg == 'autoLoadMoreButtonPagination' ) {
+		    $argsHRName = __('Auto load more next posts button pagination', 'cssecotheme');
+        } elseif ( $arg == 'simplePagination' ) {
+			$argsHRName = __('Simple pagination', 'cssecotheme');
 		}
 		$checked = ( $options==$arg ? 'checked="checked"' : '' );
 		$output .= '<label for="' . $arg . '"><input '. $checked .' name="themefeatures_loadMore_or_pagination" 
-		            type="radio" id="' . $arg . '" class="post-format-' . $arg . '" value="'.$arg.'" />' . $argsHRName  . '</label><br>';
+		            type="radio" id="' . $arg . '" class="post-format-' . $arg . '" value="'.$arg.'" />' .
+                    $argsHRName  . '</label><br>';
 	}
+	$output .= '<p class="description">To use Load More you have to set 
+                <a href="options-permalink.php">Permalinks</a> to "Post name"</p>';
 	echo $output;
 }
 

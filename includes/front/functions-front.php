@@ -252,7 +252,7 @@ function csseco_pagination_top() {
 
 	$output = '';
 
-	if ( get_option( 'themefeatures_loadMore_or_pagination' ) == 'loadMoreButtonPagination' ) {
+	if ( get_option( 'themefeatures_loadMore_or_pagination' ) == 'autoLoadMoreButtonPagination' || get_option( 'themefeatures_loadMore_or_pagination' ) == 'loadMoreButtonPagination' ) {
 
 		$output .= '<div class="csseco-load-prev text-center">';
 		if ( is_home() ) {
@@ -283,7 +283,7 @@ function csseco_pagination_bottom() {
 
 	$output = '';
 
-	if ( get_option( 'themefeatures_loadMore_or_pagination' ) == 'loadMoreButtonPagination' ) {
+	if ( get_option( 'themefeatures_loadMore_or_pagination' ) == 'autoLoadMoreButtonPagination' || get_option( 'themefeatures_loadMore_or_pagination' ) == 'loadMoreButtonPagination' ) {
 
 		$output .= '<div class="csseco-load-next text-center">';
 		if ( is_home() ) {

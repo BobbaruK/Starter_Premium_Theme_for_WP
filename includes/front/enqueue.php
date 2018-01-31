@@ -70,6 +70,17 @@ function csseco_load_front_scripts() {
 		true
 	);
 	wp_enqueue_script('csseco_front_js');
+	/* Auto Load More Next Posts Init*/
+	if ( get_option( 'themefeatures_loadMore_or_pagination' ) == 'autoLoadMoreButtonPagination' ) {
+		wp_register_script(
+			'autoload_init',
+			get_template_directory_uri() . '/js/csseco.autoload-init.js',
+			array( 'jquery' ),
+			'1.0.0',
+			true
+		);
+		wp_enqueue_script('autoload_init');
+	}
 
 }
 add_action( 'wp_enqueue_scripts', 'csseco_load_front_scripts' );       // hook style and scripts to the FRONTEND

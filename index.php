@@ -11,7 +11,7 @@ get_header(); ?>
 			<?php
 				if ( have_posts() ) {
 
-				    //echo '<div class="page-limit" data-page="/'.csseco_check_paged() .'">'; // Live Server
+//				    echo '<div class="page-limit" data-page="/'.csseco_check_paged() .'">'; // Live Server
 				    echo '<div class="page-limit" data-page="'.esc_url( home_url( '/' ) ).csseco_check_paged() .'">'; // LocalHost
 
 					while ( have_posts() ) {

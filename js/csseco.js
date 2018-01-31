@@ -119,7 +119,7 @@ jQuery(document).ready(function ($) {
                         if ( prev == 1 ) {
                             $('.csseco-posts-container').prepend( response );
                             newPage = page-1;
-                            that.find('.text').text('Load Prev');
+                            // that.find('.text').text('Load Prev');
                         } else {
                             $('.csseco-posts-container').append( response );
                         }
