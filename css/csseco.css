@@ -1,2 +1,1134 @@
-@import url(fonts/fonts.css);article.csseco-format-image header.entry-header .entry-excerpt.image-caption,article.csseco-format-gallery header.entry-header .carousel .carousel-inner .csseco_slides .entry-excerpt.image-caption{background:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0.2)), to(rgba(0,0,0,0.5)));background:linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.5) 100%);filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#80000000',GradientType=0 )}.alignnone{margin:5px 20px 20px 0}.aligncenter,div.aligncenter{display:block;margin:5px auto 5px auto}.alignright{float:right;margin:5px 0 20px 20px}.alignleft{float:left;margin:5px 20px 20px 0}a img.alignright{float:right;margin:5px 0 20px 20px}a img.alignnone{margin:5px 20px 20px 0}a img.alignleft{float:left;margin:5px 20px 20px 0}a img.aligncenter{display:block;margin-left:auto;margin-right:auto}.wp-caption{background:#fff;border:1px solid #f0f0f0;max-width:100%;padding:5px 3px 10px;text-align:center}.wp-caption.alignnone{margin:5px 20px 20px 0;clear:both}.wp-caption.aligncenter{clear:both}.wp-caption.alignleft{margin:5px 20px 20px 0}.wp-caption.alignright{margin:5px 0 20px 20px}.wp-caption img{border:0 none;height:auto;margin:0;max-width:100%;padding:0;width:auto}.wp-caption p.wp-caption-text{font-size:11px;line-height:17px;margin:0;padding:0 4px 5px}.screen-reader-text{border:0;clip:rect(1px, 1px, 1px, 1px);-webkit-clip-path:inset(50%);clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute !important;width:1px;word-wrap:normal !important}.screen-reader-text:focus{background-color:#eee;clip:auto !important;-webkit-clip-path:none;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}body{font-family:"Fira Sans","Helvetica Neue","Helvetica",Arial,Verdana,sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:greyscale}a{color:#000;-webkit-transition:color 320ms ease;transition:color 320ms ease}a:hover,a:focus{text-decoration:none;color:#898989}.bg-img-el{background-position:center center;background-size:cover;background-repeat:no-repeat}.table{display:table;width:100%;height:100%}.table .table-cell{display:table-cell;width:100%;height:100%;vertical-align:middle}nav#cssecoMenu{background:#fff}nav#cssecoMenu i.csseco_menu_burger{cursor:pointer;display:none;font-size:22px;padding:10px}@media screen and (max-width: 768px){nav#cssecoMenu i.csseco_menu_burger{display:inline-block}}nav#cssecoMenu>ul.menu{background:transparent;list-style:none;margin:0;padding:0;position:relative;z-index:20}nav#cssecoMenu>ul.menu li{position:relative;width:auto}nav#cssecoMenu>ul.menu li a{display:block;margin:5px 20px;padding:0 15px;text-align:center;text-decoration:none}@media screen and (max-width: 768px){nav#cssecoMenu>ul.menu li a{display:block}}nav#cssecoMenu>ul.menu li ul{min-width:100%;z-index:30}nav#cssecoMenu>ul.menu li>ul{display:none;list-style:none;margin:0;padding:0;position:absolute;top:0;right:0}@media screen and (max-width: 768px){nav#cssecoMenu>ul.menu li>ul{position:relative;min-width:auto;width:100%}}nav#cssecoMenu>ul.menu li.opened>a,nav#cssecoMenu>ul.menu li:hover>a{font-weight:bold}nav#cssecoMenu>ul.menu li.opened>ul{display:block}nav#cssecoMenu>ul.menu li.opened{background:rgba(0,0,0,0.3)}nav#cssecoMenu>ul.menu li.menu-item-has-children>a::after{background:transparent;display:inline-block;font:normal normal normal 14px/1 FontAwesome;font-size:inherit;height:15px;position:absolute;right:2px;text-align:center;text-indent:initial;text-rendering:auto;top:7px;width:15px;z-index:30;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}@media screen and (max-width: 768px){nav#cssecoMenu>ul.menu li.menu-item-has-children>a::after{right:5px}}@media screen and (max-width: 768px){nav#cssecoMenu>ul.menu li{width:100%}}nav#cssecoMenu>ul.menu>li{display:inline-block}nav#cssecoMenu>ul.menu>li>ul{background:#fff;left:0;text-align:left;top:100%;width:auto}nav#cssecoMenu>ul.menu>li>ul li{display:block}nav#cssecoMenu>ul.menu>li>ul li a{margin-bottom:0;margin-top:0;padding:5px 0}@media screen and (max-width: 768px){nav#cssecoMenu>ul.menu>li>ul>li>a{text-indent:20px}}nav#cssecoMenu>ul.menu>li>ul>li ul{background:#fff;left:100%;position:absolute;text-align:left;top:0;width:auto}@media screen and (max-width: 1200px){nav#cssecoMenu>ul.menu>li>ul>li ul{left:0;position:relative}}@media screen and (min-width: 768px) and (max-width: 1200px){nav#cssecoMenu>ul.menu>li>ul>li ul{border-color:#000;border-style:solid;border-width:1px 0}}@media screen and (max-width: 768px){nav#cssecoMenu>ul.menu>li>ul>li ul>li>a{text-indent:40px}}@media screen and (max-width: 768px){nav#cssecoMenu>ul.menu>li>ul>li ul{left:0}}nav#cssecoMenu>ul.menu>li>ul>li.menu-item-has-children>a::after{content:'\f054'}@media screen and (max-width: 1200px){nav#cssecoMenu>ul.menu>li>ul>li.menu-item-has-children>a::after{content:'\f078'}}nav#cssecoMenu>ul.menu>li>ul>li.menu-item-has-children.opened>a::after{content:'\f053'}@media screen and (max-width: 1200px){nav#cssecoMenu>ul.menu>li>ul>li.menu-item-has-children.opened>a::after{content:'\f077'}}@media screen and (max-width: 768px){nav#cssecoMenu>ul.menu>li>ul>li{padding-left:0;padding-right:0}}nav#cssecoMenu>ul.menu>li.menu-item-has-children>a::after{content:'\f078'}nav#cssecoMenu>ul.menu>li.menu-item-has-children.opened>a::after{content:'\f077'}@media screen and (max-width: 768px){nav#cssecoMenu>ul.menu>li.opened{padding-left:0;padding-right:0}}nav#cssecoMenu>ul.menu li.current-menu-item,nav#cssecoMenu>ul.menu li.current_page_item,nav#cssecoMenu>ul.menu li.current-page-ancestor,nav#cssecoMenu>ul.menu li.current-menu-ancestor{background:rgba(0,0,0,0.3)}nav#cssecoMenu>ul.menu li.current-menu-item>a,nav#cssecoMenu>ul.menu li.current_page_item>a,nav#cssecoMenu>ul.menu li.current-page-ancestor>a,nav#cssecoMenu>ul.menu li.current-menu-ancestor>a{font-weight:bold}@media screen and (max-width: 768px){nav#cssecoMenu>ul.menu{display:none}}#cssecoFooter{background-color:#333;margin-top:40px;padding:20px 0}#cssecoFooter nav.footer_menu ul.menu{display:block}.csseco_custom_post_navigation .post-link-nav-prev{text-align:center}.csseco_custom_post_navigation .post-link-nav-prev i{margin-right:5px}@media screen and (min-width: 768px){.csseco_custom_post_navigation .post-link-nav-prev{text-align:left}}.csseco_custom_post_navigation .post-link-nav-next{text-align:center}.csseco_custom_post_navigation .post-link-nav-next i{margin-left:5px}@media screen and (min-width: 768px){.csseco_custom_post_navigation .post-link-nav-next{text-align:right}}article{margin-bottom:10px;padding-bottom:30px;opacity:0;-webkit-transition:all 320ms ease;transition:all 320ms ease;-webkit-transform:translateY(50px);transform:translateY(50px)}article.reveal{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}article header.entry-header h1.entry-title{margin-top:0}article .entry-share h4{margin-bottom:0}article .entry-share ul{list-style-type:none;margin:0;padding:0}article .entry-share ul li{display:inline-block;margin-right:5px}article .entry-share ul li a{font-size:34px}article .entry-footer{border-bottom:3px solid #c5c4cd;margin:15px 0;padding:0 0 10px}article .entry-footer .post-footer-container .footer-right{text-align:right}@media screen and (max-width: 768px){article .entry-footer .post-footer-container .footer-right i{float:left;margin-right:5px}}@media screen and (max-width: 768px){article .entry-footer .post-footer-container .footer-right{text-align:left}}article.csseco-single-post .entry-content .single-featured{border:1px solid #eee;padding:10px 10px;margin:0 0 5px 0;width:100%}@media screen and (min-width: 768px){article.csseco-single-post .entry-content .single-featured{padding:15px 20px}}@media screen and (min-width: 992px){article.csseco-single-post .entry-content .single-featured{padding:17px 50px}}@media screen and (min-width: 1200px){article.csseco-single-post .entry-content .single-featured{padding:20px 75px}}article.csseco-format-standard .entry-content a.standard-featured-link .standard-featured{min-height:350px}article.csseco-format-image header.entry-header{min-height:350px;position:relative;text-align:center}article.csseco-format-image header.entry-header .entry-excerpt.image-caption{bottom:0;color:#898989;left:0;margin:0;padding:0 15px;position:absolute;right:0}article.csseco-format-image header.entry-header .entry-excerpt.image-caption p{margin:40px 0;font-size:14px}article.csseco-format-audio header.entry-header h1.entry-title{display:inline-block;width:auto}article.csseco-format-audio header.entry-header .entry-meta{display:inline-block;width:auto}article.csseco-format-audio .entry-content iframe{height:166px;width:100%}article.csseco-format-video header.entry-header h1.entry-title{text-align:center}article.csseco-format-gallery header.entry-header .carousel .carousel-indicators{bottom:0}article.csseco-format-gallery header.entry-header .carousel .carousel-inner .csseco_slides{height:350px}article.csseco-format-gallery header.entry-header .carousel .carousel-inner .csseco_slides .entry-excerpt.image-caption{bottom:0;color:#898989;left:0;margin:0;padding:0 15px;position:absolute;right:0;text-align:center;-webkit-transition:transform 320ms ease;-webkit-transition:-webkit-transform 320ms ease;transition:-webkit-transform 320ms ease;transition:transform 320ms ease;transition:transform 320ms ease, -webkit-transform 320ms ease;-webkit-transform:translateY(100%);transform:translateY(100%)}article.csseco-format-gallery header.entry-header .carousel .carousel-inner .csseco_slides .entry-excerpt.image-caption p{margin:40px 0;font-size:14px}article.csseco-format-gallery header.entry-header .carousel .carousel-control{background:none;padding:0 30px;width:auto}article.csseco-format-gallery header.entry-header .carousel .carousel-control .control-wrapper{position:relative}article.csseco-format-gallery header.entry-header .carousel .carousel-control .control-wrapper i{padding:2px}article.csseco-format-gallery header.entry-header .carousel .carousel-control .control-wrapper .preview-thumb{border-radius:5px;bottom:-5px;display:inline-block;height:68px;position:absolute;top:-10px;width:68px;-webkit-transition:transform 320ms ease;-webkit-transition:-webkit-transform 320ms ease;transition:-webkit-transform 320ms ease;transition:transform 320ms ease;transition:transform 320ms ease, -webkit-transform 320ms ease;-webkit-transform:scale(0);transform:scale(0)}article.csseco-format-gallery header.entry-header .carousel .carousel-control.left .control-wrapper .preview-thumb{left:30px}article.csseco-format-gallery header.entry-header .carousel .carousel-control.right .control-wrapper .preview-thumb{right:30px}article.csseco-format-gallery header.entry-header .carousel .carousel-control:hover .control-wrapper .preview-thumb{-webkit-transform:scale(1);transform:scale(1)}article.csseco-format-gallery header.entry-header .carousel:hover .carousel-inner .csseco_slides .entry-excerpt.image-caption{-webkit-transform:translateY(0);transform:translateY(0)}article.csseco-format-quote header.entry-header h1.qote-content{font-size:34px;letter-spacing:0.03em;position:relative}article.csseco-format-quote header.entry-header h1.qote-content::before,article.csseco-format-quote header.entry-header h1.qote-content::after{color:#999999;display:inline-block;position:relative}article.csseco-format-quote header.entry-header h1.qote-content::before{content:'\201C'}article.csseco-format-quote header.entry-header h1.qote-content::after{content:'\201E'}article.csseco-format-quote header.entry-header h2.quote-author{font-size:18px;font-weight:bold;position:relative;text-align:right}article.csseco-format-quote header.entry-header h2.quote-author::before{content:'\2014 ';display:inline-block;margin:0 5px 0 0;position:relative}article.csseco-format-link header.entry-header h1.entry-title{text-align:center}article.csseco-format-link header.entry-header h1.entry-title i{color:#999999;display:block;margin:7px auto 0;text-align:center;width:50px}article.csseco-format-aside .aside-featured{height:120px}.comments-area{border-top:3px solid #c5c4cd;margin:10px 0 0;padding:30px 0 0}.comments-area li.comment article.comment-body{margin:0 0 25px 0;opacity:1;padding:0;-webkit-transform:translateY(0);transform:translateY(0)}.comments-area li.comment article.comment-body footer.comment-meta .comment-author{padding:0 0 7px 0;position:relative;margin:0 0 5px 0}.comments-area li.comment article.comment-body footer.comment-meta .comment-author img.avatar{border:1px solid #d7d7d7;border-radius:50%;display:inline-block;padding:2px}.comments-area li.comment article.comment-body footer.comment-meta .comment-author b.fn a{font-size:22px;padding:0 0 0 10px}.comments-area li.comment article.comment-body footer.comment-meta .comment-author::before{background:#CCCCCC;bottom:0;content:'';display:block;height:12px;left:0;position:absolute;width:1px}.comments-area li.comment article.comment-body footer.comment-meta .comment-author::after{background:#CCCCCC;bottom:0;content:'';display:block;height:1px;position:absolute;width:70px}#sitePage.sidebarLeft #main{float:right}#sitePage.sidebarLeft #secondary{float:left}#sitePage.sidebarRight #main{float:left}#sitePage.sidebarRight #secondary{float:right}#sitePage.sidebarBottom #secondary{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-flow:row wrap;flex-flow:row wrap;-ms-flex-pack:distribute;justify-content:space-around}#sitePage.sidebarBottom #secondary .csseco-widget{width:32.5%}.form-control-msg{display:none}.has-error .form-control-msg{display:block}.js-show-feedback{display:inline-block;padding-left:10px}
+/**
+ * @package CSSecoThemes
+ * csseco.scss to css/csseco.css
+ */
+/*--------------------------------------------------------------
+>>>>>> CSSeco Styles(usualy overwrite bootsrap styles :))
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+    # CSSeco Imports
+    # Generic
+    # Header
+    ## Header Menu
+    # Menu styles (wp ready)
+    # Footer
+    ## Footer Menu
+    # Body
+    # Globals and Posts Formats
+    # Single post Comments
+    # Sidebar Position
+    # Widgets
+    # Contact Form
+    # 404
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# CSSeco Imports
+--------------------------------------------------------------*/
+@import url(fonts/fonts.css);
+/**
+ * @package CSSecoThemes
+ * base/_variables.scss
+ */
+/**
+ * @package CSSecoThemes
+ * base/_mixins.scss
+ */
+/**
+ * @package CSSecoThemes
+ * base/_placeholders.scss
+ *
+ * %placeholder { text-shadow: 0 1px 2px rgba(0, 0, 0, .4); }
+ * @extend %placeholder;
+ *
+ * Placeholders
+ */
+/* line 12, scss/base/_placeholders.scss */
+article.csseco-format-image header.entry-header .entry-excerpt.image-caption, article.csseco-format-gallery header.entry-header .carousel .carousel-inner .csseco_slides .entry-excerpt.image-caption {
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.5)));
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.5) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#80000000',GradientType=0 );
+  /* IE6-9 */
+}
+
+/**
+ * @package CSSecoThemes
+ * base/_wordpress.scss
+ */
+/* =WordPress Core
+-------------------------------------------------------------- */
+/* line 8, scss/base/_wordpress.scss */
+.alignnone {
+  margin: 5px 20px 20px 0;
+}
+
+/* line 12, scss/base/_wordpress.scss */
+.aligncenter,
+div.aligncenter {
+  display: block;
+  margin: 5px auto 5px auto;
+}
+
+/* line 18, scss/base/_wordpress.scss */
+.alignright {
+  float: right;
+  margin: 5px 0 20px 20px;
+}
+
+/* line 23, scss/base/_wordpress.scss */
+.alignleft {
+  float: left;
+  margin: 5px 20px 20px 0;
+}
+
+/* line 28, scss/base/_wordpress.scss */
+a img.alignright {
+  float: right;
+  margin: 5px 0 20px 20px;
+}
+
+/* line 33, scss/base/_wordpress.scss */
+a img.alignnone {
+  margin: 5px 20px 20px 0;
+}
+
+/* line 37, scss/base/_wordpress.scss */
+a img.alignleft {
+  float: left;
+  margin: 5px 20px 20px 0;
+}
+
+/* line 42, scss/base/_wordpress.scss */
+a img.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 48, scss/base/_wordpress.scss */
+.wp-caption {
+  background: #fff;
+  border: 1px solid #f0f0f0;
+  max-width: 100%;
+  /* Image does not overflow the content area */
+  padding: 5px 3px 10px;
+  text-align: center;
+}
+
+/* line 56, scss/base/_wordpress.scss */
+.wp-caption.alignnone {
+  margin: 5px 20px 20px 0;
+  clear: both;
+}
+
+/* line 61, scss/base/_wordpress.scss */
+.wp-caption.aligncenter {
+  clear: both;
+}
+
+/* line 65, scss/base/_wordpress.scss */
+.wp-caption.alignleft {
+  margin: 5px 20px 20px 0;
+}
+
+/* line 69, scss/base/_wordpress.scss */
+.wp-caption.alignright {
+  margin: 5px 0 20px 20px;
+}
+
+/* line 73, scss/base/_wordpress.scss */
+.wp-caption img {
+  border: 0 none;
+  height: auto;
+  margin: 0;
+  max-width: 100%;
+  padding: 0;
+  width: auto;
+}
+
+/* line 82, scss/base/_wordpress.scss */
+.wp-caption p.wp-caption-text {
+  font-size: 11px;
+  line-height: 17px;
+  margin: 0;
+  padding: 0 4px 5px;
+}
+
+/* Text meant only for screen readers. */
+/* line 90, scss/base/_wordpress.scss */
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+  /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+}
+
+/* line 103, scss/base/_wordpress.scss */
+.screen-reader-text:focus {
+  background-color: #eee;
+  clip: auto !important;
+  -webkit-clip-path: none;
+          clip-path: none;
+  color: #444;
+  display: block;
+  font-size: 1em;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000;
+  /* Above WP toolbar. */
+}
+
+/*--------------------------------------------------------------
+# Generic
+--------------------------------------------------------------*/
+/* line 37, scss/csseco.scss */
+body {
+  font-family: "Fira Sans", "Helvetica Neue", "Helvetica", Arial, Verdana, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: greyscale;
+}
+
+/* line 43, scss/csseco.scss */
+a {
+  color: #000000;
+  -webkit-transition: color 320ms ease;
+  transition: color 320ms ease;
+}
+/* line 46, scss/csseco.scss */
+a:hover, a:focus {
+  text-decoration: none;
+  color: #898989;
+}
+
+/* line 53, scss/csseco.scss */
+.bg-img-el {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* line 59, scss/csseco.scss */
+.table {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+/* line 63, scss/csseco.scss */
+.table .table-cell {
+  display: table-cell;
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+/* line 74, scss/csseco.scss */
+#cssecoHeader {
+  /*------------------------------------------------------------
+  ## Header Menu
+  ------------------------------------------------------------*/
+}
+
+/*--------------------------------------------------------------
+# Menu styles (wp ready)
+--------------------------------------------------------------*/
+/* line 86, scss/csseco.scss */
+nav#cssecoMenu {
+  background: #FFFFFF;
+}
+/* line 88, scss/csseco.scss */
+nav#cssecoMenu i.csseco_menu_burger {
+  cursor: pointer;
+  display: none;
+  font-size: 22px;
+  padding: 10px;
+}
+@media screen and (max-width: 768px) {
+  /* line 88, scss/csseco.scss */
+  nav#cssecoMenu i.csseco_menu_burger {
+    display: inline-block;
+  }
+}
+/* line 95, scss/csseco.scss */
+nav#cssecoMenu > ul.menu {
+  background: transparent;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  z-index: 20;
+}
+/* line 102, scss/csseco.scss */
+nav#cssecoMenu > ul.menu li {
+  position: relative;
+  width: auto;
+}
+/* line 105, scss/csseco.scss */
+nav#cssecoMenu > ul.menu li a {
+  display: block;
+  margin: 5px 20px;
+  padding: 0 15px;
+  text-align: center;
+  text-decoration: none;
+}
+@media screen and (max-width: 768px) {
+  /* line 105, scss/csseco.scss */
+  nav#cssecoMenu > ul.menu li a {
+    display: block;
+  }
+}
+/* line 113, scss/csseco.scss */
+nav#cssecoMenu > ul.menu li ul {
+  min-width: 100%;
+  z-index: 30;
+}
+/* line 117, scss/csseco.scss */
+nav#cssecoMenu > ul.menu li > ul {
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+@media screen and (max-width: 768px) {
+  /* line 117, scss/csseco.scss */
+  nav#cssecoMenu > ul.menu li > ul {
+    position: relative;
+    min-width: auto;
+    width: 100%;
+  }
+}
+/* line 131, scss/csseco.scss */
+nav#cssecoMenu > ul.menu li.opened > a, nav#cssecoMenu > ul.menu li:hover > a {
+  font-weight: bold;
+}
+/* line 133, scss/csseco.scss */
+nav#cssecoMenu > ul.menu li.opened > ul {
+  display: block;
+}
+/* line 134, scss/csseco.scss */
+nav#cssecoMenu > ul.menu li.opened {
+  background: rgba(0, 0, 0, 0.3);
+}
+/* line 137, scss/csseco.scss */
+nav#cssecoMenu > ul.menu li.menu-item-has-children > a::after {
+  background: transparent;
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  height: 15px;
+  position: absolute;
+  right: 2px;
+  text-align: center;
+  text-indent: initial;
+  text-rendering: auto;
+  top: 7px;
+  width: 15px;
+  z-index: 30;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+@media screen and (max-width: 768px) {
+  /* line 137, scss/csseco.scss */
+  nav#cssecoMenu > ul.menu li.menu-item-has-children > a::after {
+    right: 5px;
+  }
+}
+@media screen and (max-width: 768px) {
+  /* line 102, scss/csseco.scss */
+  nav#cssecoMenu > ul.menu li {
+    width: 100%;
+  }
+}
+/* line 159, scss/csseco.scss */
+nav#cssecoMenu > ul.menu > li {
+  display: inline-block;
+}
+/* line 161, scss/csseco.scss */
+nav#cssecoMenu > ul.menu > li > ul {
+  /* depth 1 */
+  background: #FFFFFF;
+  left: 0;
+  text-align: left;
+  top: 100%;
+  width: auto;
+}
+/* line 167, scss/csseco.scss */
+nav#cssecoMenu > ul.menu > li > ul li {
+  display: block;
+}
+/* line 169, scss/csseco.scss */
+nav#cssecoMenu > ul.menu > li > ul li a {
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 5px 0;
+}
+@media screen and (max-width: 768px) {
+  /* line 176, scss/csseco.scss */
+  nav#cssecoMenu > ul.menu > li > ul > li > a {
+    text-indent: 20px;
+  }
+}
+/* line 179, scss/csseco.scss */
+nav#cssecoMenu > ul.menu > li > ul > li ul {
+  /* depth >=2 */
+  background: #FFFFFF;
+  left: 100%;
+  position: absolute;
+  text-align: left;
+  top: 0;
+  width: auto;
+}
+@media screen and (max-width: 1200px) {
+  /* line 179, scss/csseco.scss */
+  nav#cssecoMenu > ul.menu > li > ul > li ul {
+    left: 0;
+    position: relative;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  /* line 179, scss/csseco.scss */
+  nav#cssecoMenu > ul.menu > li > ul > li ul {
+    border-color: #000;
+    border-style: solid;
+    border-width: 1px 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  /* line 196, scss/csseco.scss */
+  nav#cssecoMenu > ul.menu > li > ul > li ul > li > a {
+    text-indent: 40px;
+  }
+}
+@media screen and (max-width: 768px) {
+  /* line 179, scss/csseco.scss */
+  nav#cssecoMenu > ul.menu > li > ul > li ul {
+    left: 0;
+  }
+}
+/* line 204, scss/csseco.scss */
+nav#cssecoMenu > ul.menu > li > ul > li.menu-item-has-children > a::after {
+  content: '\f054';
+}
+@media screen and (max-width: 1200px) {
+  /* line 204, scss/csseco.scss */
+  nav#cssecoMenu > ul.menu > li > ul > li.menu-item-has-children > a::after {
+    content: '\f078';
+  }
+}
+/* line 211, scss/csseco.scss */
+nav#cssecoMenu > ul.menu > li > ul > li.menu-item-has-children.opened > a::after {
+  content: '\f053';
+}
+@media screen and (max-width: 1200px) {
+  /* line 211, scss/csseco.scss */
+  nav#cssecoMenu > ul.menu > li > ul > li.menu-item-has-children.opened > a::after {
+    content: '\f077';
+  }
+}
+@media screen and (max-width: 768px) {
+  /* line 175, scss/csseco.scss */
+  nav#cssecoMenu > ul.menu > li > ul > li {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+/* line 226, scss/csseco.scss */
+nav#cssecoMenu > ul.menu > li.menu-item-has-children > a::after {
+  content: '\f078';
+}
+/* line 230, scss/csseco.scss */
+nav#cssecoMenu > ul.menu > li.menu-item-has-children.opened > a::after {
+  content: '\f077';
+}
+@media screen and (max-width: 768px) {
+  /* line 234, scss/csseco.scss */
+  nav#cssecoMenu > ul.menu > li.opened {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+/* line 241, scss/csseco.scss */
+nav#cssecoMenu > ul.menu li.current-menu-item,
+nav#cssecoMenu > ul.menu li.current_page_item,
+nav#cssecoMenu > ul.menu li.current-page-ancestor,
+nav#cssecoMenu > ul.menu li.current-menu-ancestor {
+  /* active */
+  background: rgba(0, 0, 0, 0.3);
+}
+/* line 246, scss/csseco.scss */
+nav#cssecoMenu > ul.menu li.current-menu-item > a,
+nav#cssecoMenu > ul.menu li.current_page_item > a,
+nav#cssecoMenu > ul.menu li.current-page-ancestor > a,
+nav#cssecoMenu > ul.menu li.current-menu-ancestor > a {
+  font-weight: bold;
+}
+@media screen and (max-width: 768px) {
+  /* line 95, scss/csseco.scss */
+  nav#cssecoMenu > ul.menu {
+    display: none;
+  }
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+/* line 255, scss/csseco.scss */
+#cssecoFooter {
+  background-color: #333;
+  margin-top: 40px;
+  padding: 20px 0;
+  /*------------------------------------------------------------
+  ## Footer Menu
+  ------------------------------------------------------------*/
+}
+/* line 263, scss/csseco.scss */
+#cssecoFooter nav.footer_menu ul.menu {
+  display: block;
+}
+
+/*--------------------------------------------------------------
+# Body
+--------------------------------------------------------------*/
+/* line 273, scss/csseco.scss */
+.csseco_custom_post_navigation .post-link-nav-prev {
+  text-align: center;
+}
+/* line 275, scss/csseco.scss */
+.csseco_custom_post_navigation .post-link-nav-prev i {
+  margin-right: 5px;
+}
+@media screen and (min-width: 768px) {
+  /* line 273, scss/csseco.scss */
+  .csseco_custom_post_navigation .post-link-nav-prev {
+    text-align: left;
+  }
+}
+/* line 278, scss/csseco.scss */
+.csseco_custom_post_navigation .post-link-nav-next {
+  text-align: center;
+}
+/* line 279, scss/csseco.scss */
+.csseco_custom_post_navigation .post-link-nav-next i {
+  margin-left: 5px;
+}
+@media screen and (min-width: 768px) {
+  /* line 278, scss/csseco.scss */
+  .csseco_custom_post_navigation .post-link-nav-next {
+    text-align: right;
+  }
+}
+
+/*--------------------------------------------------------------
+# Globals and Posts Formats
+--------------------------------------------------------------*/
+/**
+ * @package CSSecoThemes
+ * base/_globals.scss
+ *
+ * Global Elements
+ *
+ *
+ * Article posts footer ** the footer is the same on all post formats
+ */
+/* line 10, scss/base/_globals.scss */
+article {
+  margin-bottom: 10px;
+  padding-bottom: 30px;
+  opacity: 0;
+  -webkit-transition: all 320ms ease;
+  transition: all 320ms ease;
+  -webkit-transform: translateY(50px);
+  transform: translateY(50px);
+}
+/* line 16, scss/base/_globals.scss */
+article.reveal {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  opacity: 1;
+}
+/* line 21, scss/base/_globals.scss */
+article header.entry-header h1.entry-title {
+  margin-top: 0;
+}
+/* line 27, scss/base/_globals.scss */
+article .entry-share h4 {
+  margin-bottom: 0;
+}
+/* line 30, scss/base/_globals.scss */
+article .entry-share ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+/* line 34, scss/base/_globals.scss */
+article .entry-share ul li {
+  display: inline-block;
+  margin-right: 5px;
+}
+/* line 37, scss/base/_globals.scss */
+article .entry-share ul li a {
+  font-size: 34px;
+}
+/* line 44, scss/base/_globals.scss */
+article .entry-footer {
+  border-bottom: 3px solid #c5c4cd;
+  margin: 15px 0;
+  padding: 0 0 10px;
+}
+/* line 56, scss/base/_globals.scss */
+article .entry-footer .post-footer-container .footer-right {
+  text-align: right;
+}
+@media screen and (max-width: 768px) {
+  /* line 59, scss/base/_globals.scss */
+  article .entry-footer .post-footer-container .footer-right i {
+    float: left;
+    margin-right: 5px;
+  }
+}
+@media screen and (max-width: 768px) {
+  /* line 56, scss/base/_globals.scss */
+  article .entry-footer .post-footer-container .footer-right {
+    text-align: left;
+  }
+}
+
+/**
+ * @package CSSecoThemes
+ * posts-formats/_single.scss
+ *
+ * Single Post Template
+ */
+/* line 14, scss/posts-formats/_single.scss */
+article.csseco-single-post .entry-content .single-featured {
+  border: 1px solid #eee;
+  padding: 10px 10px;
+  margin: 0 0 5px 0;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  /* line 14, scss/posts-formats/_single.scss */
+  article.csseco-single-post .entry-content .single-featured {
+    padding: 15px 20px;
+  }
+}
+@media screen and (min-width: 992px) {
+  /* line 14, scss/posts-formats/_single.scss */
+  article.csseco-single-post .entry-content .single-featured {
+    padding: 17px 50px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  /* line 14, scss/posts-formats/_single.scss */
+  article.csseco-single-post .entry-content .single-featured {
+    padding: 20px 75px;
+  }
+}
+/* line 31, scss/posts-formats/_single.scss */
+article.csseco-single-post footer.entry-footer {
+  /* ../base/_globals.scss */
+}
+
+/**
+ * @package CSSecoThemes
+ * posts-formats/_standard-pf.scss
+ *
+ * Standard Post Format
+ */
+/* line 15, scss/posts-formats/_standard-pf.scss */
+article.csseco-format-standard .entry-content a.standard-featured-link .standard-featured {
+  min-height: 350px;
+}
+/* line 24, scss/posts-formats/_standard-pf.scss */
+article.csseco-format-standard footer.entry-footer {
+  /* ../base/_globals.scss */
+}
+
+/**
+ * @package CSSecoThemes
+ * posts-formats/_image-pf.scss
+ *
+ * Image Post Format
+ */
+/* line 9, scss/posts-formats/_image-pf.scss */
+article.csseco-format-image header.entry-header {
+  min-height: 350px;
+  position: relative;
+  text-align: center;
+}
+/* line 16, scss/posts-formats/_image-pf.scss */
+article.csseco-format-image header.entry-header .entry-excerpt.image-caption {
+  bottom: 0;
+  color: #898989;
+  left: 0;
+  margin: 0;
+  padding: 0 15px;
+  position: absolute;
+  right: 0;
+}
+/* line 25, scss/posts-formats/_image-pf.scss */
+article.csseco-format-image header.entry-header .entry-excerpt.image-caption p {
+  margin: 40px 0;
+  font-size: 14px;
+}
+/* line 32, scss/posts-formats/_image-pf.scss */
+article.csseco-format-image footer.entry-footer {
+  /* ../base/_globals.scss */
+}
+
+/**
+ * @package CSSecoThemes
+ * posts-formats/_audio-pf.scss
+ *
+ * Audio Post Format style
+ */
+/* line 10, scss/posts-formats/_audio-pf.scss */
+article.csseco-format-audio header.entry-header h1.entry-title {
+  display: inline-block;
+  width: auto;
+}
+/* line 15, scss/posts-formats/_audio-pf.scss */
+article.csseco-format-audio header.entry-header .entry-meta {
+  display: inline-block;
+  width: auto;
+}
+/* line 21, scss/posts-formats/_audio-pf.scss */
+article.csseco-format-audio .entry-content iframe {
+  height: 166px;
+  width: 100%;
+}
+/* line 26, scss/posts-formats/_audio-pf.scss */
+article.csseco-format-audio footer.entry-footer {
+  /* ../base/_globals.scss */
+}
+
+/**
+ * @package CSSecoThemes
+ * posts-formats/_video-pf.scss
+ *
+ * Video Post Format
+ */
+/* line 10, scss/posts-formats/_video-pf.scss */
+article.csseco-format-video header.entry-header h1.entry-title {
+  text-align: center;
+}
+/* line 20, scss/posts-formats/_video-pf.scss */
+article.csseco-format-video footer.entry-footer {
+  /* ../base/_globals.scss */
+}
+
+/**
+ * @package CSSecoThemes
+ * posts-formats/_gallery-pf.scss
+ *
+ * Gallery Post Format style
+ */
+/* line 11, scss/posts-formats/_gallery-pf.scss */
+article.csseco-format-gallery header.entry-header .carousel .carousel-indicators {
+  bottom: 0;
+}
+/* line 15, scss/posts-formats/_gallery-pf.scss */
+article.csseco-format-gallery header.entry-header .carousel .carousel-inner .csseco_slides {
+  height: 350px;
+}
+/* line 18, scss/posts-formats/_gallery-pf.scss */
+article.csseco-format-gallery header.entry-header .carousel .carousel-inner .csseco_slides .entry-excerpt.image-caption {
+  bottom: 0;
+  color: #898989;
+  left: 0;
+  margin: 0;
+  padding: 0 15px;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  -webkit-transition: transform 320ms ease;
+  -webkit-transition: -webkit-transform 320ms ease;
+  transition: -webkit-transform 320ms ease;
+  transition: transform 320ms ease;
+  transition: transform 320ms ease, -webkit-transform 320ms ease;
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%);
+}
+/* line 30, scss/posts-formats/_gallery-pf.scss */
+article.csseco-format-gallery header.entry-header .carousel .carousel-inner .csseco_slides .entry-excerpt.image-caption p {
+  margin: 40px 0;
+  font-size: 14px;
+}
+/* line 38, scss/posts-formats/_gallery-pf.scss */
+article.csseco-format-gallery header.entry-header .carousel .carousel-control {
+  background: none;
+  padding: 0 30px;
+  width: auto;
+}
+/* line 42, scss/posts-formats/_gallery-pf.scss */
+article.csseco-format-gallery header.entry-header .carousel .carousel-control .control-wrapper {
+  position: relative;
+}
+/* line 44, scss/posts-formats/_gallery-pf.scss */
+article.csseco-format-gallery header.entry-header .carousel .carousel-control .control-wrapper i {
+  padding: 2px;
+}
+/* line 47, scss/posts-formats/_gallery-pf.scss */
+article.csseco-format-gallery header.entry-header .carousel .carousel-control .control-wrapper .preview-thumb {
+  border-radius: 5px;
+  bottom: -5px;
+  display: inline-block;
+  height: 68px;
+  position: absolute;
+  top: -10px;
+  width: 68px;
+  -webkit-transition: transform 320ms ease;
+  -webkit-transition: -webkit-transform 320ms ease;
+  transition: -webkit-transform 320ms ease;
+  transition: transform 320ms ease;
+  transition: transform 320ms ease, -webkit-transform 320ms ease;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
+/* line 61, scss/posts-formats/_gallery-pf.scss */
+article.csseco-format-gallery header.entry-header .carousel .carousel-control.left .control-wrapper .preview-thumb {
+  left: 30px;
+}
+/* line 68, scss/posts-formats/_gallery-pf.scss */
+article.csseco-format-gallery header.entry-header .carousel .carousel-control.right .control-wrapper .preview-thumb {
+  right: 30px;
+}
+/* line 75, scss/posts-formats/_gallery-pf.scss */
+article.csseco-format-gallery header.entry-header .carousel .carousel-control:hover .control-wrapper .preview-thumb {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+/* line 85, scss/posts-formats/_gallery-pf.scss */
+article.csseco-format-gallery header.entry-header .carousel:hover .carousel-inner .csseco_slides .entry-excerpt.image-caption {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+/* line 97, scss/posts-formats/_gallery-pf.scss */
+article.csseco-format-gallery footer.entry-footer {
+  /* ../base/_globals.scss */
+}
+
+/**
+ * @package CSSecoThemes
+ * posts-formats/_quote-pf.scss
+ *
+ * Quote Post Format style
+ */
+/* line 10, scss/posts-formats/_quote-pf.scss */
+article.csseco-format-quote header.entry-header h1.qote-content {
+  font-size: 34px;
+  letter-spacing: 0.03em;
+  position: relative;
+}
+/* line 15, scss/posts-formats/_quote-pf.scss */
+article.csseco-format-quote header.entry-header h1.qote-content::before, article.csseco-format-quote header.entry-header h1.qote-content::after {
+  color: #999999;
+  display: inline-block;
+  position: relative;
+}
+/* line 21, scss/posts-formats/_quote-pf.scss */
+article.csseco-format-quote header.entry-header h1.qote-content::before {
+  content: '\201C';
+}
+/* line 24, scss/posts-formats/_quote-pf.scss */
+article.csseco-format-quote header.entry-header h1.qote-content::after {
+  content: '\201E';
+}
+/* line 28, scss/posts-formats/_quote-pf.scss */
+article.csseco-format-quote header.entry-header h2.quote-author {
+  font-size: 18px;
+  font-weight: bold;
+  position: relative;
+  text-align: right;
+}
+/* line 33, scss/posts-formats/_quote-pf.scss */
+article.csseco-format-quote header.entry-header h2.quote-author::before {
+  content: '\2014 ';
+  display: inline-block;
+  margin: 0 5px 0 0;
+  position: relative;
+}
+/* line 41, scss/posts-formats/_quote-pf.scss */
+article.csseco-format-quote footer.entry-footer {
+  /* ../base/_globals.scss */
+}
+
+/**
+ * @package CSSecoThemes
+ * posts-formats/_link-pf.scss
+ *
+ * Link Post Format style
+ */
+/* line 10, scss/posts-formats/_link-pf.scss */
+article.csseco-format-link header.entry-header h1.entry-title {
+  text-align: center;
+}
+/* line 12, scss/posts-formats/_link-pf.scss */
+article.csseco-format-link header.entry-header h1.entry-title i {
+  color: #999999;
+  display: block;
+  margin: 7px auto 0;
+  text-align: center;
+  width: 50px;
+}
+/* line 21, scss/posts-formats/_link-pf.scss */
+article.csseco-format-link footer.entry-footer {
+  /* ../base/_globals.scss */
+}
+
+/**
+ * @package CSSecoThemes
+ * posts-formats/_aside-pf.scss
+ *
+ * Aside Post Format style
+ */
+/* line 9, scss/posts-formats/_aside-pf.scss */
+article.csseco-format-aside .aside-featured {
+  height: 120px;
+}
+/* line 18, scss/posts-formats/_aside-pf.scss */
+article.csseco-format-aside footer.entry-footer {
+  /* ../base/_globals.scss */
+}
+
+/**
+ * @package CSSecoThemes
+ * posts-formats/_status-pf.scss
+ *
+ * Status Post Format style
+ */
+/**
+ * @package CSSecoThemes
+ * posts-formats/_chat-pf.scss
+ *
+ * Chat Post Format style
+ */
+/*--------------------------------------------------------------
+# Single post Comments
+--------------------------------------------------------------*/
+/* line 304, scss/csseco.scss */
+.comments-area {
+  border-top: 3px solid #c5c4cd;
+  margin: 10px 0 0;
+  padding: 30px 0 0;
+}
+/* line 309, scss/csseco.scss */
+.comments-area li.comment article.comment-body {
+  margin: 0 0 25px 0;
+  opacity: 1;
+  padding: 0;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+/* line 315, scss/csseco.scss */
+.comments-area li.comment article.comment-body footer.comment-meta .comment-author {
+  padding: 0 0 7px 0;
+  position: relative;
+  margin: 0 0 5px 0;
+}
+/* line 319, scss/csseco.scss */
+.comments-area li.comment article.comment-body footer.comment-meta .comment-author img.avatar {
+  border: 1px solid #d7d7d7;
+  border-radius: 50%;
+  display: inline-block;
+  padding: 2px;
+}
+/* line 326, scss/csseco.scss */
+.comments-area li.comment article.comment-body footer.comment-meta .comment-author b.fn a {
+  font-size: 22px;
+  padding: 0 0 0 10px;
+}
+/* line 332, scss/csseco.scss */
+.comments-area li.comment article.comment-body footer.comment-meta .comment-author::before {
+  background: #CCCCCC;
+  bottom: 0;
+  content: '';
+  display: block;
+  height: 12px;
+  left: 0;
+  position: absolute;
+  width: 1px;
+}
+/* line 342, scss/csseco.scss */
+.comments-area li.comment article.comment-body footer.comment-meta .comment-author::after {
+  background: #CCCCCC;
+  bottom: 0;
+  content: '';
+  display: block;
+  height: 1px;
+  position: absolute;
+  width: 70px;
+}
+
+/*--------------------------------------------------------------
+# Sidebar Position
+--------------------------------------------------------------*/
+/* line 373, scss/csseco.scss */
+#sitePage.sidebarLeft #main {
+  float: right;
+}
+/* line 374, scss/csseco.scss */
+#sitePage.sidebarLeft #secondary {
+  float: left;
+}
+
+/* line 377, scss/csseco.scss */
+#sitePage.sidebarRight #main {
+  float: left;
+}
+/* line 378, scss/csseco.scss */
+#sitePage.sidebarRight #secondary {
+  float: right;
+}
+
+/* line 381, scss/csseco.scss */
+#sitePage.sidebarBottom #secondary {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+/* line 385, scss/csseco.scss */
+#sitePage.sidebarBottom #secondary .csseco-widget {
+  width: 32.5%;
+}
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Contact Form
+--------------------------------------------------------------*/
+/* line 401, scss/csseco.scss */
+.form-control-msg {
+  display: none;
+}
+
+/* line 405, scss/csseco.scss */
+.has-error .form-control-msg {
+  display: block;
+}
+
+/* line 410, scss/csseco.scss */
+.js-show-feedback {
+  display: inline-block;
+  padding-left: 10px;
+}
+
+/*--------------------------------------------------------------
+# 404
+--------------------------------------------------------------*/
+/* line 418, scss/csseco.scss */
+#fof {
+  display: block;
+  margin: 20px 0;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  /* line 418, scss/csseco.scss */
+  #fof {
+    margin: 60px 0;
+  }
+}
+@media screen and (min-width: 992px) {
+  /* line 418, scss/csseco.scss */
+  #fof {
+    margin: 120px 0;
+  }
+}
+/* line 430, scss/csseco.scss */
+#fof .fof-inner {
+  border: 1px solid #CCCCCC;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
+  padding: 20px;
+  width: 90%;
+}
+/* line 437, scss/csseco.scss */
+#fof .fof-inner h1.csseco-404-title {
+  font-size: 36px;
+  margin: 0;
+}
+@media screen and (min-width: 768px) {
+  /* line 437, scss/csseco.scss */
+  #fof .fof-inner h1.csseco-404-title {
+    font-size: 60px;
+  }
+}
+/* line 447, scss/csseco.scss */
+#fof a.go-back,
+#fof a.go-home {
+  background-color: #CCCCCC;
+  border-radius: 10px;
+  display: inline-block;
+  margin-top: -15px;
+  padding: 10px;
+  width: 25%;
+}
+@media screen and (min-width: 768px) {
+  /* line 447, scss/csseco.scss */
+  #fof a.go-back,
+  #fof a.go-home {
+    margin-top: 0;
+    position: absolute;
+    top: 50px;
+    width: 80px;
+  }
+}
+/* line 461, scss/csseco.scss */
+#fof a.go-back span,
+#fof a.go-home span {
+  display: block;
+}
+/* line 465, scss/csseco.scss */
+#fof a.go-back {
+  margin-right: 5%;
+}
+@media screen and (min-width: 768px) {
+  /* line 465, scss/csseco.scss */
+  #fof a.go-back {
+    left: 0;
+    margin-right: 0;
+  }
+}
+/* line 472, scss/csseco.scss */
+#fof a.go-home {
+  margin-left: 5%;
+}
+@media screen and (min-width: 768px) {
+  /* line 472, scss/csseco.scss */
+  #fof a.go-home {
+    margin-left: 0;
+    right: 0;
+  }
+}
+
 /*# sourceMappingURL=csseco.css.map */
