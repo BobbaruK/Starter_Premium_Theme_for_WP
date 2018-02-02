@@ -83,6 +83,7 @@ jQuery(document).ready(function ($) {
         var prev = that.data('prev');
         var archive = that.data('archive');
         var date = that.data('date');
+        var search = that.data('search');
 
         if( typeof prev === 'undefined' ) {
             prev = 0;
@@ -104,6 +105,7 @@ jQuery(document).ready(function ($) {
                 prev : prev,
                 archive : archive,
                 date : date,
+                search : search,
                 action : 'csseco_load_more'
             },
             error : function( response ){

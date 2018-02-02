@@ -14,6 +14,7 @@ function csseco_load_more() {
 	$prev        = $_POST["prev"];
 	$archive     = $_POST["archive"];
 	$date        = $_POST["date"];
+	$search      = $_POST["search"];
 
 	if( $prev == 1 && $_POST["page"] != 1 ) {
 		$paged = $_POST["page"]-1;
@@ -31,12 +32,22 @@ function csseco_load_more() {
 		$zi      = ( empty( $dateVal[$ziNr] ) ? '' : $dateVal[$ziNr] );
 	}
 
+	if ( $search != '0' ) {
+//		echo $search.'<br>';
+		$searchVal = explode( '?s=', $search );
+//		print_r( $searchVal );
+		$searchQuerry = ( empty( $searchVal[1] ) ? '' : $searchVal[1] );
+//		echo '<br>';
+//		echo $searchQuerry;
+	}
+
 	$args = array(
 		'post_type'     => 'post',
 		'post_status'   => 'publish',
 		'year'          => $an,
 		'monthnum'      => $luna,
 //		'day'           => $zi,
+		's'             => $searchQuerry,
 		'paged'         => $paged
 	);
 
@@ -99,7 +110,11 @@ function csseco_load_more() {
 
 	if ( $query->have_posts() ) {
 
-		echo '<div class="page-limit" data-page="'.$page_trail.'page/'.$paged.'/">';
+		if ( $searchQuerry != '' ) {
+			echo '<div class="page-limit" data-page="'.$page_trail.'page/'.$paged.'/?s='.$searchQuerry.'">';
+		} else {
+			echo '<div class="page-limit" data-page="'.$page_trail.'page/'.$paged.'/">';
+		}
 		while ( $query->have_posts() ) {
 			$query->the_post();
 			get_template_part( 'includes/front/template-parts/content', get_post_format() );

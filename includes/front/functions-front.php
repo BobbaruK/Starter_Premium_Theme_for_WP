@@ -269,6 +269,13 @@ function csseco_pagination_top() {
                        data-date="'.csseco_grab_current_uri().'"
 					   data-url="'.admin_url('admin-ajax.php').'"
 					   style="margin-bottom: 40px;">';
+		} elseif ( is_search() ) {
+			$output .= '<a class="csseco_load_more btn btn-lg btn-default"
+					   data-prev="1"
+					   data-page="'.csseco_check_paged(1).'"
+					   data-search="'.csseco_grab_current_uri().'"
+					   data-url="'.admin_url('admin-ajax.php').'"
+					   style="margin-bottom: 40px;">';
 		}
 		$output .= '<i class="fa fa-refresh" aria-hidden="true"></i>&nbsp;';
 		$output .= '<span class="text">Load Previous</span>';
@@ -295,6 +302,11 @@ function csseco_pagination_bottom() {
 					   data-page="'.csseco_check_paged(1).'"
 					   data-archive="'.csseco_grab_current_uri().'"
 					   data-date="'.csseco_grab_current_uri().'"
+					   data-url="'.admin_url('admin-ajax.php').'">';
+		} elseif ( is_search() ) {
+			$output .= '<a class="csseco_load_more btn btn-lg btn-default"
+					   data-page="'.csseco_check_paged(1).'"
+					   data-search="'.csseco_grab_current_uri().'"
 					   data-url="'.admin_url('admin-ajax.php').'">';
 		}
 		$output .= '<i class="fa fa-refresh" aria-hidden="true"></i>&nbsp;';
