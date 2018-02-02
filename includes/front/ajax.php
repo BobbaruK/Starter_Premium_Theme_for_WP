@@ -29,7 +29,7 @@ function csseco_load_more() {
 //		print_r( $dateVal );
 		$an      = ( empty( $dateVal[$anNr] ) ? '' : $dateVal[$anNr] );
 		$luna    = ( empty( $dateVal[$lunaNr] ) ? '' : $dateVal[$lunaNr] );
-		$zi      = ( empty( $dateVal[$ziNr] ) ? '' : $dateVal[$ziNr] );
+//		$zi      = ( empty( $dateVal[$ziNr] ) ? '' : $dateVal[$ziNr] );
 	}
 
 	if ( $search != '0' ) {
