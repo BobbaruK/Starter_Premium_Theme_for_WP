@@ -14,18 +14,18 @@ get_header(); ?>
 			<?php
 				if ( have_posts() ) {
 
-				echo '<div class="page-limit" data-page="'.$_SERVER["REQUEST_URI"].'">';
+                    echo '<div class="page-limit" data-page="'.$_SERVER["REQUEST_URI"].'">';
 
-				while ( have_posts() ) {
-					the_post();
-					//$class = 'reveal';
-					//set_query_var( 'post-class', $class ); // un fel de global vezi content-aside in susul paginii($class = get_query_var('post-class');)
-					get_template_part( 'includes/front/template-parts/content', get_post_format() );
-				}
+                    while ( have_posts() ) {
+                        the_post();
+                        //$class = 'reveal';
+                        //set_query_var( 'post-class', $class ); // un fel de global vezi content-aside in susul paginii($class = get_query_var('post-class');)
+                        get_template_part( 'includes/front/template-parts/content', get_post_format() );
+                    }
 
-				echo '</div>';
+                    echo '</div>';
 
-			}
+			    }
 			?>
 		</div><!-- /.csseco-posts-container -->
 	    <?php echo csseco_pagination_bottom(); ?>

@@ -12,10 +12,9 @@ get_header(); ?>
 		<?php if ( is_paged() ) { echo csseco_pagination_top(); } ?>
 		<div class="csseco-posts-container">
 			<?php
-
                 if ( have_posts() ) {
-    //				echo '<div class="page-limit" data-page="/'.csseco_check_paged() .'?s='.get_search_query().'">'; // Live Server
-                    echo '<div class="page-limit" data-page="'.esc_url( home_url( '/' ) ).csseco_check_paged() .'?s='.get_search_query().'">'; // LocalHost
+    				echo '<div class="page-limit" data-page="/'.csseco_check_paged() .'?s='.get_search_query().'">'; // Live Server
+//                  echo '<div class="page-limit" data-page="'.esc_url( home_url( '/' ) ).csseco_check_paged() .'?s='.get_search_query().'">'; // LocalHost
 
                     while ( have_posts() ) {
                         the_post();
