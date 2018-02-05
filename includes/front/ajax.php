@@ -24,7 +24,7 @@ function csseco_load_more() {
 		$anNr    = 4; // localhost(starter_premium_theme) or in .../blog/
 //		$anNr    = 3; // liveserver or NOT in .../blog/
 		$lunaNr  = $anNr+1;
-		$ziNr    = $lunaNr+1;
+//		$ziNr    = $lunaNr+1;
 		$dateVal = explode( '/', $date );
 //		print_r( $dateVal );
 		$an      = ( empty( $dateVal[$anNr] ) ? '' : $dateVal[$anNr] );
@@ -130,7 +130,7 @@ function csseco_load_more() {
 function csseco_check_paged( $num = null ) {
 	$output = '';
 	if ( is_paged() ) {
-		$output = 'page/' . get_query_var( 'paged' );
+		$output = 'page/' . get_query_var( 'paged' ) . '/';
 	}
 	if ( $num == 1 ) {
 		$paged = ( get_query_var( 'paged' ) == 0 ? 1 : get_query_var( 'paged' ) );

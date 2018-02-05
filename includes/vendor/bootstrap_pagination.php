@@ -20,7 +20,7 @@ function wp_bs_pagination($pages = '', $range = 4) {
 	}
 	if(1 != $pages) {
 		echo '<div class="text-center">';
-		echo '<nav><ul class="pagination"><li class="disabled hidden-xs"><span><span aria-hidden="true">Page '.$paged.' of '.$pages.'</span></span></li>'; // delete "'; //"(wihout quotes) for Page 5 of 45
+		echo '<nav><ul class="pagination">'; //<li class="disabled hidden-xs"><span><span aria-hidden="true">Page '.$paged.' of '.$pages.'</span></span></li>'; // delete "'; //"(wihout quotes) for Page 5 of 45
 		if($paged > 2 && $paged > $range+1 && $showitems < $pages) echo "<li><a href='".get_pagenum_link(1)."' aria-label='First'>&laquo;<span class='hidden-xs'> First</span></a></li>";
 		if($paged > 1 && $showitems < $pages) echo "<li><a href='".get_pagenum_link($paged - 1)."' aria-label='Previous'>&lsaquo;<span class='hidden-xs'> Previous</span></a></li>";
 

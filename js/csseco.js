@@ -93,6 +93,10 @@ jQuery(document).ready(function ($) {
             archive = 0;
         }
 
+        if( typeof search === 'undefined') {
+            search = 0;
+        }
+
 
         that.addClass( 'load' ).find('.text').text('Loading'); // add class load on the button
         that.find('i').addClass('fa-spin'); // add class fa-spin ont the i(fontawesome)
