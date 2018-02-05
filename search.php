@@ -6,6 +6,9 @@
  */
 get_header(); ?>
 	<main id="main" class="site-main col-xs-12 col-md-<?php echo $contentWidth; ?>" role="main">
+        <header class="search-header">
+			<h1>You are searching for: <?php echo get_search_query(); ?></h1>
+        </header>
 		<?php if ( is_paged() ) { echo csseco_pagination_top(); } ?>
 		<div class="csseco-posts-container">
 			<?php
