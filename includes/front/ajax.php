@@ -21,8 +21,8 @@ function csseco_load_more() {
 	}
 
 	if( $date != '0' ) {
-		$anNr    = 3; // liveserver or NOT in .../blog/
-//		$anNr    = 4; // localhost(starter_premium_theme) or in .../blog/
+//		$anNr    = 3; // liveserver or NOT in .../blog/
+		$anNr    = 4; // localhost(starter_premium_theme) or in .../blog/
 		$lunaNr  = $anNr+1;
 //		$ziNr    = $lunaNr+1;
 		$dateVal = explode( '/', $date );
@@ -102,8 +102,8 @@ function csseco_load_more() {
 		}
 
 	} else {
-		$page_trail = '/'; // live server(if root)
-//		$page_trail = '/starter_premium_theme/'; // starter_premium_theme e numele folderului in care e instalat situl LocalHost
+//		$page_trail = '/'; // live server(if root)
+		$page_trail = '/starter_premium_theme/'; // starter_premium_theme e numele folderului in care e instalat situl LocalHost
 	}
 
 	$query = new WP_Query( $args );
