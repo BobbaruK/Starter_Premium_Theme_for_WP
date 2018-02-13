@@ -83,22 +83,22 @@ function csseco_load_more() {
 
 		$args[ $type ] = $value;
 
-		// check page trail and remove "page" value; for archive(category, tags, and author)
+
 		if ( isset( $archValFlipped["page"] ) ) {
+			// check page trail and remove "page" value; for category, tags, and author archive
 			$pageVal = explode( 'page', $archive );
 			$page_trail = $pageVal[0];
-		} else {
-			$page_trail = $archive;
-		}
-
-		// check page trail and remove "page" value; for archive(yearly, monthly and daily)
-		$dateValFlipped = array_flip($dateVal);
-//		print_r($dateValFlipped);
-		if ( isset( $dateValFlipped["page"] ) ) {
+		} elseif ( isset( $dateValFlipped["page"] ) ) {
+			// check page trail and remove "page" value; for yearly, monthly, daily archive
 			$pageVal = explode( 'page', $date );
 			$page_trail = $pageVal[0];
 		} else {
-			$page_trail = $date;
+			if ( $archive != '0' ) {
+				$page_trail = $archive;
+			}
+			if ( $date != '0' ) {
+				$page_trail = $date;
+			}
 		}
 
 	} else {
